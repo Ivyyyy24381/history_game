@@ -399,5 +399,12 @@
   "rumi.dark.guessFirst": "先猜，再点灯。",
   "rumi.dark.lit": "点灯之后",
   "rumi.dark.same": "你把几块拼成了整体。",
-  "rumi.dark.diff": "每一块都是真的，只是都不完整。"
+  "rumi.dark.diff": "每一块都是真的，只是都不完整。",
+  "rumi.scratch.instruction": "按住，在墙上来回擦。",
+  "rumi.scratch.polished": "墙磨得像水一样亮——可现在它只映出对面那道帘子。",
+  "rumi.scratch.rub": "磨一下",
+  "rumi.scratch.guessFirst": "先猜，再拉开帘子。",
+  "rumi.scratch.opened": "帘子拉开",
+  "rumi.scratch.same": "你猜到了镜子的用处。",
+  "rumi.scratch.diff": "希腊画师赌的是另一件事——"
 }

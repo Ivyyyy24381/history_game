@@ -743,6 +743,33 @@ export const PHASE_TEMPLATES = [
       consequence: "（出处与引申。）",
     }),
   },
+  {
+    type: "scratch_reveal",
+    name: "磨 · 猜 · 拉帘",
+    desc: "玩家先亲手擦/磨一块表面（过桥动作），磨完先下判断，再揭开对照。「磨」本身不教东西，所以必须带 question/options——判断才是这一幕的认知动作。mirrorImage 会左右翻转显示。",
+    ref: "rumi · 1258_masnavi「中国画师与希腊画师」",
+    sketch: "pairs",
+    make: () => ({
+      id: "scratch_" + uid(),
+      type: "scratch_reveal",
+      background: "",
+      legend: "",
+      situation: "（处境。）",
+      instruction: "按住，在墙上来回擦。",
+      mirrorImage: "",
+      threshold: 0.7,
+      brush: 7,
+      polishedNote: "（磨完之后、揭开之前，玩家看到了什么。）",
+      question: "（揭开之前先猜。）",
+      options: [
+        { id: "a", text: "（一个合理的猜测）" },
+        { id: "b", text: "（实际）" },
+      ],
+      actual: "b",
+      reveal: "（揭开之后。）",
+      consequence: "（出处与引申。）",
+    }),
+  },
 ];
 
 export default PHASE_TEMPLATES;

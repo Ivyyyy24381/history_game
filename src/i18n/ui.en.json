@@ -399,5 +399,12 @@
   "rumi.dark.guessFirst": "Guess first, then light the lamp.",
   "rumi.dark.lit": "With the lamp lit",
   "rumi.dark.same": "You pieced the parts into a whole.",
-  "rumi.dark.diff": "Every piece was true — just incomplete."
+  "rumi.dark.diff": "Every piece was true — just incomplete.",
+  "rumi.scratch.instruction": "Hold and rub back and forth across the wall.",
+  "rumi.scratch.polished": "The wall shines like water — but for now it only reflects the curtain opposite.",
+  "rumi.scratch.rub": "Polish",
+  "rumi.scratch.guessFirst": "Guess first, then draw the curtain.",
+  "rumi.scratch.opened": "Curtain drawn",
+  "rumi.scratch.same": "You guessed what the mirror was for.",
+  "rumi.scratch.diff": "The Greek painters were betting on something else —"
 }
