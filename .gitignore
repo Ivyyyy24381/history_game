@@ -16,3 +16,4 @@ _to_delete/
 # 编辑器保存前的自动备份（每个文件保留最近 20 份）
 .editor-backups/
 assets_src/png_masters/
+dist-artifact/

@@ -1,0 +1,14 @@
+<!-- 鲁米交互原型 · 单文件 artifact 的构建入口（npm run artifact:rumi）。
+     构建脚本会把打包后的 JS/CSS 内联进来，并去掉外层 html/head/body，
+     因为 Artifact 发布时自己会套一层页面骨架。 -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>鲁米交互原型</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/artifact/rumiTest.jsx"></script>
+  </body>
+</html>
