@@ -23,6 +23,7 @@ Usage:
     #    --host 127.0.0.1:8188
     #    --manifest scripts/assets_manifest_dante.csv   # alternate character line
     #    --preset dante      # medieval style preset for the Dante line
+    #    --preset rumi       # Persian miniature preset for the Rumi line
 """
 import argparse
 import csv
@@ -50,6 +51,7 @@ TYPE_MODIFIER = {
     "npc":  "人物立绘居中, 半写实人物面部, 解剖准确",
     "dufu": "人物立绘居中, 半写实人物面部, 解剖准确",
     "dante": "人物立绘居中, 半写实人物面部, 解剖准确",
+    "rumi": "人物立绘居中, 半写实人物面部, 解剖准确",
     # Note: prop does NOT use BASE_STYLE_ZH (see PROP_FULL_STYLE_ZH below).
     # The "工笔重彩" wording in BASE_STYLE makes the model paint figures onto
     # objects (turning a wine jar into a decorated vase). At CFG=1 (Z-Image
@@ -112,6 +114,33 @@ DANTE_EXTRA_NEG = (
     # nose amplifies it. Nose is described ONCE, briefly, in the manifest.
 )
 
+# ---- Rumi line: Persian miniature (Ilkhanid → Timurid manuscript painting) ----
+# 鲁米同时代（13 世纪）的波斯绘画存世很少；最接近的是 14 世纪初伊儿汗朝抄本插画
+# （如《史集》《大蒙古列王纪》），再往后是帖木儿朝的成熟细密画。取二者之间的画风。
+RUMI_BASE_STYLE_ZH = (
+    "波斯细密画风格, Persian miniature painting, "
+    "伊儿汗与帖木儿时期抄本插画, Ilkhanid and Timurid manuscript illustration, "
+    "平面构图多视点, flat multi-viewpoint composition, 细线勾勒, 矿物颜料平涂, "
+    "青金石蓝 绿松石 朱红 赭石 金箔主色, lapis lazuli turquoise vermilion ochre and gold palette, "
+    "13世纪呼罗珊与安纳托利亚服饰建筑器物考证, 半写实, 典雅宁静, "
+    "无可读文字, 无文字水印, 无现代元素, 高质量, 8k"
+)
+RUMI_PROP_FULL_STYLE_ZH = (
+    "波斯抄本器物插画风格, Persian manuscript object illustration, "
+    "平面2D插画, flat 2D illustration of a single 13th century Persian or Seljuk artifact, "
+    "黑色细线勾勒轮廓, fine ink line outlines, 矿物颜料平涂, flat mineral color, "
+    "no shading no gradient, no perspective no 3D rendering, no photo realism, "
+    "single object centered, plain paper background, "
+    "无任何人物, 无场景, 无装饰边框, 无文字水印, 无现代元素"
+)
+RUMI_EXTRA_NEG = (
+    ", Chinese elements, hanfu, Tang Dynasty style, Italian fresco, Gothic architecture, "
+    "European medieval, Arabic text, readable calligraphy, Ottoman 16th century costume, fez"
+    # 同但丁线的教训：CFG=1（Turbo/schnell）时 negative 整个被忽略，
+    # 真正起作用的约束要写在 positive 里（base style 已写「无可读文字」）。
+    # 1258「中国画师」那张需要中国元素——在 CSV 的 prompt 里正面写明即可。
+)
+
 # Style presets: base style for characters/backgrounds, full style for props,
 # and preset-specific extra negatives.
 STYLE_PRESETS = {
@@ -120,6 +149,11 @@ STYLE_PRESETS = {
         "base": DANTE_BASE_STYLE_ZH,
         "prop": DANTE_PROP_FULL_STYLE_ZH,
         "extra_neg": DANTE_EXTRA_NEG,
+    },
+    "rumi": {
+        "base": RUMI_BASE_STYLE_ZH,
+        "prop": RUMI_PROP_FULL_STYLE_ZH,
+        "extra_neg": RUMI_EXTRA_NEG,
     },
 }
 PROP_TRANSPARENT_TAIL = (
@@ -380,8 +414,8 @@ def main():
     p.add_argument("--manifest", default="scripts/assets_manifest.csv",
                    help="CSV manifest to read (e.g. scripts/assets_manifest_dante.csv)")
     p.add_argument("--preset", choices=list(STYLE_PRESETS), default="tang",
-                   help="Style preset: tang (杜甫线工笔重彩) / dante (中世纪湿壁画+泥金抄本)")
-    p.add_argument("--only", choices=["npc", "bg", "prop", "dufu", "dante"], help="Filter by type")
+                   help="Style preset: tang (杜甫线工笔重彩) / dante (中世纪湿壁画+泥金抄本) / rumi (波斯细密画)")
+    p.add_argument("--only", choices=["npc", "bg", "prop", "dufu", "dante", "rumi"], help="Filter by type")
     p.add_argument("--filter", help="Substring filter on output_path (e.g. '736')")
     p.add_argument("--skip-existing", action="store_true",
                    help="Skip rows whose output file already exists")
