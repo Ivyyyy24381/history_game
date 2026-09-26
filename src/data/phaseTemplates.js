@@ -714,6 +714,35 @@ export const PHASE_TEMPLATES = [
       consequence: "（出处与史实。）",
     }),
   },
+  {
+    type: "dark_explore",
+    name: "烛光摸索",
+    desc: "画面全黑，玩家只有一小圈烛光。摸到的每一处都给一句「片面但真实」的说法；摸够之后先猜整体，再点灯对照。适合「每个人只看到一部分真相」的材料。热区坐标是画面百分比。",
+    ref: "rumi · 1258_masnavi「黑屋里的东西」",
+    sketch: "pairs",
+    make: () => ({
+      id: "dark_" + uid(),
+      type: "dark_explore",
+      image: "",
+      legend: "",
+      situation: "（为什么看不见。）",
+      instruction: "移动烛光，摸一摸。",
+      candle: 8,
+      spots: [
+        { id: "s1", x: 30, y: 50, r: 6, part: "（摸到的部位，别直接说破）", claim: "（这个人的说法）" },
+        { id: "s2", x: 60, y: 50, r: 6, part: "（摸到的部位）", claim: "（这个人的说法）" },
+      ],
+      need: 2,
+      question: "（到底是什么？）",
+      options: [
+        { id: "parts", text: "（把各种说法当成几样东西）" },
+        { id: "whole", text: "（整体）" },
+      ],
+      actual: "whole",
+      reveal: "（点灯后的那一句。）",
+      consequence: "（出处与引申。）",
+    }),
+  },
 ];
 
 export default PHASE_TEMPLATES;

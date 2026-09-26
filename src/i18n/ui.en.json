@@ -391,5 +391,13 @@
   "rumi.link.commit": "Link it like this →",
   "rumi.link.hint": "Tap a card on the left, then one on the right. You can change a link.",
   "rumi.link.same": "Your lines match exactly.",
-  "rumi.link.diff": "Dashed lines are yours; solid lines are what actually happened."
+  "rumi.link.diff": "Dashed lines are yours; solid lines are what actually happened.",
+  "rumi.dark.touch": "Feel around in the dark",
+  "rumi.dark.instruction": "Move the candle and feel around in the dark.",
+  "rumi.dark.who": "The one who touched {part}",
+  "rumi.dark.judge": "Make a judgment →",
+  "rumi.dark.guessFirst": "Guess first, then light the lamp.",
+  "rumi.dark.lit": "With the lamp lit",
+  "rumi.dark.same": "You pieced the parts into a whole.",
+  "rumi.dark.diff": "Every piece was true — just incomplete."
 }

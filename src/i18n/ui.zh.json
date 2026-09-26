@@ -391,5 +391,13 @@
   "rumi.link.commit": "就这样连 →",
   "rumi.link.hint": "先点左边一张，再点右边一张。连好的可以改。",
   "rumi.link.same": "你的线和实际完全重合。",
-  "rumi.link.diff": "虚线是你连的，实线是实际的。"
+  "rumi.link.diff": "虚线是你连的，实线是实际的。",
+  "rumi.dark.touch": "在黑暗里摸一摸",
+  "rumi.dark.instruction": "移动烛光，在黑暗里摸一摸。",
+  "rumi.dark.who": "摸到{part}的人",
+  "rumi.dark.judge": "下个判断 →",
+  "rumi.dark.guessFirst": "先猜，再点灯。",
+  "rumi.dark.lit": "点灯之后",
+  "rumi.dark.same": "你把几块拼成了整体。",
+  "rumi.dark.diff": "每一块都是真的，只是都不完整。"
 }

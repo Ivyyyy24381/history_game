@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
+  <!-- 占位图：黑屋里的大象。待换成细密画风格正式图（坐标需在 event.json 里同步调整）。 -->
+  <defs>
+    <linearGradient id="wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3A2A1C"/><stop offset="1" stop-color="#1E150E"/>
+    </linearGradient>
+    <linearGradient id="hide" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#9C8C7C"/><stop offset="1" stop-color="#6E6053"/>
+    </linearGradient>
+    <pattern id="tile" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M40 0 L80 40 L40 80 L0 40 Z" fill="none" stroke="#5B4430" stroke-width="2"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="900" fill="url(#wall)"/>
+  <rect y="740" width="1600" height="160" fill="#2A1E14"/>
+  <rect y="740" width="1600" height="160" fill="url(#tile)" opacity="0.6"/>
+  <!-- 拱门 -->
+  <path d="M1250 740 V360 Q1350 230 1450 360 V740" fill="#140E09" stroke="#7A5A34" stroke-width="10"/>
+  <!-- 大象（侧身，面朝左） -->
+  <g stroke="#3E342B" stroke-width="6" stroke-linejoin="round">
+    <!-- 后腿 -->
+    <rect x="880" y="560" width="92" height="210" rx="30" fill="url(#hide)"/>
+    <rect x="1010" y="560" width="92" height="210" rx="30" fill="#7E7063"/>
+    <!-- 身体 -->
+    <path d="M470 430 Q520 250 760 240 Q1010 230 1120 360 Q1160 470 1110 590 Q1050 640 900 640 L600 640 Q480 620 470 520 Z" fill="url(#hide)"/>
+    <!-- 前腿 -->
+    <rect x="540" y="560" width="96" height="215" rx="30" fill="url(#hide)"/>
+    <rect x="670" y="560" width="92" height="210" rx="30" fill="#7E7063"/>
+    <!-- 头 -->
+    <path d="M300 330 Q330 220 450 230 Q560 240 560 370 Q560 470 470 500 Q380 510 330 450 Z" fill="url(#hide)"/>
+    <!-- 鼻子 -->
+    <path d="M320 420 Q250 520 270 640 Q280 720 240 760 Q260 790 300 760 Q335 700 330 620 Q325 530 380 470 Z" fill="url(#hide)"/>
+    <!-- 耳朵 -->
+    <path d="M440 250 Q610 230 630 380 Q640 520 520 520 Q460 470 450 400 Z" fill="#8E7F71"/>
+    <!-- 背上的鞍毯（「像王座」） -->
+    <path d="M700 250 Q840 225 980 262 L990 420 Q840 440 700 420 Z" fill="#8B2E2A" stroke="#C9A86A"/>
+    <path d="M710 400 L980 400" stroke="#C9A86A" stroke-width="8" fill="none"/>
+    <!-- 尾巴 -->
+    <path d="M1130 420 Q1175 500 1160 580" fill="none" stroke-width="8"/>
+  </g>
+  <circle cx="380" cy="330" r="10" fill="#1A1410"/>
+  <path d="M340 440 Q300 470 290 520" stroke="#EDE3D0" stroke-width="16" fill="none" stroke-linecap="round"/>
+</svg>
