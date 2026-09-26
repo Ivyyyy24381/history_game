@@ -11,6 +11,7 @@ import { asset } from "../utils/asset";
 import { POINTS, timedScore } from "../utils/scoring";
 import { GAME_ICONS } from "../data/icons";
 import ArtworkLabel from "./ArtworkLabel";
+import SilenceChoicePhase from "./phases/SilenceChoicePhase";
 
 /** 图标：只吃 path，颜色大小随调。来源 game-icons.net（CC BY 3.0，见 CREDITS.md）。 */
 function Icon({ name, size = 40, color = "#E8D9BE" }) {
@@ -1403,6 +1404,11 @@ export default function ScenePlayer({ sceneData, eventId, awardScore, onComplete
   // --- PROPHECY PARADOX (「预言」一件已经发生的事) ---
   if (currentPhase.type === "prophecy_paradox") {
     return <ProphecyParadoxPhase phase={currentPhase} onScore={award} onComplete={goToNextPhase} />;
+  }
+
+  // --- SILENCE CHOICE (鲁米 · 唯一的正确答案是不作答) ---
+  if (currentPhase.type === "silence_choice") {
+    return <SilenceChoicePhase phase={currentPhase} onScore={award} onComplete={goToNextPhase} />;
   }
 
   // --- PREDICT REVEAL (先猜，再对照。没有对错) ---

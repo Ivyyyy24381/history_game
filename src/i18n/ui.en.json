@@ -377,5 +377,13 @@
   "char.dante.epigraph": "“It is love that moves the sun and the other stars.” — the last line of the Divine Comedy",
   "char.dante.path": "Divina Commedia",
   "art.libTitle": "Art Library",
-  "art.libLede": "None of these were made for this game. People have been painting this poem for six hundred years. Tap one to see it large."
+  "art.libLede": "None of these were made for this game. People have been painting this poem for six hundred years. Tap one to see it large.",
+  "rumi.silence.he": "He",
+  "rumi.silence.you": "You",
+  "rumi.silence.exhausted": "The answers from the books have run out. He is still waiting.",
+  "rumi.silence.triedLabel": "What you tried",
+  "rumi.silence.none": "Nothing — you never opened your mouth.",
+  "rumi.silence.count": "{n}, all of them from books.",
+  "rumi.silence.waitedLabel": "What he was waiting for",
+  "rumi.silence.silence": "Silence."
 }

@@ -377,5 +377,13 @@
   "char.dante.epigraph": "「是爱，在推动太阳和其他的星辰。」——《神曲·天堂》最后一行",
   "char.dante.path": "Divina Commedia",
   "art.libTitle": "画作库",
-  "art.libLede": "游戏里这几幅画，都不是我们画的——是六百多年里，一代代人为这首诗画的。点开看大图。"
+  "art.libLede": "游戏里这几幅画，都不是我们画的——是六百多年里，一代代人为这首诗画的。点开看大图。",
+  "rumi.silence.he": "他",
+  "rumi.silence.you": "你",
+  "rumi.silence.exhausted": "书里的答案都用完了。他还在等。",
+  "rumi.silence.triedLabel": "你试过的回答",
+  "rumi.silence.none": "一句也没有——你从一开始就没有开口。",
+  "rumi.silence.count": "{n} 句，都是书上的话。",
+  "rumi.silence.waitedLabel": "他在等的",
+  "rumi.silence.silence": "沉默。"
 }

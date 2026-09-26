@@ -1,0 +1,46 @@
+{
+  "id": "1244_shams",
+  "title": "水池边的陌生人",
+  "year": "1244",
+  "type": "interactive",
+  "_note": "鲁米线垂直切片（交互原型）。背景图暂用主页宫殿图占位，待细密画风格的科尼亚场景图替换。",
+  "phases": [
+    {
+      "id": "books_in_pool",
+      "type": "predict_reveal",
+      "background": "/assets/home/hp_background_rumi.webp",
+      "situation": "1244 年 11 月，科尼亚。\n鲁米三十七岁，是城里最受尊敬的学者。一个衣衫破旧的游方者——大不里士来的沙姆斯——走到他面前，把他随身带着的几本书扔进了院子里的水池。",
+      "question": "接下来会怎样？",
+      "himLabel": "传说里是这样",
+      "options": [
+        { "id": "ruined", "text": "书泡烂了，鲁米勃然大怒，叫人把他赶走" },
+        { "id": "dry", "text": "沙姆斯把书一本本捞出来——书页竟然是干的" },
+        { "id": "dive", "text": "鲁米顾不上体面，跳进池子去救书" }
+      ],
+      "actual": "dry",
+      "sameNote": "你猜中了传说。但要紧的是：他为什么要这样做？",
+      "diffNote": "传说走的是另一条路——",
+      "reveal": "沙姆斯问：「你要的是书里的字，还是写书的人当时尝到的那样东西？」",
+      "consequence": "这是后世的传说，不是史实（见阿夫拉基《圣徒传》，写于鲁米去世几十年后），沙姆斯的这句话也是本作的改写。\n但传说抓住了这次相遇的分量：一个靠书本活着的学者，第一次被人问到了书的外面。"
+    },
+    {
+      "id": "what_do_you_know",
+      "type": "silence_choice",
+      "background": "/assets/home/hp_background_rumi.webp",
+      "legend": "传说 · 台词为本作改写",
+      "speaker": { "name": "沙姆斯" },
+      "situation": "沙姆斯没有走。他看着鲁米。",
+      "question": "「你读了这么多书——你自己，知道些什么？」",
+      "options": [
+        { "id": "commentary", "text": "「经典的每一家注释，我都能一字不差地背出来。」", "rebuttal": "「那是注释的人知道的。我问的是你。」" },
+        { "id": "father", "text": "「我父亲巴哈丁教过我：知识是通往真理的阶梯。」", "rebuttal": "「那是你父亲的阶梯。你自己爬过几级？」" },
+        { "id": "students", "text": "「我讲学十三年，满城的学生都来听我讲。」", "rebuttal": "「他们来听你背书。有谁听过你自己的声音？」" }
+      ],
+      "silenceSec": 10,
+      "firstSilenceSec": 30,
+      "exhaustedHint": "书里的答案都用完了。他还在等。",
+      "silenceReveal": "你没有回答。\n沙姆斯笑了：「这是你今天说得最真的一句。」",
+      "consequence": "此后几个月，鲁米几乎谢绝了所有学生，整日和沙姆斯闭门长谈。学生们又嫉妒又愤怒。\n这个一辈子讲经注经的学者，开始写诗——他后来那部卷帙浩繁的抒情诗集（三千多首加扎勒），署的不是自己的名字，而是沙姆斯的名字。"
+    }
+  ]
+}

@@ -659,6 +659,33 @@ export const PHASE_TEMPLATES = [
       },
     }),
   },
+  // ── 鲁米线新增（见 docs/DESIGN_VERBS.md「鲁米线新增」）──
+  {
+    type: "silence_choice",
+    name: "沉默作答",
+    desc: "选项全是引经据典的回答，每选一个对方当场驳回，一问一驳并排留在屏幕上。玩家一段时间不再作答，沉默本身就成了回答。只在「放下已有的答案」正是这段历史的要点时用。",
+    ref: "rumi · 1244_shams「你自己知道些什么？」",
+    sketch: "pairs",
+    make: () => ({
+      id: "silence_" + uid(),
+      type: "silence_choice",
+      background: "",
+      legend: "传说 · 台词为本作改写",
+      speaker: { name: "（提问的人）", portrait: "" },
+      situation: "（此刻的处境。）",
+      question: "（那个问题——书里找不到答案的问题。）",
+      options: [
+        { id: "a", text: "（书上说……）", rebuttal: "（他怎么驳回。）" },
+        { id: "b", text: "（老师说……）", rebuttal: "（他怎么驳回。）" },
+        { id: "c", text: "（我的名声……）", rebuttal: "（他怎么驳回。）" },
+      ],
+      silenceSec: 10,
+      firstSilenceSec: 30,
+      exhaustedHint: "书里的答案都用完了。他还在等。",
+      silenceReveal: "（沉默之后，他说了什么。）",
+      consequence: "（后来怎么样了。）",
+    }),
+  },
 ];
 
 export default PHASE_TEMPLATES;

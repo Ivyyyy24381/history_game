@@ -16,7 +16,10 @@ const CJK = /[㐀-鿿]/;
 const SKIP = new Set(["SceneEditor.jsx", "TimelineEditor.jsx", "EditorShell.jsx"]);
 const files = [join(ROOT, "src/App.jsx"),
   ...readdirSync(join(ROOT, "src/components")).filter((f) => f.endsWith(".jsx") && !SKIP.has(f))
-    .map((f) => join(ROOT, "src/components", f))];
+    .map((f) => join(ROOT, "src/components", f)),
+  // 新 phase 各自一个文件，放在 components/phases/
+  ...readdirSync(join(ROOT, "src/components/phases")).filter((f) => f.endsWith(".jsx"))
+    .map((f) => join(ROOT, "src/components/phases", f))];
 
 // JS 字符串字面量 → 真实字符（\uXXXX / \n / \" 等）
 const unescapeLiteral = (raw) => { try { return JSON.parse(`"${raw}"`); } catch { return raw; } };
