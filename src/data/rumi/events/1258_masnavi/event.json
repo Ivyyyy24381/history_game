@@ -1,0 +1,35 @@
+{
+  "id": "1258_masnavi",
+  "title": "芦笛之歌 · 寓言书架",
+  "year": "1258",
+  "type": "interactive",
+  "_note": "鲁米线垂直切片（交互原型）。《玛斯纳维》寓言：四人争葡萄、黑屋里的东西、中国画师与希腊画师。背景暂用主页宫殿图占位。引文据 Nicholson 英译（公有领域）由本作试译/概述。",
+  "phases": [
+    {
+      "id": "four_and_grapes",
+      "type": "link_match",
+      "background": "/assets/home/hp_background_rumi.webp",
+      "legend": "《玛斯纳维》卷二 · 寓言",
+      "situation": "四个旅伴——一个波斯人、一个阿拉伯人、一个突厥人、一个希腊人——路上有人施舍给他们一枚银币。\n四个人都想拿它买吃的，却吵得差点动起手来。",
+      "question": "他们各自想买什么？把每个人连到你认为他想要的东西上。",
+      "left": [
+        { "id": "persian", "who": "波斯人", "text": "「买 angūr（安古尔）！」" },
+        { "id": "arab", "who": "阿拉伯人", "text": "「不，要买 ʿinab（伊纳卜）！」" },
+        { "id": "turk", "who": "突厥人", "text": "「我要 üzüm（于祖姆）！」" },
+        { "id": "greek", "who": "希腊人", "text": "「买 istāfīl（伊斯塔菲勒）！」" }
+      ],
+      "right": [
+        { "id": "fig", "text": "无花果" },
+        { "id": "pomegranate", "text": "石榴" },
+        { "id": "grape", "text": "葡萄" },
+        { "id": "melon", "text": "甜瓜" }
+      ],
+      "answer": { "persian": "grape", "arab": "grape", "turk": "grape", "greek": "grape" },
+      "himLabel": "实际",
+      "sameNote": "你一眼看穿了：四个词，是同一样东西。",
+      "diffNote": "虚线是你连的，实线是实际的——四条实线落在同一个地方。",
+      "reveal": "四个词，都是「葡萄」。\n他们要的是同一串葡萄，只是说着四种不同的话。",
+      "consequence": "鲁米在《玛斯纳维》卷二里说：要是当时有一个懂许多语言的人在场，他会让四个人和好——用那一枚银币，买来四个人都想要的东西。\n鲁米自己就住在这样的城市。十三世纪的科尼亚，街上同时说着波斯语、阿拉伯语、突厥语和希腊语；鲁米用波斯语写作，也留下过夹着突厥语和希腊语的诗行。"
+    }
+  ]
+}

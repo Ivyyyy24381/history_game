@@ -385,5 +385,11 @@
   "rumi.silence.none": "一句也没有——你从一开始就没有开口。",
   "rumi.silence.count": "{n} 句，都是书上的话。",
   "rumi.silence.waitedLabel": "他在等的",
-  "rumi.silence.silence": "沉默。"
+  "rumi.silence.silence": "沉默。",
+  "rumi.link.you": "你连",
+  "rumi.link.actual": "实际",
+  "rumi.link.commit": "就这样连 →",
+  "rumi.link.hint": "先点左边一张，再点右边一张。连好的可以改。",
+  "rumi.link.same": "你的线和实际完全重合。",
+  "rumi.link.diff": "虚线是你连的，实线是实际的。"
 }

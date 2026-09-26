@@ -65,7 +65,7 @@ export default function SilenceChoicePhase({ phase, onScore, onComplete }) {
           <img src={asset(phase.speaker.portrait)} alt="" style={sc.portrait} />
         )}
 
-        <div style={{ ...kit.wrap, justifyContent: "flex-start", paddingTop: "5%" }}>
+        <div style={{ ...kit.wrap, justifyContent: "flex-start", paddingTop: "max(5%, 48px)" }}>
           {phase.situation && step === 0 && tried.length === 0 && (
             <div style={kit.situation}>{nb(phase.situation)}</div>
           )}

@@ -686,6 +686,34 @@ export const PHASE_TEMPLATES = [
       consequence: "（后来怎么样了。）",
     }),
   },
+  {
+    type: "link_match",
+    name: "连线对照",
+    desc: "玩家按自己的理解把左边连到右边（右边一张可被多条线连），提交后自己的线变虚线留在原地，实际的线用实线画上。适合「你以为是 A，其实是 B」的结构，不适合考记忆。",
+    ref: "rumi · 1258_masnavi「四人争葡萄」",
+    sketch: "pairs",
+    make: () => ({
+      id: "link_" + uid(),
+      type: "link_match",
+      background: "",
+      legend: "",
+      situation: "（处境。）",
+      question: "（让玩家连什么。）",
+      left: [
+        { id: "l1", who: "（谁）", text: "（他说的话）" },
+        { id: "l2", who: "（谁）", text: "（他说的话）" },
+      ],
+      right: [
+        { id: "r1", text: "（选项一）" },
+        { id: "r2", text: "（选项二）" },
+      ],
+      answer: { l1: "r1", l2: "r1" },
+      sameNote: "你的线和实际完全重合。",
+      diffNote: "虚线是你连的，实线是实际的。",
+      reveal: "（反转的那一句。）",
+      consequence: "（出处与史实。）",
+    }),
+  },
 ];
 
 export default PHASE_TEMPLATES;
