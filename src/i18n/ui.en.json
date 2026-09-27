@@ -474,5 +474,6 @@
   "rumi.birds.c.stone": "hit floating stones",
   "rumi.birds.c.darkLost": "lost in the dark",
   "rumi.birds.c.excuse": "left with an excuse",
-  "rumi.birds.orbs": "Light gathered in the Valley of Knowledge: {n} — it lit the path through the last valley."
+  "rumi.birds.orbs": "Light gathered in the Valley of Knowledge: {n} — it lit the path through the last valley.",
+  "rumi.scratch.mirrorCap": "In the mirror: "
 }

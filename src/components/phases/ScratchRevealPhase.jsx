@@ -11,7 +11,7 @@
 //
 // phase: {
 //   background, legend?, situation, instruction,
-//   mirrorImage（帘子拉开后映进镜子里的画）, mirrorFallback?（正式图缺失时用）, artCard?, threshold = 0.7, brush = 7（笔刷半径，占墙宽 %）,
+//   mirrorImage（帘子拉开后映进镜子里的画）, mirrorFallback?（正式图缺失时用）, mirrorKey?（查墙签的原路径）, artCard?, threshold = 0.7, brush = 7（笔刷半径，占墙宽 %）,
 //   polishedNote,
 //   question, options: [{ id, text }], actual,
 //   sameNote, diffNote, reveal, consequence
@@ -24,6 +24,7 @@ import { POINTS } from "../../utils/scoring";
 import usePrefersReducedMotion from "../../utils/usePrefersReducedMotion";
 import { kit } from "./phaseKit";
 import ArtCard from "./ArtCard";
+import { artworkFor } from "../ArtworkLabel";
 
 const GRID_X = 48, GRID_Y = 30; // 抽样估算磨亮了多少
 
@@ -214,6 +215,11 @@ export default function ScratchRevealPhase({ phase, onScore, onComplete }) {
         {step === 0 && (
           <button style={sr.kbd} onClick={rubBand}>{t("磨一下")}</button>
         )}
+        {/* 镜中画是真实古画时，墙下挂一行墙签（图缺失、退回占位图时不挂） */}
+        {step >= 2 && mirror === phase.mirrorImage && artworkFor(phase.mirrorKey) && (() => {
+          const art = artworkFor(phase.mirrorKey);
+          return <div style={sr.caption}>{t("镜中：")}{[art.title, art.artist, art.year, art.holder, art.license].filter(Boolean).join(" · ")}</div>;
+        })()}
 
         {step === 1 && (
           <div style={sr.panel}>
@@ -288,6 +294,10 @@ const sr = {
     background: "linear-gradient(110deg, rgba(255,255,255,0) 35%, rgba(255,255,255,0.35) 50%, rgba(255,255,255,0) 65%)",
     backgroundSize: "60% 100%", backgroundRepeat: "no-repeat", backgroundPosition: "-60% 0",
     mixBlendMode: "screen", pointerEvents: "none",
+  },
+  caption: {
+    position: "absolute", left: "50%", top: "48.5%", transform: "translateX(-50%)", zIndex: 12, width: "60%",
+    textAlign: "center", color: "rgba(233,220,194,0.85)", fontSize: 12, letterSpacing: 1, textShadow: "0 1px 6px rgba(0,0,0,0.9)",
   },
   kbd: {
     position: "absolute", right: "4%", bottom: "5%", zIndex: 14, minHeight: 44, padding: "8px 18px",

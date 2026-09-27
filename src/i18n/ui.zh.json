@@ -474,5 +474,6 @@
   "rumi.birds.c.stone": "撞上浮石",
   "rumi.birds.c.darkLost": "消失在黑暗里",
   "rumi.birds.c.excuse": "找借口离开",
-  "rumi.birds.orbs": "你在知识之谷收集的光：{n} 点——它们照亮了最后那一谷的路。"
+  "rumi.birds.orbs": "你在知识之谷收集的光：{n} 点——它们照亮了最后那一谷的路。",
+  "rumi.scratch.mirrorCap": "镜中："
 }

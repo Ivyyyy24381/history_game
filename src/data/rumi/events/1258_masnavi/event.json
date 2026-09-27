@@ -174,10 +174,7 @@
       "reveal": "苏丹先看中国画师的墙，看得入了迷；再转身看希腊画师的墙——对面那整幅画映在里面，随着光在流动。\n鲁米说：希腊画师就像修行的人，他们不堆砌学问，只把心磨亮，磨到能映出一切。\n——《玛斯纳维》卷一（本作概述）",
       "consequence": "但也别忘了：镜子里的那幅画，是中国画师一笔一笔画出来的。没有对面那面墙，镜子什么也映不出。\n在波斯诗歌里，「中国画师」本来就是巧夺天工的代名词；鲁米偏偏让一面什么也没画的墙赢了它。\n还有一个小秘密：「希腊人」在波斯语里叫「鲁姆人」（Rūmī），指的就是安纳托利亚一带——也正是「鲁米」这个名字的来历。",
       "mirrorFallback": "/assets/dufu/events/736_qizhao/backgrounds/taishan_summit.webp",
-      "artCard": {
-        "src": "/assets/rumi/art/xuanzong_flight_to_shu.webp",
-        "artKey": "/assets/rumi/art/xuanzong_flight_to_shu.webp"
-      }
+      "mirrorKey": "/assets/rumi/art/xuanzong_flight_to_shu.webp"
     }
   ]
 }
