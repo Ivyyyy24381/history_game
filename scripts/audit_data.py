@@ -201,6 +201,14 @@ def check_phase(line, eid, i, p):
         limit, items = p.get("limit"), p.get("items", [])
         if limit is not None and limit >= len(items):
             err(where, f"limit={limit} 但只有 {len(items)} 件，没得取舍")
+        # 图标块连标签大约占 12% 宽 × 14% 高，挨太近会糊成一团
+        # （英文标签比中文长，所以按英文的尺寸卡）
+        for i in range(len(items)):
+            for j in range(i + 1, len(items)):
+                a, b = items[i], items[j]
+                if abs(a.get("x", 0) - b.get("x", 0)) < 12 and abs(a.get("y", 0) - b.get("y", 0)) < 14:
+                    warn(where, f"图标 {a.get('id')} 和 {b.get('id')} 会互相压住"
+                                f"（{a.get('x')},{a.get('y')} / {b.get('x')},{b.get('y')}）")
 
     if t == "poem_compose":
         blanks = p.get("blanks", [])

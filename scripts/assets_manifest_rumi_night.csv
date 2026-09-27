@@ -1,0 +1,5 @@
+type,output_path,prompt,width,height,transparent
+npc,public/assets/rumi/npcs/night/inn_doorman.png,"13世纪大马士革的客栈伙计，三十岁男子，头缠深色头巾，粗布长袍外罩短褂，一手提着一盏小铜油灯，另一手抬起指向侧前方，被灯光从下方照亮，全身立绘含双脚，站在纯白的空白上，画面里只有这个人，isolated single figure on plain white, cut-out character sheet",768,1024,false
+npc,public/assets/rumi/npcs/night/mosque_elder.png,"13世纪大马士革的老人，七十岁，雪白长须，浅褐色斗篷，盘腿坐在地上，双手放在膝上，抬头说话，人物占满画面高度，被暖光照亮、面部清楚，坐姿全身，站在纯白的空白上，画面里只有这个人，isolated single figure on plain white, cut-out character sheet",768,1024,false
+npc,public/assets/rumi/npcs/night/bookseller.png,13世纪大马士革书商，五十岁男子，白头巾，深蓝长袍，正弯腰给店铺上最后一块门板，侧头回答问话，被灯光从下方照亮，夜色里的暖光，全身立绘含双脚，纯白背景单人，isolated figure on plain white,768,1024,false
+npc,public/assets/rumi/npcs/night/gate_guard.png,13世纪大马士革城门守卫，四十岁男子，铁盔与皮甲外罩深色斗篷，一手扶长矛，神情疲惫不耐烦，被灯光从下方照亮，夜色里的暖光，全身立绘含双脚，纯白背景单人，isolated figure on plain white,768,1024,false

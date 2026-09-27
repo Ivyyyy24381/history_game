@@ -10,7 +10,9 @@
 // phase: {
 //   image（整幅场景，16:9）, legend?, situation, instruction,
 //   candle = 8（烛光半径，占画面宽度 %）,
-//   spots: [{ id, x, y, r?（热区半径 %，默认 6）, part, who?, claim }],
+//   spots: [{ id, x, y, r?（热区半径 %，默认 6）, part, who?, claim,
+//            figure?（人物立绘，画在黑幕底下——烛光照到才现身）,
+//            figureH?（占画面高度 %，默认 26）, flip?（左右翻转）}],
 //   need（摸到几处才能下判断，默认全部）,
 //   question, options: [{ id, text }], actual,
 //   sameNote, diffNote, reveal, consequence
@@ -112,6 +114,25 @@ export default function DarkExplorePhase({ phase, onScore, onComplete }) {
       <div ref={stage} style={{ ...kit.stage, backgroundImage: `url(${asset(phase.image)})`, cursor: step === 0 ? "crosshair" : "default" }}
         onPointerMove={onPointer} onPointerDown={onPointer}>
         {/* 热区在黑幕下面；黑幕不吃指针事件，点击穿过去 */}
+        {/* 人物层：画在黑幕底下，烛光扫过才现身。
+            「提灯寻人」这一关四条线索都是某个人说的话，照过去却只有空墙，
+            那这一关就不成立了。大象那一关的热区是象的各个部位，没有 figure，
+            这一层自然就不画。 */}
+        {spots.map((s) => (s.figure ? (
+          <img
+            key={`fig-${s.id}`}
+            src={asset(s.figure)}
+            alt=""
+            aria-hidden="true"
+            style={{
+              ...de.figure,
+              left: `${s.x}%`,
+              top: `${s.y}%`,
+              height: `${s.figureH || 26}%`,
+              transform: `translate(-50%, -52%)${s.flip ? " scaleX(-1)" : ""}`,
+            }}
+          />
+        ) : null))}
         {step === 0 && spots.map((s, i) => (
           <button key={s.id} onClick={() => touch(s)} onFocus={() => moveTo(s.x, s.y)}
             aria-label={t("在黑暗里摸一摸") + ` ${i + 1}`}
@@ -204,6 +225,13 @@ export default function DarkExplorePhase({ phase, onScore, onComplete }) {
 }
 
 const de = {
+  // 人物贴在场景里：不要投影（黑幕下看不见），底部略微压暗和地面接住
+  figure: {
+    position: "absolute", zIndex: 4, pointerEvents: "none", userSelect: "none",
+    objectFit: "contain", objectPosition: "bottom",
+    // 油灯从下方照人：提亮一点、压一层暖调，否则在黑幕里看着像影子
+    filter: "brightness(1.14) saturate(1.05) sepia(0.12)",
+  },
   spot: {
     position: "absolute", zIndex: 5, aspectRatio: "1 / 1", transform: "translate(-50%, -50%)",
     borderRadius: "50%", border: "none", background: "transparent", cursor: "crosshair", padding: 0,

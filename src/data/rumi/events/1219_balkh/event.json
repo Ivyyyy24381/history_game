@@ -113,43 +113,43 @@
           "id": "manuscript",
           "icon": "manuscript",
           "name": "父亲的讲稿",
-          "x": 16,
-          "y": 30
+          "x": 10.0,
+          "y": 76.0
         },
         {
           "id": "codex",
           "icon": "codex",
           "name": "几本经书",
-          "x": 33,
-          "y": 18
+          "x": 24.0,
+          "y": 62.0
         },
         {
           "id": "waterskin",
           "icon": "waterskin",
           "name": "两只水囊",
-          "x": 50,
-          "y": 16
+          "x": 68.0,
+          "y": 62.0
         },
         {
           "id": "bread",
           "icon": "bread",
           "name": "一袋馕",
-          "x": 66,
-          "y": 20
+          "x": 80.0,
+          "y": 77.0
         },
         {
           "id": "jewel",
           "icon": "jewel",
           "name": "母亲的首饰盒",
-          "x": 18,
-          "y": 62
+          "x": 22.0,
+          "y": 89.0
         },
         {
           "id": "toy",
           "icon": "toy",
           "name": "你的木马",
-          "x": 30,
-          "y": 80
+          "x": 38.0,
+          "y": 84.0
         }
       ],
       "verdictDate": "此后数年",

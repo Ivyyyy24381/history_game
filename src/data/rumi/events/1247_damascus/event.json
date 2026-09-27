@@ -121,31 +121,40 @@
       "spots": [
         {
           "id": "inn",
-          "x": 16,
-          "y": 62,
+          "x": 9.0,
+          "y": 60.0,
           "part": "客栈门口",
-          "claim": "「一个戴黑毡帽的人？前几天好像见过……往北门去了。」"
+          "claim": "「一个戴黑毡帽的人？前几天好像见过……往北门去了。」",
+          "figure": "/assets/rumi/npcs/night/inn_doorman.webp",
+          "figureH": 30
         },
         {
           "id": "steps",
-          "x": 41,
-          "y": 70,
+          "x": 50.0,
+          "y": 53.0,
           "part": "清真寺的台阶",
-          "claim": "「他在这儿坐过一夜。天亮就走了。」"
+          "claim": "「他在这儿坐过一夜。天亮就走了。」",
+          "figure": "/assets/rumi/npcs/night/mosque_elder.webp",
+          "figureH": 20
         },
         {
           "id": "books",
-          "x": 63,
-          "y": 56,
+          "x": 23.0,
+          "y": 57.0,
           "part": "关了门的书店",
-          "claim": "「沙姆斯？没听过。你说的是哪个大不里士人？」"
+          "claim": "「沙姆斯？没听过。你说的是哪个大不里士人？」",
+          "figure": "/assets/rumi/npcs/night/bookseller.webp",
+          "figureH": 26,
+          "flip": true
         },
         {
           "id": "gate",
-          "x": 85,
-          "y": 66,
+          "x": 62.0,
+          "y": 63.0,
           "part": "城门",
-          "claim": "「每天进出几千人。谁记得住一个外乡人。」"
+          "claim": "「每天进出几千人。谁记得住一个外乡人。」",
+          "figure": "/assets/rumi/npcs/night/gate_guard.webp",
+          "figureH": 30
         }
       ],
       "need": 4,
