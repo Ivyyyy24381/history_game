@@ -7,61 +7,71 @@
   "phases": [
     {
       "id": "four_and_grapes",
-      "type": "link_match",
+      "type": "coin_market",
       "background": "/assets/home/hp_background_rumi.webp",
       "legend": "《玛斯纳维》卷二 · 寓言",
-      "situation": "四个旅伴——一个波斯人、一个阿拉伯人、一个突厥人、一个希腊人——路上有人施舍给他们一枚银币。\n四个人都想拿它买吃的，却吵得差点动起手来。",
-      "question": "他们各自想买什么？把每个人连到你认为他想要的东西上。",
-      "left": [
+      "situation": "四个旅伴——一个波斯人、一个阿拉伯人、一个突厥人、一个希腊人——路上有人施舍给他们一枚银币。四个人都想拿它买吃的，各喊各的，快要打起来了。你站在果摊前。",
+      "goal": "一枚银币，只够买一样。让四个人都满意。",
+      "travelers": [
         {
           "id": "persian",
           "who": "波斯人",
-          "text": "「买 angūr（安古尔）！」"
+          "word": "angūr",
+          "clue": "「angūr！长在藤上的那个！」",
+          "color": "#2F5D8A",
+          "hat": "turban"
         },
         {
           "id": "arab",
           "who": "阿拉伯人",
-          "text": "「不，要买 ʿinab（伊纳卜）！」"
+          "word": "ʿinab",
+          "clue": "「ʿinab！一串一串的，一颗一颗的！」",
+          "color": "#8A6A3A",
+          "hat": "headcloth"
         },
         {
           "id": "turk",
           "who": "突厥人",
-          "text": "「我要 üzüm（于祖姆）！」"
+          "word": "üzüm",
+          "clue": "「üzüm！紫的，晒干了更甜！」",
+          "color": "#6E3A2A",
+          "hat": "furcap"
         },
         {
           "id": "greek",
           "who": "希腊人",
-          "text": "「买 istāfīl（伊斯塔菲勒）！」"
+          "word": "istāfīl",
+          "clue": "「istāfīl！拿来酿酒的！」",
+          "color": "#3E5A3A",
+          "hat": "pilos"
         }
       ],
-      "right": [
+      "fruits": [
         {
           "id": "fig",
-          "text": "无花果"
-        },
-        {
-          "id": "pomegranate",
-          "text": "石榴"
-        },
-        {
-          "id": "grape",
-          "text": "葡萄"
+          "name": "无花果",
+          "kind": "fig"
         },
         {
           "id": "melon",
-          "text": "甜瓜"
+          "name": "甜瓜",
+          "kind": "melon"
+        },
+        {
+          "id": "grape",
+          "name": "葡萄",
+          "kind": "grape"
+        },
+        {
+          "id": "pomegranate",
+          "name": "石榴",
+          "kind": "pomegranate"
         }
       ],
-      "answer": {
-        "persian": "grape",
-        "arab": "grape",
-        "turk": "grape",
-        "greek": "grape"
-      },
-      "himLabel": "实际",
-      "sameNote": "你一眼看穿了：四个词，是同一样东西。",
-      "diffNote": "虚线是你连的，实线是实际的——四条实线落在同一个地方。",
-      "reveal": "四个词，都是「葡萄」。\n他们要的是同一串葡萄，只是说着四种不同的话。",
+      "answer": "grape",
+      "vendorLine": "摊主：「一枚银币，只够买一样。」",
+      "hint": "……四个人喊的，会不会是同一样东西？",
+      "reveal": "angūr、ʿinab、üzüm、istāfīl——四个词，都是「葡萄」。\n他们要的是同一串葡萄，只是说着四种不同的话。",
       "consequence": "鲁米在《玛斯纳维》卷二里说：要是当时有一个懂许多语言的人在场，他会让四个人和好——用那一枚银币，买来四个人都想要的东西。\n鲁米自己就住在这样的城市。十三世纪的科尼亚，街上同时说着波斯语、阿拉伯语、突厥语和希腊语；鲁米用波斯语写作，也留下过夹着突厥语和希腊语的诗行。"
     },
     {

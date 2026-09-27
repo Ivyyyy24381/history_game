@@ -22,13 +22,14 @@ function remap(v) {
 // 认知动词标记，和 docs/DESIGN_VERBS.md / lint 一致
 const VERB = {
   predict_reveal: ["▲", "先判断"], scratch_reveal: ["▲", "先判断"],
-  silence_choice: ["★", "改模型"], link_match: ["★", "改模型"],
+  silence_choice: ["★", "改模型"], link_match: ["★", "改模型"], coin_market: ["★", "改模型"],
+  pool_rescue: ["▲", "先判断"],
   dark_explore: ["◆", "辨证据"],
 };
 const NAMES = {
-  books_in_pool: "书落水池 · 先猜",
-  what_do_you_know: "「你自己知道些什么？」· 沉默作答",
-  four_and_grapes: "四人争葡萄 · 连线对照",
+  books_in_pool: "书落水池 · 只来得及救一本",
+  what_do_you_know: "「你自己知道些什么？」· 静下来",
+  four_and_grapes: "四人争葡萄 · 一枚银币",
   dark_house: "黑屋里的东西 · 烛光摸索",
   painters: "中国画师与希腊画师 · 磨墙拉帘",
 };
@@ -41,8 +42,8 @@ function Menu({ onPlay, score }) {
         <p className="rt-eyebrow">历史长河 · 鲁米线</p>
         <h1>交互原型试玩</h1>
         <p className="rt-lede">
-          五幕新交互，全部是「先自己判断，再和实际并排对照」。点任意一幕直接开始；
-          玩完一个事件会回到这里。图片都是占位图，正式的细密画还没画。
+          五幕新交互：救书、静坐、买葡萄、摸黑、磨墙。每一幕都是先动手、先判断，再和史实并排对照。
+          点任意一幕直接开始；玩完一个事件会回到这里。图片都是占位图，正式的细密画还没画。
         </p>
         {score > 0 && <p className="rt-score">本次试玩得分 <b>{score}</b></p>}
       </header>

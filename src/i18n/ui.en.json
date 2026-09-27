@@ -416,5 +416,22 @@
   "rumi.pool.dry": "All of them — and the pages are dry",
   "rumi.silence.noise": "“Someone else's words again.”",
   "rumi.silence.waiting": "… He is waiting.",
-  "rumi.silence.said": "What you said aloud"
+  "rumi.silence.said": "What you said aloud",
+  "rumi.market.vendor": "Vendor: “One silver coin buys one thing.”",
+  "rumi.market.split": "The vendor splits one bunch of grapes four ways.",
+  "rumi.market.refund": "The vendor rolls his eyes and hands your coin back.",
+  "rumi.market.payFirst": "Vendor: “Money first.”",
+  "rumi.market.goal": "One coin. Make all four happy.",
+  "rumi.market.meterLabel": "How heated the quarrel is",
+  "rumi.market.meter": "Quarrel",
+  "rumi.market.askAria": ": ask what he wants",
+  "rumi.market.asked": "asked",
+  "rumi.market.coinAria": "Silver coin: drag it onto a fruit to buy it, or tap the coin and then a fruit",
+  "rumi.market.tapFruit": "Tap a fruit to buy it",
+  "rumi.market.dragHint": "Drag the coin onto a fruit · or tap someone to ask",
+  "rumi.market.hint": "… Could all four be shouting about the same thing?",
+  "rumi.market.you": "You",
+  "rumi.market.tally": "Asked {a}, bought {b} time(s).",
+  "rumi.market.actually": "In fact",
+  "rumi.market.oneCoin": "One coin, one bunch of grapes, four happy people."
 }

@@ -416,5 +416,22 @@
   "rumi.pool.dry": "全部——而且书页是干的",
   "rumi.silence.noise": "「又是别人的话。」",
   "rumi.silence.waiting": "……他在等。",
-  "rumi.silence.said": "你说出口的"
+  "rumi.silence.said": "你说出口的",
+  "rumi.market.vendor": "摊主：「一枚银币，只够买一样。」",
+  "rumi.market.split": "摊主把一串葡萄掰成了四份。",
+  "rumi.market.refund": "摊主翻了个白眼，把银币退给了你。",
+  "rumi.market.payFirst": "摊主：「先把钱拿出来。」",
+  "rumi.market.goal": "一枚银币。让四个人都满意。",
+  "rumi.market.meterLabel": "争吵程度",
+  "rumi.market.meter": "争吵",
+  "rumi.market.askAria": "：问问他要的是什么",
+  "rumi.market.asked": "问过",
+  "rumi.market.coinAria": "银币：拖到一样水果上买下它，或者点一下银币再点水果",
+  "rumi.market.tapFruit": "点一样水果买下它",
+  "rumi.market.dragHint": "拖动银币到水果上 · 或点人问问",
+  "rumi.market.hint": "……四个人喊的，会不会是同一样东西？",
+  "rumi.market.you": "你",
+  "rumi.market.tally": "问了 {a} 个人，买了 {b} 次。",
+  "rumi.market.actually": "其实",
+  "rumi.market.oneCoin": "一枚银币，一串葡萄，四个人都满意。"
 }

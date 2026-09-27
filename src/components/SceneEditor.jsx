@@ -1080,6 +1080,7 @@ export default function SceneEditor({ initialEventId, initialLine, onExit }) {
                 <option value="dark_explore">{"◆ 烛光摸索 (dark_explore)"}</option>
                 <option value="scratch_reveal">{"▲ 磨墙拉帘 (scratch_reveal)"}</option>
                 <option value="pool_rescue">{"▲ 水中救书 (pool_rescue)"}</option>
+                <option value="coin_market">{"★ 一枚银币 (coin_market)"}</option>
                 <option value="echo_portal">{"\u{1F4DC} \u8F6C\u573A\u00B7\u795E\u66F2 (echo_portal)"}</option>
                 <option value="inferno_placement">{"\u{1F5FA} \u5B89\u653E\u4E09\u754C (inferno_placement)"}</option>
                 <option value="comedy_encounter">{"\u{1F464} \u91CD\u9022 (comedy_encounter)"}</option>

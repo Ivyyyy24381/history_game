@@ -34,7 +34,8 @@ const GENERATE = new Set(["predict_reveal", "poem_compose", "explain_by_building
                           "scratch_reveal", "pool_rescue"]);                    // 先产出一个判断
 const EVIDENCE = new Set(["evidence_select", "click_points", "exam", "dark_explore"]);         // 在材料里做区分
 const REVISE   = new Set(["inferno_placement", "comedy_encounter", "commit_then_reveal",
-                          "prophecy_paradox", "silence_choice", "link_match"]);                                // 拿自己的答案去对照
+                          "prophecy_paradox", "silence_choice", "link_match",
+                          "coin_market"]);                                // 拿自己的答案去对照
 // 注：contrapasso(build) 和 explain_by_building 提交后也做「你 / 但丁」并列对照，
 // 但它们的主动作是「先造出一个东西」，所以归 generate，不重复计入 revise。
 const DEXTERITY = new Set(["sliding_puzzle", "escape_game", "minigame", "dialogue_branch"]); // 手速/包装
