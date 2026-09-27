@@ -441,5 +441,13 @@
   "rumi.eaves.pick": "From what you heard yourself, pick the {n} lines that really show this.",
   "rumi.eaves.supports": "Shows it",
   "rumi.eaves.irrelevant": "True, but doesn't show it",
-  "rumi.eaves.submit": "These ones →"
+  "rumi.eaves.submit": "These ones →",
+  "rumi.birds.kbd": "Use the arrow keys to lead the flock",
+  "rumi.birds.valley": "Valley {n}",
+  "rumi.birds.count": "Birds",
+  "rumi.birds.hoopoe": "Hoopoe",
+  "rumi.birds.reply": "What does the hoopoe say?",
+  "rumi.birds.hint": "You are the hoopoe. Move the mouse to lead the flock.",
+  "rumi.birds.look": "Guess first, then look down at the lake.",
+  "rumi.birds.lake": "In the lake"
 }

@@ -441,5 +441,13 @@
   "rumi.eaves.pick": "从你亲耳听到的话里，挑出 {n} 句真能说明这一点的。",
   "rumi.eaves.supports": "能说明",
   "rumi.eaves.irrelevant": "真的，但说明不了",
-  "rumi.eaves.submit": "就是这几句 →"
+  "rumi.eaves.submit": "就是这几句 →",
+  "rumi.birds.kbd": "用方向键带着鸟群飞",
+  "rumi.birds.valley": "第 {n} 谷",
+  "rumi.birds.count": "鸟",
+  "rumi.birds.hoopoe": "戴胜",
+  "rumi.birds.reply": "戴胜怎么回？",
+  "rumi.birds.hint": "你是戴胜鸟。移动鼠标，带着鸟群飞。",
+  "rumi.birds.look": "先猜，再低头看湖。",
+  "rumi.birds.lake": "湖里"
 }
