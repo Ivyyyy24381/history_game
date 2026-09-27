@@ -32,7 +32,7 @@ const BROWSE  = new Set(["explore", "map_travel"]);                            /
 const GENERATE = new Set(["predict_reveal", "poem_compose", "explain_by_building",
                           "contrapasso", "forced_choice", "flee_florence", "petition",
                           "scratch_reveal", "pool_rescue"]);                    // 先产出一个判断
-const EVIDENCE = new Set(["evidence_select", "click_points", "exam", "dark_explore"]);         // 在材料里做区分
+const EVIDENCE = new Set(["evidence_select", "click_points", "exam", "dark_explore", "eavesdrop"]);         // 在材料里做区分
 const REVISE   = new Set(["inferno_placement", "comedy_encounter", "commit_then_reveal",
                           "prophecy_paradox", "silence_choice", "link_match",
                           "coin_market"]);                                // 拿自己的答案去对照

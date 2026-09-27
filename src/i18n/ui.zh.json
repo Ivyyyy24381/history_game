@@ -433,5 +433,13 @@
   "rumi.market.you": "你",
   "rumi.market.tally": "问了 {a} 个人，买了 {b} 次。",
   "rumi.market.actually": "其实",
-  "rumi.market.oneCoin": "一枚银币，一串葡萄，四个人都满意。"
+  "rumi.market.oneCoin": "一枚银币，一串葡萄，四个人都满意。",
+  "rumi.eaves.kbd": "用左右方向键沿着墙挪动耳朵",
+  "rumi.eaves.instruction": "把耳朵贴在墙上，左右挪动。",
+  "rumi.eaves.noted": "记下",
+  "rumi.eaves.heard": "你听到的",
+  "rumi.eaves.pick": "从你亲耳听到的话里，挑出 {n} 句真能说明这一点的。",
+  "rumi.eaves.supports": "能说明",
+  "rumi.eaves.irrelevant": "真的，但说明不了",
+  "rumi.eaves.submit": "就是这几句 →"
 }

@@ -433,5 +433,13 @@
   "rumi.market.you": "You",
   "rumi.market.tally": "Asked {a}, bought {b} time(s).",
   "rumi.market.actually": "In fact",
-  "rumi.market.oneCoin": "One coin, one bunch of grapes, four happy people."
+  "rumi.market.oneCoin": "One coin, one bunch of grapes, four happy people.",
+  "rumi.eaves.kbd": "Use the left and right arrow keys to move your ear along the wall",
+  "rumi.eaves.instruction": "Press your ear to the wall and move it left and right.",
+  "rumi.eaves.noted": "Noted",
+  "rumi.eaves.heard": "What you heard",
+  "rumi.eaves.pick": "From what you heard yourself, pick the {n} lines that really show this.",
+  "rumi.eaves.supports": "Shows it",
+  "rumi.eaves.irrelevant": "True, but doesn't show it",
+  "rumi.eaves.submit": "These ones →"
 }

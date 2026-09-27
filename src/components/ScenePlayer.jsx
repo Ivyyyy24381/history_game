@@ -17,6 +17,7 @@ import DarkExplorePhase from "./phases/DarkExplorePhase";
 import ScratchRevealPhase from "./phases/ScratchRevealPhase";
 import PoolRescuePhase from "./phases/PoolRescuePhase";
 import CoinMarketPhase from "./phases/CoinMarketPhase";
+import EavesdropPhase from "./phases/EavesdropPhase";
 
 /** 图标：只吃 path，颜色大小随调。来源 game-icons.net（CC BY 3.0，见 CREDITS.md）。 */
 function Icon({ name, size = 40, color = "#E8D9BE" }) {
@@ -1424,6 +1425,11 @@ export default function ScenePlayer({ sceneData, eventId, awardScore, onComplete
   // --- DARK EXPLORE (黑屋里只有一小圈烛光：摸 → 猜 → 点灯对照) ---
   if (currentPhase.type === "dark_explore") {
     return <DarkExplorePhase phase={currentPhase} onScore={award} onComplete={goToNextPhase} />;
+  }
+
+  // --- EAVESDROP (贴墙偷听：挪耳朵 → 记下 → 下判断) ---
+  if (currentPhase.type === "eavesdrop") {
+    return <EavesdropPhase phase={currentPhase} onScore={award} onComplete={goToNextPhase} />;
   }
 
   // --- COIN MARKET (一枚银币，四个吵架的人：问线索 → 试买 → 修正) ---
