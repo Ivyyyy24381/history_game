@@ -11,6 +11,14 @@ public/ 下的正式资产不动。
 
 产出：.artifact-assets/<原路径>，build_artifact.mjs 找得到就优先用它。
 """
+import sys
+
+# Windows 上 npm 起的 python 默认是 cp1252，print 中文会直接抛 UnicodeEncodeError，
+# 把整条 npm script 带崩。这里显式把标准输出改成 utf-8，不依赖环境变量。
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+
 import argparse
 import json
 import re

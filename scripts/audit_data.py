@@ -8,6 +8,14 @@ lint_phases.mjs 管的是「这一幕算不算认知动作」，这个脚本管�
     python scripts/audit_data.py            # 全部故事线
     python scripts/audit_data.py rumi       # 只看一条
 """
+import sys
+
+# Windows 上 npm 起的 python 默认是 cp1252，print 中文会直接抛 UnicodeEncodeError，
+# 把整条 npm script 带崩。这里显式把标准输出改成 utf-8，不依赖环境变量。
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+
 import json
 import re
 import sys
