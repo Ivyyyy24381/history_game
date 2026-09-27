@@ -22,6 +22,7 @@ import { asset } from "../../utils/asset";
 import { POINTS } from "../../utils/scoring";
 import usePrefersReducedMotion from "../../utils/usePrefersReducedMotion";
 import { kit } from "./phaseKit";
+import ArtCard from "./ArtCard";
 
 export default function DarkExplorePhase({ phase, onScore, onComplete }) {
   const spots = phase.spots || [];
@@ -191,6 +192,7 @@ export default function DarkExplorePhase({ phase, onScore, onComplete }) {
             ) : (
               <>
                 {phase.consequence && <div style={kit.consequence}>{nb(phase.consequence)}</div>}
+                {phase.artCard && <ArtCard src={phase.artCard} />}
                 <button style={kit.go} onClick={onComplete}>{t("继续 →")}</button>
               </>
             )}

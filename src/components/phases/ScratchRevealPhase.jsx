@@ -11,7 +11,7 @@
 //
 // phase: {
 //   background, legend?, situation, instruction,
-//   mirrorImage（帘子拉开后映进镜子里的画）, threshold = 0.7, brush = 7（笔刷半径，占墙宽 %）,
+//   mirrorImage（帘子拉开后映进镜子里的画）, mirrorFallback?（正式图缺失时用）, artCard?, threshold = 0.7, brush = 7（笔刷半径，占墙宽 %）,
 //   polishedNote,
 //   question, options: [{ id, text }], actual,
 //   sameNote, diffNote, reveal, consequence
@@ -23,6 +23,7 @@ import { asset } from "../../utils/asset";
 import { POINTS } from "../../utils/scoring";
 import usePrefersReducedMotion from "../../utils/usePrefersReducedMotion";
 import { kit } from "./phaseKit";
+import ArtCard from "./ArtCard";
 
 const GRID_X = 48, GRID_Y = 30; // 抽样估算磨亮了多少
 
@@ -57,6 +58,14 @@ export default function ScratchRevealPhase({ phase, onScore, onComplete }) {
   const [step, setStep] = useState(0); // 0 磨 · 1 猜 · 2 拉帘对照 · 3 后来
   const [progress, setProgress] = useState(0);
   const [mine, setMine] = useState(null);
+  // 镜中画：正式图（真实古画）还没放进 public/ 时，退回 mirrorFallback
+  const [mirror, setMirror] = useState(phase.mirrorImage);
+  useEffect(() => {
+    if (!phase.mirrorImage || !phase.mirrorFallback) return;
+    const im = new Image();
+    im.onerror = () => setMirror(phase.mirrorFallback);
+    im.src = asset(phase.mirrorImage);
+  }, [phase.mirrorImage, phase.mirrorFallback]);
   const wall = useRef(null);
   const canvas = useRef(null);
   const drawing = useRef(false);
@@ -187,7 +196,7 @@ export default function ScratchRevealPhase({ phase, onScore, onComplete }) {
           <div style={{ ...sr.layer, ...sr.curtainReflection, opacity: open ? 0 : 1, transition: fade }} />
           <div style={{
             ...sr.layer,
-            backgroundImage: `url(${asset(phase.mirrorImage)})`,
+            backgroundImage: `url(${asset(mirror)})`,
             transform: "scaleX(-1)",
             filter: "brightness(1.08) saturate(1.12)",
             opacity: open ? 1 : 0, transition: fade,
@@ -241,6 +250,7 @@ export default function ScratchRevealPhase({ phase, onScore, onComplete }) {
             ) : (
               <>
                 {phase.consequence && <div style={kit.consequence}>{nb(phase.consequence)}</div>}
+                {phase.artCard && <ArtCard src={phase.artCard} />}
                 <button style={kit.go} onClick={onComplete}>{t("继续 →")}</button>
               </>
             )}

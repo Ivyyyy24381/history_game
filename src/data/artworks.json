@@ -28,5 +28,37 @@
     "year": "1861 年（《地狱》插图初版）",
     "source": "Wikimedia Commons",
     "license": "公有领域"
+  },
+  "/assets/rumi/art/concourse_of_birds.webp": {
+    "title": "《百鸟会议》（The Concourse of the Birds），《鸟的语言》抄本第 11 页",
+    "artist": "哈比布拉（Habiballah of Sava）",
+    "year": "约 1600 年",
+    "holder": "大都会艺术博物馆，馆藏号 63.210.11",
+    "source": "The Met Open Access（collectionapi 标明 isPublicDomain）",
+    "license": "公有领域"
+  },
+  "/assets/rumi/art/xuanzong_flight_to_shu.webp": {
+    "title": "《明皇幸蜀图》（Emperor Xuanzong's Flight to Shu）",
+    "artist": "佚名",
+    "year": "12 世纪中期（中国）",
+    "holder": "大都会艺术博物馆，馆藏号 41.138",
+    "source": "The Met Open Access（collectionapi 标明 isPublicDomain）",
+    "license": "公有领域"
+  },
+  "/assets/rumi/art/elephant_alam_guman.webp": {
+    "title": "《大象阿拉姆·古曼像》（Portrait of the Elephant 'Alam Guman）",
+    "artist": "传 比契特尔（Bichitr）",
+    "year": "约 1640 年（莫卧儿王朝）",
+    "holder": "大都会艺术博物馆，馆藏号 1996.98a",
+    "source": "The Met Open Access（collectionapi 标明 isPublicDomain）",
+    "license": "公有领域"
+  },
+  "/assets/rumi/art/dancing_dervishes.webp": {
+    "title": "《旋舞的托钵僧》（Dancing Dervishes），哈菲兹《诗集》插页",
+    "artist": "佚名（伊朗）",
+    "year": "约 1480 年",
+    "holder": "大都会艺术博物馆，馆藏号 17.81.4",
+    "source": "The Met Open Access（collectionapi 标明 isPublicDomain）",
+    "license": "公有领域"
   }
 }

@@ -17,3 +17,4 @@ _to_delete/
 .editor-backups/
 assets_src/png_masters/
 dist-artifact/
+public/assets/rumi/art/*.jpg

@@ -21,6 +21,7 @@ import { asset } from "../../utils/asset";
 import { POINTS } from "../../utils/scoring";
 import usePrefersReducedMotion from "../../utils/usePrefersReducedMotion";
 import { kit } from "./phaseKit";
+import ArtCard from "./ArtCard";
 import { Traveler, Keepsake } from "./figures";
 
 export default function ProcessionPhase({ phase, onScore, onComplete }) {
@@ -206,7 +207,7 @@ export default function ProcessionPhase({ phase, onScore, onComplete }) {
             {phase.reveal && <div style={{ ...kit.reveal, fontSize: "clamp(13px, 1.1vw, 18px)" }}>{nb(phase.reveal)}</div>}
             {step === 3
               ? <button style={kit.go} onClick={() => setStep(4)}>{t("后来呢 →")}</button>
-              : <>{phase.consequence && <div style={kit.consequence}>{nb(phase.consequence)}</div>}<button style={kit.go} onClick={onComplete}>{t("继续 →")}</button></>}
+              : <>{phase.consequence && <div style={kit.consequence}>{nb(phase.consequence)}</div>}{phase.artCard && <ArtCard src={phase.artCard} />}<button style={kit.go} onClick={onComplete}>{t("继续 →")}</button></>}
           </div>
         )}
         <style>{`
