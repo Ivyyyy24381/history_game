@@ -15,7 +15,8 @@ const MAP = (typeof window !== "undefined" && window.__ASSET_MAP__) || {};
 function remap(v) {
   if (typeof v === "string") return MAP[v] || v;
   if (Array.isArray(v)) return v.map(remap);
-  if (v && typeof v === "object") return Object.fromEntries(Object.entries(v).map(([k, x]) => [k, remap(x)]));
+  // artKey 是查墙签用的原路径，不换成 data: URI
+  if (v && typeof v === "object") return Object.fromEntries(Object.entries(v).map(([k, x]) => [k, k === "artKey" ? x : remap(x)]));
   return v;
 }
 
