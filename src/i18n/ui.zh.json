@@ -449,5 +449,11 @@
   "rumi.birds.reply": "戴胜怎么回？",
   "rumi.birds.hint": "你是戴胜鸟。移动鼠标，带着鸟群飞。",
   "rumi.birds.look": "先猜，再低头看湖。",
-  "rumi.birds.lake": "湖里"
+  "rumi.birds.lake": "湖里",
+  "rumi.proc.armed": "点一个人，把信物还给他",
+  "rumi.proc.hint": "把每样信物拖到当年给他的那个人身上。",
+  "rumi.proc.next": "第二天清晨 →",
+  "rumi.proc.count": "送葬的人",
+  "rumi.proc.hold": "按住：送他一程",
+  "rumi.proc.source": "据后世传记"
 }

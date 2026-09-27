@@ -74,3 +74,33 @@ export function Traveler({ hat, color, mood, beard, beardColor = "#3E2A1E", clot
     </svg>
   );
 }
+
+// ———— 画：小物件（回忆的信物） ————
+// kind: book | lamp | question | hammer | pen
+export function Keepsake({ kind, size = 56 }) {
+  const common = { width: size, height: size, viewBox: "0 0 64 64", "aria-hidden": true };
+  if (kind === "book") return (
+    <svg {...common}><rect x="12" y="10" width="40" height="46" rx="3" fill="#5A2E2A" stroke="#2E1614" strokeWidth="1.5" />
+      <rect x="16" y="14" width="32" height="38" rx="2" fill="none" stroke="#D9BB7E" strokeWidth="1.5" />
+      <path d="M32 22 L38 32 L32 42 L26 32 Z" fill="#D9BB7E" /></svg>
+  );
+  if (kind === "lamp") return (
+    <svg {...common}><path d="M10 44 C14 34 44 34 54 40 L46 46 C36 50 18 50 10 44 Z" fill="#B4762F" stroke="#6E4418" strokeWidth="1.5" />
+      <path d="M50 40 C56 36 58 32 56 28" stroke="#6E4418" strokeWidth="2" fill="none" />
+      <path d="M52 26 C56 18 56 14 52 8 C48 14 48 18 52 26 Z" fill="#FFD27A" /></svg>
+  );
+  if (kind === "question") return (
+    <svg {...common}><path d="M8 12 H56 V42 H30 L18 54 V42 H8 Z" fill="#F4ECDC" stroke="#8C7A5A" strokeWidth="1.5" />
+      <text x="32" y="36" textAnchor="middle" fontSize="24" fill="#6E3A2A" fontFamily="serif">?</text></svg>
+  );
+  if (kind === "hammer") return (
+    <svg {...common}><rect x="29" y="22" width="6" height="36" rx="2" fill="#8A6438" />
+      <rect x="16" y="10" width="32" height="14" rx="3" fill="#8C8F94" stroke="#4E5256" strokeWidth="1.5" />
+      <circle cx="50" cy="44" r="5" fill="#E9C46A" /></svg>
+  );
+  return ( // pen
+    <svg {...common}><path d="M14 54 L46 10 L52 14 L20 58 Z" fill="#C9A86A" stroke="#6E5A2E" strokeWidth="1.5" />
+      <path d="M14 54 L12 60 L20 58 Z" fill="#2B2118" />
+      <circle cx="50" cy="52" r="7" fill="#1E2A3A" /></svg>
+  );
+}

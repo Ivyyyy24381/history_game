@@ -1,0 +1,156 @@
+{
+  "id": "1273_wedding",
+  "title": "婚礼之夜",
+  "year": "1273",
+  "type": "interactive",
+  "_note": "鲁米线原型：回忆信物 + 送葬队伍。人物为 SVG 剪影占位。",
+  "phases": [
+    {
+      "id": "wedding_night",
+      "type": "procession",
+      "background": "/assets/home/hp_background_rumi.webp",
+      "legend": "台词为本作改写 · 送葬场面据阿夫拉基《圣徒传》",
+      "situation": "1273 年冬，科尼亚。鲁米病了。他对身边的人说：不要哭，这是我的婚礼。病榻前摆着几样东西——每一样，都是一路上有人给他的。",
+      "people": [
+        {
+          "id": "attar",
+          "name": "阿塔尔",
+          "where": "1220 · 内沙布尔",
+          "hat": "bigturban",
+          "color": "#6E5A3A",
+          "beardColor": "#E8E2D6",
+          "keepsake": "book",
+          "line": "「这孩子将来，会在世上点起一把火。」"
+        },
+        {
+          "id": "burhan",
+          "name": "布尔汉丁",
+          "where": "1233 · 闭关",
+          "hat": "turban",
+          "color": "#5A5A4A",
+          "beardColor": "#9A948A",
+          "keepsake": "lamp",
+          "line": "「现在你身上，有了你父亲的那样东西。」"
+        },
+        {
+          "id": "shams",
+          "name": "沙姆斯",
+          "where": "1244 · 水池边",
+          "hat": "feltcap",
+          "color": "#24201E",
+          "keepsake": "question",
+          "line": "「你自己，知道些什么？」"
+        },
+        {
+          "id": "salah",
+          "name": "萨拉丁",
+          "where": "1250 · 金匠街",
+          "hat": "furcap",
+          "color": "#8A6438",
+          "keepsake": "hammer",
+          "line": "「我不会读书，我只会敲。」"
+        },
+        {
+          "id": "husam",
+          "name": "胡萨姆丁",
+          "where": "1258 · 书房",
+          "hat": "bigturban",
+          "color": "#4A6A7A",
+          "keepsake": "pen",
+          "line": "「老师，您说，我来写。」",
+          "walks": true
+        }
+      ],
+      "keepsakes": [
+        {
+          "id": "hammer",
+          "kind": "hammer",
+          "label": "一把小锤"
+        },
+        {
+          "id": "question",
+          "kind": "question",
+          "label": "一个问题"
+        },
+        {
+          "id": "pen",
+          "kind": "pen",
+          "label": "一支芦苇笔"
+        },
+        {
+          "id": "book",
+          "kind": "book",
+          "label": "一本旧书"
+        },
+        {
+          "id": "lamp",
+          "kind": "lamp",
+          "label": "一盏油灯"
+        }
+      ],
+      "walkPrompt": "1273 年 12 月 17 日，鲁米去世。第二天清晨，送葬的队伍出发了。",
+      "mourners": [
+        {
+          "label": "儿子苏丹·瓦拉德",
+          "hat": "turban",
+          "color": "#2F4A5A"
+        },
+        {
+          "label": "经学院的学生们",
+          "hat": "bigturban",
+          "color": "#3A4A6A"
+        },
+        {
+          "label": "基督徒修士",
+          "hat": "hood",
+          "color": "#24201E",
+          "cloth": "#1A1614"
+        },
+        {
+          "label": "犹太拉比",
+          "hat": "kippah",
+          "color": "#2E3A5A"
+        },
+        {
+          "label": "希腊石匠",
+          "hat": "pilos",
+          "color": "#5A4A3A"
+        },
+        {
+          "label": "突厥士兵",
+          "hat": "furcap",
+          "color": "#6E3A2A"
+        },
+        {
+          "label": "亚美尼亚妇人",
+          "hat": "veil",
+          "color": "#6A2E3A",
+          "cloth": "#3A2A4A"
+        },
+        {
+          "label": "波斯商人",
+          "hat": "turban",
+          "color": "#8A6A3A"
+        }
+      ],
+      "question": "送葬的队伍里，有基督徒，也有犹太人。他们为什么也来了？",
+      "options": [
+        {
+          "id": "order",
+          "text": "苏丹下令，全城的人都要来"
+        },
+        {
+          "id": "teacher",
+          "text": "他们觉得，鲁米也是自己的老师"
+        },
+        {
+          "id": "crowd",
+          "text": "只是来看热闹"
+        }
+      ],
+      "actual": "teacher",
+      "reveal": "据阿夫拉基记载，有人问他们为何而来，他们大意是说：「我们从他身上，懂得了我们自己经书里的道理。」",
+      "consequence": "科尼亚当时住着突厥人、波斯人、希腊人、亚美尼亚人和犹太人——就像那四个争葡萄的旅伴，说着不同的话。鲁米讲的寓言，谁都听得懂。\n鲁米管自己的死叫「婚礼之夜」。七百多年后，每年 12 月 17 日，科尼亚还在纪念这一夜。\n同一年，远在东方，襄阳在蒙古大军的围困中陷落。"
+    }
+  ]
+}

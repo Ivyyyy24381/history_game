@@ -1083,6 +1083,7 @@ export default function SceneEditor({ initialEventId, initialLine, onExit }) {
                 <option value="coin_market">{"★ 一枚银币 (coin_market)"}</option>
                 <option value="eavesdrop">{"◆ 贴墙偷听 (eavesdrop)"}</option>
                 <option value="bird_flight">{"▲ 百鸟飞越七谷 (bird_flight)"}</option>
+                <option value="procession">{"★ 信物与送葬 (procession)"}</option>
                 <option value="echo_portal">{"\u{1F4DC} \u8F6C\u573A\u00B7\u795E\u66F2 (echo_portal)"}</option>
                 <option value="inferno_placement">{"\u{1F5FA} \u5B89\u653E\u4E09\u754C (inferno_placement)"}</option>
                 <option value="comedy_encounter">{"\u{1F464} \u91CD\u9022 (comedy_encounter)"}</option>

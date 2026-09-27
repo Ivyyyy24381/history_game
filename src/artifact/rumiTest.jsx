@@ -23,10 +23,14 @@ function remap(v) {
 const VERB = {
   predict_reveal: ["▲", "先判断"], scratch_reveal: ["▲", "先判断"],
   silence_choice: ["★", "改模型"], link_match: ["★", "改模型"], coin_market: ["★", "改模型"],
-  pool_rescue: ["▲", "先判断"],
+  pool_rescue: ["▲", "先判断"], bird_flight: ["▲", "先判断"],
+  eavesdrop: ["◆", "辨证据"], procession: ["★", "改模型"],
   dark_explore: ["◆", "辨证据"],
 };
 const NAMES = {
+  why_leave: "为什么要走？· 贴墙偷听",
+  seven_valleys: "百鸟会议 · 带鸟群飞过七谷",
+  wedding_night: "婚礼之夜 · 信物与送葬",
   books_in_pool: "书落水池 · 只来得及救一本",
   what_do_you_know: "「你自己知道些什么？」· 静下来",
   four_and_grapes: "四人争葡萄 · 一枚银币",
@@ -42,7 +46,7 @@ function Menu({ onPlay, score }) {
         <p className="rt-eyebrow">历史长河 · 鲁米线</p>
         <h1>交互原型试玩</h1>
         <p className="rt-lede">
-          五幕新交互：救书、静坐、买葡萄、摸黑、磨墙。每一幕都是先动手、先判断，再和史实并排对照。
+          八幕交互，从 1219 年逃离撒马尔罕到 1273 年的婚礼之夜。每一幕都是先动手、先判断，再和史实并排对照。
           点任意一幕直接开始；玩完一个事件会回到这里。图片都是占位图，正式的细密画还没画。
         </p>
         {score > 0 && <p className="rt-score">本次试玩得分 <b>{score}</b></p>}

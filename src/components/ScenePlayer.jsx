@@ -19,6 +19,7 @@ import PoolRescuePhase from "./phases/PoolRescuePhase";
 import CoinMarketPhase from "./phases/CoinMarketPhase";
 import EavesdropPhase from "./phases/EavesdropPhase";
 import BirdFlightPhase from "./phases/BirdFlightPhase";
+import ProcessionPhase from "./phases/ProcessionPhase";
 
 /** 图标：只吃 path，颜色大小随调。来源 game-icons.net（CC BY 3.0，见 CREDITS.md）。 */
 function Icon({ name, size = 40, color = "#E8D9BE" }) {
@@ -1426,6 +1427,11 @@ export default function ScenePlayer({ sceneData, eventId, awardScore, onComplete
   // --- DARK EXPLORE (黑屋里只有一小圈烛光：摸 → 猜 → 点灯对照) ---
   if (currentPhase.type === "dark_explore") {
     return <DarkExplorePhase phase={currentPhase} onScore={award} onComplete={goToNextPhase} />;
+  }
+
+  // --- PROCESSION (婚礼之夜：信物还给人 → 送一程 → 猜) ---
+  if (currentPhase.type === "procession") {
+    return <ProcessionPhase phase={currentPhase} onScore={award} onComplete={goToNextPhase} />;
   }
 
   // --- BIRD FLIGHT (带鸟群飞过七谷 → 猜 → 湖里的倒影) ---
