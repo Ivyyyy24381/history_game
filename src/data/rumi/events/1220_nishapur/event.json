@@ -3,8 +3,90 @@
   "title": "内沙布尔的香料铺",
   "year": "1220",
   "type": "interactive",
-  "_note": "鲁米线原型：带鸟群飞过七谷。全部是 canvas 画的，不需要美术。借口与戴胜的回答为本作据阿塔尔《百鸟会议》概述。",
+  "_note": "鲁米线 1220：药香铺探索 → 百鸟会议（带《百鸟会议》古画卡）→ 赠书传说 → 内沙布尔陷落。",
   "phases": [
+    {
+      "id": "attar_shop",
+      "type": "explore",
+      "background": "/assets/rumi/events/1220_nishapur/backgrounds/nishapur_attar_shop.png",
+      "title": "内沙布尔 · 药香铺",
+      "narrative": "驼队在内沙布尔歇脚。父亲带你走进一间铺子——墙上一格格全是药材和香料，铜秤，玫瑰水瓶。\n「阿塔尔」这个名字，本来的意思就是「卖香料和药的人」。",
+      "instruction": "铺子里有三个人。都说说话。",
+      "npcs": [
+        {
+          "id": "attar_apprentice",
+          "name": "学徒",
+          "portrait": "/assets/rumi/npcs/attar_apprentice.png",
+          "position": {
+            "x": 22,
+            "y": 86
+          },
+          "scale": 2.4,
+          "dialogues": [
+            {
+              "speaker": "attar_apprentice",
+              "speakerName": "学徒",
+              "text": "「客人要什么？乳香、没药、玫瑰水，我们都有。」"
+            },
+            {
+              "speaker": "attar_apprentice",
+              "speakerName": "学徒",
+              "text": "「师父？他白天称药，晚上写东西。写的什么我们也看不懂。」"
+            }
+          ]
+        },
+        {
+          "id": "baha_walad",
+          "name": "父亲巴哈丁",
+          "portrait": "/assets/rumi/npcs/baha_walad.png",
+          "position": {
+            "x": 50,
+            "y": 88
+          },
+          "scale": 2.6,
+          "dialogues": [
+            {
+              "speaker": "baha_walad",
+              "speakerName": "巴哈丁",
+              "text": "「这位老先生的诗，呼罗珊没有人没读过。」"
+            },
+            {
+              "speaker": "baha_walad",
+              "speakerName": "巴哈丁",
+              "text": "「去，你自己跟他说话。」"
+            }
+          ]
+        },
+        {
+          "id": "attar",
+          "name": "阿塔尔",
+          "portrait": "/assets/rumi/npcs/attar.png",
+          "position": {
+            "x": 76,
+            "y": 86
+          },
+          "scale": 2.8,
+          "dialogues": [
+            {
+              "speaker": "attar",
+              "speakerName": "阿塔尔",
+              "text": "「我白天称药，晚上写诗。」"
+            },
+            {
+              "speaker": "attar",
+              "speakerName": "阿塔尔",
+              "text": "「药治身上的病。诗治别的。」"
+            },
+            {
+              "speaker": "attar",
+              "speakerName": "阿塔尔",
+              "text": "「孩子，坐下。我给你讲个故事——讲一群鸟，去找它们的王。」"
+            }
+          ]
+        }
+      ],
+      "requiredTalks": 3
+    },
     {
       "id": "seven_valleys",
       "type": "bird_flight",
@@ -181,11 +263,26 @@
       ],
       "actual": "lake",
       "reveal": "波斯语里，「西摩格」（sī murgh）拆开来念，就是「三十只鸟」。\n它们要找的王，就是飞到终点的它们自己。",
-      "consequence": "在阿塔尔的原诗里，掉队的不只是找借口的鸟——还有渴死的、淹死的、被烧死的、被野兽吃掉的。上万只鸟出发，只有三十只飞到了。\n传说阿塔尔还送了孩子一本自己的书，对他父亲说：「这孩子将来会在世上点起一把火。」（后世记载）\n第二年，蒙古军攻破内沙布尔。二十四年后，鲁米会在科尼亚遇见一个人，问他一个问题——到那时你会再想起这面湖。",
+      "consequence": "在阿塔尔的原诗里，掉队的不只是找借口的鸟——还有渴死的、淹死的、被烧死的、被野兽吃掉的。上万只鸟出发，只有三十只飞到了。\n二十四年后，鲁米会在科尼亚遇见一个人，问他一个问题——到那时你会再想起这面湖。",
       "artCard": {
         "src": "/assets/rumi/art/concourse_of_birds.webp",
         "artKey": "/assets/rumi/art/concourse_of_birds.webp"
-      }
+      },
+      "background": "/assets/rumi/events/1220_nishapur/backgrounds/birds_seven_valleys.png"
+    },
+    {
+      "id": "book_and_words",
+      "type": "transition",
+      "background": "/assets/rumi/events/1220_nishapur/backgrounds/nishapur_attar_shop.png",
+      "legend": "传说（道拉特沙等后世记载）",
+      "title": "一本书和一句话",
+      "transitionText": "临走的时候，老人从架子上取下自己写的一本书，放进孩子手里。",
+      "announcement": {
+        "title": "后世记载",
+        "style": "imperial_decree",
+        "text": "阿塔尔对巴哈丁说：「这孩子将来会在世上点起一把火。」"
+      },
+      "narrative": "瓦拉德：「这件事我父亲从没跟我提过。它是后来的人写的。\n你可以不信——但你看，后来确实着了火。」\n\n第二年，蒙古军攻破内沙布尔，屠城。传说阿塔尔死在这场屠杀里。"
     }
   ]
 }

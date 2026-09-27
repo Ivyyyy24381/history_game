@@ -1,6 +1,7 @@
 import { useState, useRef, useCallback, useEffect } from "react";
 import { DUFU_POSES, dufuPortraitPath } from "../data/dufuPoses";
 import { DANTE_POSES, dantePortraitPath } from "../data/dantePoses";
+import { RUMI_POSES, rumiPortraitPath } from "../data/rumiPoses";
 import { PHASE_TEMPLATES } from "../data/phaseTemplates";
 
 // 故事线判定：事件年份 <1000 → dufu，否则 → dante（与 ScenePlayer 约定一致）。

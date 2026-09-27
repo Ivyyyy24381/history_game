@@ -67,4 +67,17 @@ export function localize(data, line, prefix, lang = getLang()) {
 }
 
 /** 事件 id 的年份 <1000 → 杜甫线，否则但丁线。全站已有的判定，收在这里一处。 */
-export const lineOf = (eventId) => (parseInt(eventId, 10) < 1000 ? "dufu" : "dante");
+// 当前故事线（选人时由 App 设一次）。
+// 原来只按「事件 id 的年份 <1000 → 杜甫，否则但丁」猜：但丁 1265–1321 和鲁米
+// 1219–1273 年份重叠，光看年份永远分不开；EventPanel/QuizPanel 还拿 stage.id
+// （"exile" 这种）来调，parseInt 是 NaN。改成显式设定，年份规则只作兜底。
+let CURRENT_LINE = null;
+
+/** 选人 / 载入 timeline 时调一次，参数是 characters.js 的 dataDir。 */
+export function setLine(dir) {
+  CURRENT_LINE = dir || null;
+}
+
+/** 当前故事线；没设定时退回旧的年份猜法。 */
+export const lineOf = (eventId) =>
+  CURRENT_LINE || (parseInt(eventId, 10) < 1000 ? "dufu" : "dante");

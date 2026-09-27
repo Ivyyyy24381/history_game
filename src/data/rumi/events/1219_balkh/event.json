@@ -3,39 +3,222 @@
   "title": "四十头骆驼",
   "year": "1219",
   "type": "interactive",
-  "_note": "鲁米线原型：贴墙偷听。背景暂用主页宫殿图占位（正式为 samarkand_bazaar）。",
+  "_note": "鲁米线 1219：瓦拉德开场 → 贴墙偷听（为什么要走）→ 只能带三样 → 呼罗珊大道。",
   "phases": [
+    {
+      "id": "walad_opens",
+      "type": "transition",
+      "background": "/assets/rumi/shared/backgrounds/walad_study_1291.png",
+      "title": "开端之书",
+      "transitionText": "1291 年，科尼亚。\n我叫苏丹·瓦拉德。我在写我父亲的一生——这本书后来叫《开端之书》。",
+      "announcement": {
+        "title": "苏丹·瓦拉德",
+        "style": "imperial_decree",
+        "text": "「我父亲十二岁那年，全家离开了撒马尔罕。后来的人说，是为了躲蒙古人。\n可我祖父动身的时候，蒙古人还没有到。\n——他为什么要走？」"
+      },
+      "narrative": ""
+    },
     {
       "id": "why_leave",
       "type": "eavesdrop",
-      "background": "/assets/home/hp_background_rumi.webp",
+      "background": "/assets/rumi/events/1219_balkh/backgrounds/samarkand_rooftops.png",
       "situation": "撒马尔罕。十二岁的鲁米听说，全家要走了——去麦加，而且可能再也不回来。大人们不肯跟孩子说为什么。市集的土墙后面，有人在说话。",
       "instruction": "把耳朵贴在墙上，左右挪动。离谁近，谁的话就听得清。",
       "voices": [
-        {"id": "melon", "x": 9, "who": "瓜贩", "hat": "furcap", "color": "#5A4A2A",
-         "text": "「撒马尔罕的瓜，连巴格达的哈里发都要吃！」", "supports": false,
-         "why": "撒马尔罕很富——这解释了为什么舍不得走，不解释为什么要走。"},
-        {"id": "caravan", "x": 25, "who": "商队头领", "hat": "turban", "color": "#6E3A2A",
-         "text": "「讹答剌出事了——蒙古大汗派来的商队被杀了个精光。大汗不会善罢甘休。」", "supports": true,
-         "why": "外面的危险：花剌子模杀了蒙古商队（1218），战争迫在眉睫。"},
-        {"id": "mother", "x": 41, "who": "母亲穆敏娜", "hat": "veil", "color": "#6A2E3A",
-         "text": "「你父亲说要去麦加朝觐。东西只能带最要紧的。」", "supports": false,
-         "why": "朝觐是对外说的去处——它没说明为什么非走不可、还要带上全家和藏书。"},
-        {"id": "student", "x": 57, "who": "老学生", "hat": "bigturban", "color": "#2F4A5A",
-         "text": "「巴哈丁先生讲经时句句都在骂朝廷里那帮学者，宫里早就恨上他了。」", "supports": true,
-         "why": "里面的不和：他和宫廷、和宫里的学者关系很僵。"},
-        {"id": "silk", "x": 73, "who": "丝绸商", "hat": "headcloth", "color": "#7A6A3A",
-         "text": "「今年丝绸的价钱翻了一倍，一匹都难收。」", "supports": false,
-         "why": "真的，也可能和战乱有关——但它说的是生意，说明不了巴哈丁一家为什么要走。"},
-        {"id": "teller", "x": 89, "who": "说书人", "hat": "pilos", "color": "#3E5A3A",
-         "text": "「从前有个国王，他有四十头骆驼……」", "supports": false,
-         "why": "只是一个故事。"}
+        {
+          "id": "melon",
+          "x": 9,
+          "who": "瓜贩",
+          "hat": "furcap",
+          "color": "#5A4A2A",
+          "text": "「撒马尔罕的瓜，连巴格达的哈里发都要吃！」",
+          "supports": false,
+          "why": "撒马尔罕很富——这解释了为什么舍不得走，不解释为什么要走。"
+        },
+        {
+          "id": "caravan",
+          "x": 25,
+          "who": "商队头领",
+          "hat": "turban",
+          "color": "#6E3A2A",
+          "text": "「讹答剌出事了——蒙古大汗派来的商队被杀了个精光。大汗不会善罢甘休。」",
+          "supports": true,
+          "why": "外面的危险：花剌子模杀了蒙古商队（1218），战争迫在眉睫。"
+        },
+        {
+          "id": "mother",
+          "x": 41,
+          "who": "母亲穆敏娜",
+          "hat": "veil",
+          "color": "#6A2E3A",
+          "text": "「你父亲说要去麦加朝觐。东西只能带最要紧的。」",
+          "supports": false,
+          "why": "朝觐是对外说的去处——它没说明为什么非走不可、还要带上全家和藏书。"
+        },
+        {
+          "id": "student",
+          "x": 57,
+          "who": "老学生",
+          "hat": "bigturban",
+          "color": "#2F4A5A",
+          "text": "「巴哈丁先生讲经时句句都在骂朝廷里那帮学者，宫里早就恨上他了。」",
+          "supports": true,
+          "why": "里面的不和：他和宫廷、和宫里的学者关系很僵。"
+        },
+        {
+          "id": "silk",
+          "x": 73,
+          "who": "丝绸商",
+          "hat": "headcloth",
+          "color": "#7A6A3A",
+          "text": "「今年丝绸的价钱翻了一倍，一匹都难收。」",
+          "supports": false,
+          "why": "真的，也可能和战乱有关——但它说的是生意，说明不了巴哈丁一家为什么要走。"
+        },
+        {
+          "id": "teller",
+          "x": 89,
+          "who": "说书人",
+          "hat": "pilos",
+          "color": "#3E5A3A",
+          "text": "「从前有个国王，他有四十头骆驼……」",
+          "supports": false,
+          "why": "只是一个故事。"
+        }
       ],
       "need": 4,
       "claim": "巴哈丁带全家离开撒马尔罕，原因不止一个。",
       "pick": 2,
       "reveal": "一个在外面：蒙古人要来了。一个在里面：他和朝廷闹翻了。\n后来的传记常只说「为了躲蒙古人」——可他们走的时候，蒙古军还要过好几年才打到撒马尔罕。只用一个原因，解释不了他们为什么走得这么早。",
       "consequence": "出走的确切年份，学界说法不一（约 1212–1219 年）。可以确定的是：几年之后，撒马尔罕、布哈拉、巴尔赫都在蒙古西征中被攻破。巴哈丁一家再也没有回到呼罗珊。"
+    },
+    {
+      "id": "only_three",
+      "type": "flee_florence",
+      "room": "/assets/rumi/events/1219_balkh/backgrounds/balkh_house_packing.png",
+      "gate": "/assets/rumi/events/1219_balkh/backgrounds/caravan_gate_dawn.png",
+      "hero": "/assets/rumi/hero/child/standing.png",
+      "prompt": "驼队天亮就走。你只能带三样。",
+      "walkPrompt": "去城门。",
+      "seconds": 30,
+      "limit": 3,
+      "items": [
+        {
+          "id": "manuscript",
+          "icon": "manuscript",
+          "name": "父亲的讲稿",
+          "x": 16,
+          "y": 30
+        },
+        {
+          "id": "codex",
+          "icon": "codex",
+          "name": "几本经书",
+          "x": 33,
+          "y": 18
+        },
+        {
+          "id": "waterskin",
+          "icon": "waterskin",
+          "name": "两只水囊",
+          "x": 50,
+          "y": 16
+        },
+        {
+          "id": "bread",
+          "icon": "bread",
+          "name": "一袋馕",
+          "x": 66,
+          "y": 20
+        },
+        {
+          "id": "jewel",
+          "icon": "jewel",
+          "name": "母亲的首饰盒",
+          "x": 18,
+          "y": 62
+        },
+        {
+          "id": "toy",
+          "icon": "toy",
+          "name": "你的木马",
+          "x": 30,
+          "y": 80
+        }
+      ],
+      "verdictDate": "此后数年",
+      "verdict": "撒马尔罕 陷\n布哈拉 陷\n巴尔赫 陷",
+      "line": "这一家人再也没有回到呼罗珊。"
+    },
+    {
+      "id": "khorasan_road",
+      "type": "map_travel",
+      "background": "/assets/rumi/maps/route_1219_khorasan.png",
+      "title": "呼罗珊大道",
+      "travelNarrative": "驼队向西。这条路是丝绸之路的主干，一路上都是绿洲城市——它们每一座，都还不知道自己剩下几年。",
+      "instruction": "沿路线点击每一站。",
+      "requireAll": true,
+      "waypoints": [
+        {
+          "id": "samarkand",
+          "name": "撒马尔罕 · 出发",
+          "x": 84,
+          "y": 26,
+          "dialogues": [
+            {
+              "speaker": "mother",
+              "speakerName": "母亲",
+              "text": "「回头看一眼。记住它现在的样子。」"
+            }
+          ]
+        },
+        {
+          "id": "bukhara",
+          "name": "布哈拉",
+          "x": 66,
+          "y": 33,
+          "dialogues": [
+            {
+              "speaker": "narrator",
+              "speakerName": "旁白",
+              "text": "布哈拉，中亚最古老的学城之一。明年，它会被烧掉。"
+            }
+          ]
+        },
+        {
+          "id": "merv",
+          "name": "梅尔夫",
+          "x": 46,
+          "y": 40,
+          "dialogues": [
+            {
+              "speaker": "narrator",
+              "speakerName": "旁白",
+              "text": "沙漠最干的一段。水囊在这里决定一家人走得多快。"
+            },
+            {
+              "speaker": "hero",
+              "speakerName": "鲁米",
+              "text": "（如果水囊没带上——母亲把自己那份给了你。）"
+            }
+          ]
+        },
+        {
+          "id": "nishapur",
+          "name": "内沙布尔",
+          "x": 22,
+          "y": 46,
+          "isKey": true,
+          "dialogues": [
+            {
+              "speaker": "father",
+              "speakerName": "巴哈丁",
+              "text": "「在这儿歇几天。城里有个卖香料的老头，我想带你去见见他。」"
+            }
+          ]
+        }
+      ],
+      "narrative": ""
     }
   ]
 }

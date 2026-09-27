@@ -4,7 +4,10 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom/client";
 import ScenePlayer from "../components/ScenePlayer";
+import { setLine } from "../i18n/localize";
 import "../styles/game.css";
+
+setLine("rumi"); // 试玩页只有鲁米线
 
 const MODULES = import.meta.glob("../data/rumi/events/*/event.json", { eager: true });
 const EVENTS = Object.values(MODULES)

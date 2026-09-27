@@ -94,9 +94,9 @@ export const CHARACTERS = [
     dynasty: "呼罗珊 · 科尼亚",
     description: "在旋舞与诗行之间追寻神圣之爱",
     achievementTitle: "旋舞之路",
-    completionLine: "",
-    recapEpigraph: "",
-    heroPortrait: null,
+    completionLine: "从逃难的孩子，到科尼亚的芦笛。",
+    recapEpigraph: "「我曾是生的，后来熟了，最后燃尽了。」——传为鲁米的四行诗（本作试译）",
+    heroPortrait: "/assets/rumi/hero/portrait.png",
     avatar: "🌀",
     color: "#2F6F6B",
     background: "/assets/home/hp_background_rumi.webp",
@@ -104,7 +104,7 @@ export const CHARACTERS = [
     portrait: "/assets/home/hp_portrait_rumi.webp",
     name_img: "/assets/home/hp_name_rumi.webp",
     nameHeight: 34,
-    locked: true,
+    locked: false,
     // 波斯细密画（占位，待鲁米线地图落地再调）：青金墨线 + 赭金印记
     mapTheme: {
       ink: "#33415C",

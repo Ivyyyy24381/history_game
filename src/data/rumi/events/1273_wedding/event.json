@@ -3,12 +3,25 @@
   "title": "婚礼之夜",
   "year": "1273",
   "type": "interactive",
-  "_note": "鲁米线原型：回忆信物 + 送葬队伍。人物为 SVG 剪影占位。",
+  "_note": "鲁米线 1273：冬天 → 信物与送葬 → 他们为何而来 → 婚礼之夜连环画（末格接「同时代的中国」）。",
   "phases": [
+    {
+      "id": "that_winter",
+      "type": "transition",
+      "background": "/assets/rumi/events/1273_wedding/backgrounds/konya_winter.png",
+      "title": "冬天",
+      "transitionText": "1273 年冬，科尼亚。雪落在屋顶上。",
+      "announcement": {
+        "title": "十二月",
+        "style": "imperial_decree",
+        "text": "父亲病了。他对我们说：\n「不要哭。这是我的婚礼。」"
+      },
+      "narrative": ""
+    },
     {
       "id": "wedding_night",
       "type": "procession",
-      "background": "/assets/home/hp_background_rumi.webp",
+      "background": "/assets/rumi/events/1273_wedding/backgrounds/konya_winter.png",
       "legend": "台词为本作改写 · 送葬场面据阿夫拉基《圣徒传》",
       "situation": "1273 年冬，科尼亚。鲁米病了。他对身边的人说：不要哭，这是我的婚礼。病榻前摆着几样东西——每一样，都是一路上有人给他的。",
       "people": [
@@ -151,6 +164,110 @@
       "actual": "teacher",
       "reveal": "据阿夫拉基记载，有人问他们为何而来，他们大意是说：「我们从他身上，懂得了我们自己经书里的道理。」",
       "consequence": "科尼亚当时住着突厥人、波斯人、希腊人、亚美尼亚人和犹太人——就像那四个争葡萄的旅伴，说着不同的话。鲁米讲的寓言，谁都听得懂。\n鲁米管自己的死叫「婚礼之夜」。七百多年后，每年 12 月 17 日，科尼亚还在纪念这一夜。\n同一年，远在东方，襄阳在蒙古大军的围困中陷落。",
+      "artCard": {
+        "src": "/assets/rumi/art/dancing_dervishes.webp",
+        "artKey": "/assets/rumi/art/dancing_dervishes.webp"
+      }
+    },
+    {
+      "id": "why_they_came",
+      "type": "predict_reveal",
+      "background": "/assets/rumi/events/1273_wedding/backgrounds/konya_winter.png",
+      "legend": "传说（阿夫拉基《圣徒传》）· 本作意译",
+      "situation": "1273 年 12 月 17 日，鲁米去世。\n第二天送葬，队伍里有穆斯林，也有基督徒和犹太人。",
+      "question": "为什么基督徒和犹太人也来了？",
+      "himLabel": "实际",
+      "options": [
+        {
+          "id": "order",
+          "text": "苏丹下令全城都要来"
+        },
+        {
+          "id": "taught",
+          "text": "他们也听过他讲，觉得他也是自己的老师"
+        },
+        {
+          "id": "curious",
+          "text": "只是来看热闹"
+        }
+      ],
+      "actual": "taught",
+      "sameNote": "你猜对了。那你已经知道那些寓言是讲给谁听的了。",
+      "diffNote": "不是命令，也不是看热闹。——",
+      "reveal": "后来的传记记下了这一幕：有人问他们为何而来。\n他们的意思大致是——「我们从他身上，懂得了我们自己经书里的道理。」",
+      "consequence": "科尼亚当时住着突厥人、波斯人、希腊人、亚美尼亚人和犹太人。\n一枚银币买四样东西的那个故事，谁都听得懂。"
+    },
+    {
+      "id": "wedding_comic",
+      "type": "comic_reveal",
+      "background": "/assets/rumi/events/1273_wedding/backgrounds/comic_wedding_night.png",
+      "image": "/assets/rumi/events/1273_wedding/backgrounds/comic_wedding_night.png",
+      "title": "婚礼之夜",
+      "narrative": "",
+      "instruction": "点击画面，一格一格看下去。",
+      "panels": [
+        {
+          "id": "p1",
+          "x": 0,
+          "y": 0,
+          "w": 36,
+          "h": 49,
+          "dialogues": [
+            {
+              "speaker": "walad",
+              "speakerName": "苏丹·瓦拉德",
+              "text": "「他握着我的手，像要把什么交给我。」"
+            }
+          ]
+        },
+        {
+          "id": "p2",
+          "x": 36,
+          "y": 0,
+          "w": 64,
+          "h": 49,
+          "dialogues": [
+            {
+              "speaker": "narrator",
+              "speakerName": "旁白",
+              "text": "送葬的队伍里，不同衣着的人并肩走着。"
+            }
+          ]
+        },
+        {
+          "id": "p3",
+          "x": 0,
+          "y": 49,
+          "w": 49,
+          "h": 51,
+          "dialogues": [
+            {
+              "speaker": "narrator",
+              "speakerName": "旁白",
+              "text": "后来，墓上建起一座绿色的穹顶。"
+            }
+          ]
+        },
+        {
+          "id": "p4",
+          "x": 49,
+          "y": 49,
+          "w": 51,
+          "h": 51,
+          "dialogues": [
+            {
+              "speaker": "narrator",
+              "speakerName": "旁白",
+              "text": "每年 12 月 17 日，科尼亚都会举行纪念。七百多年了，人们还叫它「婚礼之夜」。"
+            },
+            {
+              "speaker": "narrator",
+              "speakerName": "同时代的中国",
+              "text": "鲁米去世的 1273 年，襄阳在蒙古大军的围困中陷落；三年后，南宋的都城临安也降了。\n当年逼得鲁米一家背井离乡的那支铁骑，此时正在中国的土地上。"
+            }
+          ]
+        }
+      ],
       "artCard": {
         "src": "/assets/rumi/art/dancing_dervishes.webp",
         "artKey": "/assets/rumi/art/dancing_dervishes.webp"

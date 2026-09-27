@@ -1,0 +1,305 @@
+{
+  "id": "1225_larende",
+  "title": "拉兰达的婚礼与葬礼",
+  "year": "1225",
+  "type": "interactive",
+  "_note": "鲁米线 1225：朝觐西行 → 拉兰达院子 → 婚约从哪边写 → 同一年（连环画）→ 墓志（无标准答案）。",
+  "phases": [
+    {
+      "id": "hajj_west",
+      "type": "map_travel",
+      "background": "/assets/rumi/maps/route_1221_hajj.png",
+      "title": "朝觐与西行",
+      "travelNarrative": "一家人往西南走到麦加，再折向西北。走走停停，六七年。\n（路线细节各家记载不一，这里只取主流说法。）",
+      "instruction": "沿路线点击每一站。",
+      "requireAll": true,
+      "waypoints": [
+        {
+          "id": "baghdad",
+          "name": "巴格达",
+          "x": 74,
+          "y": 30,
+          "dialogues": [
+            {
+              "speaker": "narrator",
+              "speakerName": "旁白",
+              "text": "哈里发的都城，当时世界最大的城市之一。三十三年后，它会被烧成白地。"
+            }
+          ]
+        },
+        {
+          "id": "mecca",
+          "name": "麦加",
+          "x": 62,
+          "y": 72,
+          "dialogues": [
+            {
+              "speaker": "baha_walad",
+              "speakerName": "巴哈丁",
+              "text": "「我们说要来朝觐的。现在到了。」"
+            }
+          ]
+        },
+        {
+          "id": "damascus",
+          "name": "大马士革",
+          "x": 44,
+          "y": 44,
+          "dialogues": [
+            {
+              "speaker": "narrator",
+              "speakerName": "旁白",
+              "text": "学者最多的城。八年后，鲁米会一个人回到这里读书。"
+            }
+          ]
+        },
+        {
+          "id": "erzincan",
+          "name": "埃尔津詹",
+          "x": 28,
+          "y": 22,
+          "dialogues": [
+            {
+              "speaker": "narrator",
+              "speakerName": "旁白",
+              "text": "塞尔柱人的地界。语言换了，饭也换了。"
+            }
+          ]
+        },
+        {
+          "id": "larende",
+          "name": "拉兰达",
+          "x": 14,
+          "y": 34,
+          "isKey": true,
+          "dialogues": [
+            {
+              "speaker": "mother",
+              "speakerName": "母亲",
+              "text": "「就在这儿吧。我走不动了。」"
+            }
+          ]
+        }
+      ],
+      "narrative": ""
+    },
+    {
+      "id": "courtyard",
+      "type": "explore",
+      "background": "/assets/rumi/events/1225_larende/backgrounds/larende_courtyard.png",
+      "title": "拉兰达的院子",
+      "narrative": "安纳托利亚的一座小城。石砌的院子，葡萄架，廊下挂起了彩色的布幔——家里要办喜事。",
+      "instruction": "院子里有三个人。都说说话。",
+      "npcs": [
+        {
+          "id": "gowhar",
+          "name": "高哈尔",
+          "portrait": "/assets/rumi/npcs/gowhar.png",
+          "position": {
+            "x": 26,
+            "y": 86
+          },
+          "scale": 2.5,
+          "dialogues": [
+            {
+              "speaker": "gowhar",
+              "speakerName": "高哈尔",
+              "text": "「我父亲和你父亲，在撒马尔罕就是朋友了。」"
+            },
+            {
+              "speaker": "gowhar",
+              "speakerName": "高哈尔",
+              "text": "「我们两家人，是在同一条路上走散又遇上的。」"
+            }
+          ]
+        },
+        {
+          "id": "mother_mumina",
+          "name": "母亲穆敏娜",
+          "portrait": "/assets/rumi/npcs/mother_mumina.png",
+          "position": {
+            "x": 52,
+            "y": 88
+          },
+          "scale": 2.5,
+          "dialogues": [
+            {
+              "speaker": "mother_mumina",
+              "speakerName": "穆敏娜",
+              "text": "「我们从撒马尔罕走到这里，走了六年。」"
+            },
+            {
+              "speaker": "mother_mumina",
+              "speakerName": "穆敏娜",
+              "text": "「你在路上长大了。我在路上老了。」"
+            }
+          ]
+        },
+        {
+          "id": "baha_walad",
+          "name": "父亲巴哈丁",
+          "portrait": "/assets/rumi/npcs/baha_walad.png",
+          "position": {
+            "x": 76,
+            "y": 86
+          },
+          "scale": 2.6,
+          "dialogues": [
+            {
+              "speaker": "baha_walad",
+              "speakerName": "巴哈丁",
+              "text": "「婚约你自己写。」"
+            },
+            {
+              "speaker": "baha_walad",
+              "speakerName": "巴哈丁",
+              "text": "「笔在桌上。纸也在。」"
+            }
+          ]
+        }
+      ],
+      "requiredTalks": 3
+    },
+    {
+      "id": "contract_direction",
+      "type": "predict_reveal",
+      "background": "/assets/rumi/events/1225_larende/backgrounds/marriage_contract_desk.png",
+      "situation": "矮桌上摊着一张空白的婚约纸。芦苇笔、墨壶、撒沙罐，旁边一支红烛。",
+      "question": "波斯文写婚约，笔从哪边起？",
+      "himLabel": "实际",
+      "options": [
+        {
+          "id": "ltr",
+          "text": "从左往右，和汉字横排一样"
+        },
+        {
+          "id": "rtl",
+          "text": "从右往左"
+        },
+        {
+          "id": "ttb",
+          "text": "从上往下，一列一列写"
+        }
+      ],
+      "actual": "rtl",
+      "sameNote": "对了。那你已经知道，这一家人的书，是从我们眼里的「最后一页」翻起的。",
+      "diffNote": "不是那一边。——",
+      "reveal": "波斯文用阿拉伯字母，从右往左写。\n书也从我们眼里的「最后一页」翻起。",
+      "consequence": "鲁米一辈子用这种文字写诗。光《玛斯纳维》就有约两万五千联，每一联都是从右往左写下来的。"
+    },
+    {
+      "id": "same_year",
+      "type": "comic_reveal",
+      "background": "/assets/rumi/events/1225_larende/backgrounds/comic_larende_year.png",
+      "image": "/assets/rumi/events/1225_larende/backgrounds/comic_larende_year.png",
+      "title": "同一年",
+      "narrative": "",
+      "instruction": "点击画面，一格一格看下去。",
+      "panels": [
+        {
+          "id": "p1",
+          "x": 0,
+          "y": 0,
+          "w": 29,
+          "h": 49,
+          "dialogues": [
+            {
+              "speaker": "narrator",
+              "speakerName": "旁白",
+              "text": "婚礼。乐师在廊下吹奏，新人低着头。"
+            }
+          ]
+        },
+        {
+          "id": "p2",
+          "x": 29,
+          "y": 0,
+          "w": 30,
+          "h": 49,
+          "dialogues": [
+            {
+              "speaker": "narrator",
+              "speakerName": "旁白",
+              "text": "没过多久，母亲病倒了。"
+            }
+          ]
+        },
+        {
+          "id": "p3",
+          "x": 59,
+          "y": 0,
+          "w": 41,
+          "h": 49,
+          "dialogues": [
+            {
+              "speaker": "narrator",
+              "speakerName": "旁白",
+              "text": "院子里的人换上了素服。"
+            }
+          ]
+        },
+        {
+          "id": "p4",
+          "x": 0,
+          "y": 49,
+          "w": 29,
+          "h": 51,
+          "dialogues": [
+            {
+              "speaker": "narrator",
+              "speakerName": "旁白",
+              "text": "十八岁的鲁米独自站在墓前。"
+            }
+          ]
+        },
+        {
+          "id": "p5",
+          "x": 29,
+          "y": 49,
+          "w": 71,
+          "h": 51,
+          "dialogues": [
+            {
+              "speaker": "narrator",
+              "speakerName": "旁白",
+              "text": "送葬的队伍走出城门。"
+            },
+            {
+              "speaker": "narrator",
+              "speakerName": "旁白",
+              "text": "母亲葬在拉兰达。七百多年后，卡拉曼城里还有一座小清真寺，当地人叫它「鲁米母亲的清真寺」。"
+            }
+          ]
+        }
+      ],
+      "nextPhase": "epitaph"
+    },
+    {
+      "id": "epitaph",
+      "type": "predict_reveal",
+      "background": "/assets/rumi/events/1225_larende/backgrounds/marriage_contract_desk.png",
+      "situation": "同一张桌子，同一支笔。这次要写的是墓志。",
+      "question": "如果让你给母亲写一句，你会写——",
+      "himLabel": "史料",
+      "options": [
+        {
+          "id": "road",
+          "text": "「她走了六年的路，把家背在身上。」"
+        },
+        {
+          "id": "quiet",
+          "text": "「她在这里停下来，我们才有了家。」"
+        },
+        {
+          "id": "gave",
+          "text": "「沙漠里最干的那一段，她把自己的水给了我。」"
+        }
+      ],
+      "actual": "road",
+      "sameNote": "史料没有留下鲁米写的那句话。你写的，就是这一关的答案。",
+      "diffNote": "史料没有留下鲁米写的那句话。你写的，就是这一关的答案。",
+      "reveal": "这一幕没有正确答案。\n关于穆敏娜，可靠的记载只有一句：她葬在拉兰达。",
+      "consequence": "两年后，父亲带着儿子北上科尼亚——苏丹在等他们。"
+    }
+  ]
+}

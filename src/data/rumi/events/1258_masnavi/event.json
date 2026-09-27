@@ -3,12 +3,47 @@
   "title": "芦笛之歌 · 寓言书架",
   "year": "1258",
   "type": "interactive",
-  "_note": "鲁米线垂直切片（交互原型）。《玛斯纳维》寓言：四人争葡萄、黑屋里的东西、中国画师与希腊画师。背景暂用主页宫殿图占位。引文据 Nicholson 英译（公有领域）由本作试译/概述。",
+  "_note": "鲁米线 1258：巴格达陷落 → 芦笛之歌 → 寓言书架三连（葡萄/大象/画师）→ 口授十五年。",
   "phases": [
+    {
+      "id": "world_falling",
+      "type": "transition",
+      "background": "/assets/rumi/events/1258_masnavi/backgrounds/baghdad_1258_smoke.png",
+      "title": "1258",
+      "transitionText": "远处地平线上，一座城在冒烟。",
+      "announcement": {
+        "title": "1258 年 2 月",
+        "style": "imperial_decree",
+        "text": "蒙古军攻破巴格达。阿拔斯王朝亡。\n同年，金匠萨拉丁去世。"
+      },
+      "narrative": "瓦拉德：「世界在塌。我父亲开始口述一部长诗。」"
+    },
+    {
+      "id": "song_of_the_reed",
+      "type": "poem_compose",
+      "background": "/assets/rumi/events/1258_masnavi/backgrounds/reed_bed_dawn.png",
+      "title": "芦笛之歌",
+      "poemContext": "胡萨姆丁拿着纸笔等着。鲁米开口了——把诗句放回原位。\n（Nicholson 英译为底本，本作试译）",
+      "puzzle": "听这芦笛，它在___；\n它讲的是___。\n「自从我被人从___割下，\n我的哀鸣，让男男女女都落泪。」",
+      "blanks": [
+        "诉说",
+        "离别",
+        "苇塘"
+      ],
+      "distractors": [
+        "歌唱",
+        "爱情",
+        "山林"
+      ],
+      "poemTitle": "《玛斯纳维》卷一 开篇",
+      "narrative": "芦苇被人从苇塘割下，从此一直在哭。\n——你在哪一关，也被人从家里带走过？",
+      "poemAnswer": "",
+      "poemCandidates": []
+    },
     {
       "id": "four_and_grapes",
       "type": "coin_market",
-      "background": "/assets/home/hp_background_rumi.webp",
+      "background": "/assets/rumi/events/1258_masnavi/backgrounds/fruit_market.png",
       "legend": "《玛斯纳维》卷二 · 寓言",
       "situation": "四个旅伴——一个波斯人、一个阿拉伯人、一个突厥人、一个希腊人——路上有人施舍给他们一枚银币。四个人都想拿它买吃的，各喊各的，快要打起来了。你站在果摊前。",
       "goal": "一枚银币，只够买一样。让四个人都满意。",
@@ -145,7 +180,7 @@
     {
       "id": "painters",
       "type": "scratch_reveal",
-      "background": "/assets/home/hp_background_rumi.webp",
+      "background": "/assets/rumi/events/1258_masnavi/backgrounds/painters_hall.png",
       "legend": "《玛斯纳维》卷一 · 寓言",
       "situation": "苏丹要中国画师和希腊画师比一比，谁的画艺更高。两间屋子面对面，中间挂着一道帘子。\n中国画师向苏丹要了上百种颜料，天天作画；希腊画师一样颜料也没要，关起门来只做一件事——",
       "instruction": "你是希腊画师。按住，把墙来回磨亮。",
@@ -175,6 +210,19 @@
       "consequence": "但也别忘了：镜子里的那幅画，是中国画师一笔一笔画出来的。没有对面那面墙，镜子什么也映不出。\n在波斯诗歌里，「中国画师」本来就是巧夺天工的代名词；鲁米偏偏让一面什么也没画的墙赢了它。\n还有一个小秘密：「希腊人」在波斯语里叫「鲁姆人」（Rūmī），指的就是安纳托利亚一带——也正是「鲁米」这个名字的来历。",
       "mirrorFallback": "/assets/dufu/events/736_qizhao/backgrounds/taishan_summit.webp",
       "mirrorKey": "/assets/rumi/art/xuanzong_flight_to_shu.webp"
+    },
+    {
+      "id": "fifteen_years",
+      "type": "transition",
+      "background": "/assets/rumi/events/1258_masnavi/backgrounds/dictation_room.png",
+      "title": "口授十五年",
+      "transitionText": "老人靠着软垫闭目说话，年轻人伏在矮桌上飞快地写。地上堆满写好的纸页。",
+      "announcement": {
+        "title": "《玛斯纳维》",
+        "style": "imperial_decree",
+        "text": "六卷，约两万五千联。\n第六卷没有写完——最后一个故事讲到一半，诗人去世了。"
+      },
+      "narrative": ""
     }
   ]
 }

@@ -1,0 +1,221 @@
+{
+  "id": "1247_damascus",
+  "title": "大马士革的灯",
+  "year": "1247",
+  "type": "interactive",
+  "_note": "鲁米线 1247：沙姆斯为什么走 → 去大马士革 → 提灯寻人（正确答案是「没有人知道」）→ 第5层回收 1220 百鸟会议。",
+  "phases": [
+    {
+      "id": "why_he_left",
+      "type": "evidence_select",
+      "background": "/assets/rumi/events/1231_konya/backgrounds/konya_madrasa.png",
+      "claim": "沙姆斯 1246 年离开科尼亚，主要是因为鲁米身边的人容不下他。",
+      "instruction": "从这些说法里，挑出 2 条真能支持这个判断的。",
+      "pick": 2,
+      "items": [
+        {
+          "id": "complain",
+          "text": "学生们抱怨：老师整天和一个来历不明的游方者关在屋里，不再讲课了。",
+          "supports": true,
+          "why": "「容不下」的直接表现：他抢走了他们的老师。"
+        },
+        {
+          "id": "threat",
+          "text": "有人当面辱骂沙姆斯，还有人放话要他好看。",
+          "supports": true,
+          "why": "从抱怨到威胁——这是「容不下」最硬的一条。"
+        },
+        {
+          "id": "origin",
+          "text": "沙姆斯来自大不里士，年纪比鲁米大。",
+          "supports": false,
+          "why": "真的，但和他为什么走没有关系。"
+        },
+        {
+          "id": "wander",
+          "text": "沙姆斯本来就是个四处游走、从不在一个地方久留的人。",
+          "supports": false,
+          "why": "这条恰恰对结论不利：他的离开也可能只是他自己的老习惯。\n好的判断要认得出哪些事实是对自己不利的。"
+        },
+        {
+          "id": "son",
+          "text": "1247 年，鲁米的儿子苏丹·瓦拉德亲自去大马士革，把他请了回来。",
+          "supports": false,
+          "why": "这说的是「请回来」，不是「为什么走」。"
+        }
+      ],
+      "closing": "抱怨，加威胁——这两条能立住。\n但别忘了那条对自己不利的：他是个从不久留的人。\n史料允许我们说「主要是」，不允许我们说「只因为」。"
+    },
+    {
+      "id": "to_damascus",
+      "type": "map_travel",
+      "background": "/assets/rumi/maps/route_1247_damascus.png",
+      "title": "去大马士革",
+      "travelNarrative": "他第二次消失了。这一次，鲁米自己去找。\n同一条路，十四年前他走过——那次是去读书。",
+      "instruction": "沿路线点击每一站。",
+      "requireAll": true,
+      "waypoints": [
+        {
+          "id": "konya",
+          "name": "科尼亚",
+          "x": 16,
+          "y": 24,
+          "dialogues": [
+            {
+              "speaker": "hero",
+              "speakerName": "鲁米",
+              "text": "「上次是瓦拉德来请他。这一次，我自己来。」"
+            }
+          ]
+        },
+        {
+          "id": "taurus",
+          "name": "托罗斯山口",
+          "x": 38,
+          "y": 40,
+          "dialogues": [
+            {
+              "speaker": "narrator",
+              "speakerName": "旁白",
+              "text": "冬天的山口。雪没到马膝。"
+            }
+          ]
+        },
+        {
+          "id": "aleppo",
+          "name": "阿勒颇",
+          "x": 58,
+          "y": 54,
+          "dialogues": [
+            {
+              "speaker": "narrator",
+              "speakerName": "旁白",
+              "text": "问了一路。没有人见过一个戴黑毡帽的人。"
+            }
+          ]
+        },
+        {
+          "id": "damascus",
+          "name": "大马士革",
+          "x": 80,
+          "y": 72,
+          "isKey": true,
+          "dialogues": [
+            {
+              "speaker": "narrator",
+              "speakerName": "旁白",
+              "text": "到了。天黑了。市集还开着一半。"
+            }
+          ]
+        }
+      ],
+      "narrative": ""
+    },
+    {
+      "id": "lamp_search",
+      "type": "dark_explore",
+      "image": "/assets/rumi/events/1247_damascus/backgrounds/damascus_night_bazaar.png",
+      "situation": "大马士革的夜市。长长的拱廊，店铺一间间关了门。地上的积水映着微光。",
+      "instruction": "你提着一盏灯。在市集里找找线索。",
+      "candle": 9,
+      "spots": [
+        {
+          "id": "inn",
+          "x": 16,
+          "y": 62,
+          "part": "客栈门口",
+          "claim": "「一个戴黑毡帽的人？前几天好像见过……往北门去了。」"
+        },
+        {
+          "id": "steps",
+          "x": 41,
+          "y": 70,
+          "part": "清真寺的台阶",
+          "claim": "「他在这儿坐过一夜。天亮就走了。」"
+        },
+        {
+          "id": "books",
+          "x": 63,
+          "y": 56,
+          "part": "关了门的书店",
+          "claim": "「沙姆斯？没听过。你说的是哪个大不里士人？」"
+        },
+        {
+          "id": "gate",
+          "x": 85,
+          "y": 66,
+          "part": "城门",
+          "claim": "「每天进出几千人。谁记得住一个外乡人。」"
+        }
+      ],
+      "need": 4,
+      "question": "沙姆斯到底去了哪里？",
+      "options": [
+        {
+          "id": "murder",
+          "text": "他被嫉妒的人害死了，尸体扔进了井里"
+        },
+        {
+          "id": "tabriz",
+          "text": "他回了大不里士，在那里终老"
+        },
+        {
+          "id": "far",
+          "text": "他去了更远的地方，再没回头"
+        },
+        {
+          "id": "unknown",
+          "text": "史料没有答案——没有人知道"
+        }
+      ],
+      "actual": "unknown",
+      "sameNote": "你选了「不知道」。这在历史里是一个正经答案，而且常常是最诚实的那个。",
+      "diffNote": "四条线索你都问到了，四条都落空。那说明什么？",
+      "reveal": "几种说法都有人写过。\n「被害」的说法出自很晚的记载，找不到可靠证据；伊朗的霍伊和土耳其的科尼亚都有据说是他的墓。\n可靠的史料只告诉我们一件事：1247 年以后，再没有人见过他。",
+      "consequence": "鲁米去大马士革找了两次，都没有找到。\n第二次回来以后，他不再找了。"
+    },
+    {
+      "id": "layer5_found",
+      "type": "link_match",
+      "background": "/assets/rumi/events/1247_damascus/backgrounds/damascus_night_bazaar.png",
+      "situation": "二十七年前，一个老人在香料铺里给他讲过一群鸟。\n现在他提着灯，在一座空市集里找一个人。",
+      "question": "这两件事，最后找到的是什么？把左边连到右边。",
+      "left": [
+        {
+          "id": "birds",
+          "who": "三十只鸟",
+          "text": "飞过七个山谷，去找它们的王"
+        },
+        {
+          "id": "lamp",
+          "who": "提灯的人",
+          "text": "走遍一座城，去找那个问住他的人"
+        }
+      ],
+      "right": [
+        {
+          "id": "self",
+          "text": "找到的是自己",
+          "sub": "湖面上的倒影 · 从自己嘴里说出来的话"
+        },
+        {
+          "id": "king",
+          "text": "找到的是一位真正的王"
+        },
+        {
+          "id": "nothing",
+          "text": "什么也没找到，空手而归"
+        }
+      ],
+      "answer": {
+        "birds": "self",
+        "lamp": "self"
+      },
+      "himLabel": "实际",
+      "sameNote": "两条线你都连到了同一处。\n——二十七年前那个故事，是这一晚的预告。",
+      "diffNote": "看一看实际的两条线：它们落在同一个地方。",
+      "reveal": "鲁米后来写的大意是：\n「我为什么还要找他？我和他本是一样的。\n他的话，正从我嘴里说出来。」\n（本作概述，不引原诗逐字）",
+      "consequence": "从这以后，他不再写「寻找」，开始写「成为」。\n三年后，他会在一条金匠街上停下来。"
+    }
+  ]
+}

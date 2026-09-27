@@ -33,7 +33,7 @@ npc,public/assets/rumi/npcs/sultan_walad_young.png,13世纪科尼亚青年苏丹
 npc,public/assets/rumi/npcs/salah_goldsmith.png,13世纪科尼亚金匠萨拉丁，五十岁，皮围裙，卷起的袖子，手上有茧，手握小锤，憨厚质朴，全身立绘，含双脚，露出鞋履,768,1280,true
 npc,public/assets/rumi/npcs/goldsmith_apprentice.png,13世纪科尼亚金匠学徒，十四岁，皮围裙，脸上有炉灰，拉风箱，全身立绘，含双脚，露出鞋履,768,1280,true
 npc,public/assets/rumi/npcs/husam.png,13世纪科尼亚弟子胡萨姆丁，三十三岁，修剪整齐的黑须，白头巾，浅色长袍，手持纸卷和芦苇笔，恭敬专注，全身立绘，含双脚，露出鞋履,768,1280,true
-bg,public/assets/rumi/shared/backgrounds/walad_study_1291.png,1291年科尼亚书房夜景，一盏油灯，矮书桌上摊着书稿和芦苇笔，窗外夜色中隐约可见一座绿色穹顶墓的轮廓，温暖静谧（画面中不画人物）,1920,1080,false
+bg,public/assets/rumi/shared/backgrounds/walad_study_1291.png,"13世纪末科尼亚一间书房的夜景，一盏铜油灯，矮书桌上摊开一叠纸和一支芦苇笔，墙边一排书，窗外夜色中一座绿色穹顶的轮廓，温暖静谧，deserted and empty room, nobody home, still life interior at night, 纸面只有细密的墨线，flat color blocks, hard edged shapes, muted warm dark tone",1920,1080,false
 bg,public/assets/rumi/events/1219_balkh/backgrounds/samarkand_bazaar.png,13世纪初撒马尔罕有顶市集，砖砌穹顶与拱廊，丝绸、瓜果、铜器摊位，远处城门外驼队走进来，清晨斜光，热闹,1920,1080,false
 bg,public/assets/rumi/events/1219_balkh/backgrounds/balkh_house_packing.png,13世纪中亚学者之家内室，地毯上散放书卷、皮水囊、首饰盒与馕，窗外院子里跪着等待装货的骆驼，晨光,1920,1080,false
 bg,public/assets/rumi/events/1219_balkh/backgrounds/caravan_gate_dawn.png,13世纪撒马尔罕土黄色城门清晨，驼队排成一线出城，城墙上的旗帜，远方沙漠地平线泛白,1920,1080,false
@@ -61,7 +61,7 @@ bg,public/assets/rumi/events/1258_masnavi/backgrounds/painters_hall.png,13世纪
 bg,public/assets/rumi/events/1258_masnavi/backgrounds/chinese_painters_wall.png,波斯细密画中描绘的中国画师作品：满墙的山水、花鸟与亭台，色彩浓丽，金色云纹，画面平视正面,1920,1080,false
 bg,public/assets/rumi/events/1258_masnavi/backgrounds/dictation_room.png,夜晚的书房，靠墙的软垫，矮桌上堆满写好的纸页和芦苇笔，油灯（不画人物）,1920,1080,false
 bg,public/assets/rumi/events/1273_wedding/backgrounds/konya_winter_1273.png,冬日科尼亚，雪落在墓园与屋顶上，炊烟袅袅，灰蓝天空，安静,1920,1080,false
-bg,public/assets/rumi/events/1273_wedding/backgrounds/comic_wedding_night.png,连环画长图横排4格，细密画金色边框分格：病榻上的老人握着儿子的手 / 送葬队伍，不同服饰的人并肩而行 / 墓上建起绿色穹顶 / 白袍的旋舞者庄重旋转,1920,1080,false
+bg,public/assets/rumi/events/1273_wedding/backgrounds/comic_wedding_night.png,连环画长图，金色边框分格，波斯细密画风格四格：第一格 病榻上的白须老人握着儿子的手；第二格 送葬队伍，突厥人波斯人希腊人亚美尼亚人不同服饰的人并肩走；第三格 一座绿色釉砖穹顶的伊斯兰陵墓，顶上一弯新月，墓前有人静立；第四格 白袍旋舞者庄重旋转，衣摆展开，闭目,1920,1080,false
 bg,public/assets/rumi/maps/rumi_general_map.png,手绘古地图风格的中亚到安纳托利亚全图，东起撒马尔罕、巴尔赫，西至科尼亚，南到麦加，标出里海、黑海、地中海、波斯湾与两河，山脉以细密画方式画出，留出城市图钉位置，羊皮纸底色（不写地名文字）,1920,1080,false
 bg,public/assets/rumi/maps/route_1219_khorasan.png,手绘古地图风格路线图：撒马尔罕→布哈拉→梅尔夫→内沙布尔，驼队小图标沿虚线行进，沙漠色调（不写文字）,1920,1080,false
 bg,public/assets/rumi/maps/route_1221_hajj.png,手绘古地图风格路线图：内沙布尔→巴格达→麦加→大马士革→马拉蒂亚→埃尔津詹→拉兰达，一条长长的弧线，沿途城市小图标（不写文字）,1920,1080,false

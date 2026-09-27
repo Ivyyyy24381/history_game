@@ -18,3 +18,7 @@ _to_delete/
 assets_src/png_masters/
 dist-artifact/
 public/assets/rumi/art/*.jpg
+
+# Python 缓存（run_comfyui_batch.py 跑一次就会生成）
+__pycache__/
+*.pyc

@@ -1,0 +1,179 @@
+{
+  "id": "1233_syria",
+  "title": "四十日",
+  "year": "1233",
+  "type": "interactive",
+  "_note": "鲁米线 1233：游学叙利亚 → 四十日（借 silence_choice：手停下来干扰才落）→ 此刻的鲁米 → 老师走了。",
+  "phases": [
+    {
+      "id": "to_syria",
+      "type": "map_travel",
+      "background": "/assets/rumi/maps/route_1233_syria.png",
+      "title": "游学叙利亚",
+      "travelNarrative": "布尔汉丁把他送出城。往南翻过托罗斯山，就是叙利亚。",
+      "instruction": "沿路线点击每一站。",
+      "requireAll": true,
+      "waypoints": [
+        {
+          "id": "konya",
+          "name": "科尼亚 · 出发",
+          "x": 16,
+          "y": 24,
+          "dialogues": [
+            {
+              "speaker": "burhan",
+              "speakerName": "布尔汉丁",
+              "text": "「去读。读到没有书可读为止。」"
+            }
+          ]
+        },
+        {
+          "id": "taurus",
+          "name": "托罗斯山口",
+          "x": 38,
+          "y": 40,
+          "dialogues": [
+            {
+              "speaker": "narrator",
+              "speakerName": "旁白",
+              "text": "翻过这座山，就是叙利亚。"
+            }
+          ]
+        },
+        {
+          "id": "aleppo",
+          "name": "阿勒颇",
+          "x": 58,
+          "y": 54,
+          "dialogues": [
+            {
+              "speaker": "narrator",
+              "speakerName": "旁白",
+              "text": "在哈拉维耶经学院读书。法学、经注、语法、逻辑。"
+            }
+          ]
+        },
+        {
+          "id": "damascus",
+          "name": "大马士革",
+          "x": 80,
+          "y": 72,
+          "isKey": true,
+          "dialogues": [
+            {
+              "speaker": "narrator",
+              "speakerName": "旁白",
+              "text": "城里有全世界最多的学者。据说伟大的伊本·阿拉比也住在这里。"
+            },
+            {
+              "speaker": "narrator",
+              "speakerName": "旁白",
+              "text": "他们见过吗？没有确证。后世的书爱这么写，可当时的人没有留下记录。"
+            }
+          ]
+        }
+      ],
+      "narrative": ""
+    },
+    {
+      "id": "forty_days",
+      "type": "silence_choice",
+      "background": "/assets/rumi/events/1233_syria/backgrounds/chilla_cell.png",
+      "legend": "据后世传记",
+      "speaker": {
+        "name": "布尔汉丁"
+      },
+      "question": "「进去，四十天。什么都不用做。」",
+      "options": [
+        {
+          "id": "knock",
+          "text": "（门外有人敲门。去应一声。）",
+          "rebuttal": "「门一开，四十天就得从头数。」"
+        },
+        {
+          "id": "letter",
+          "text": "（学生从科尼亚送信来了。拆开看看。）",
+          "rebuttal": "「信里写的是外面的事。你现在不在外面。」"
+        },
+        {
+          "id": "food",
+          "text": "（饭菜的香味从窗口飘进来。）",
+          "rebuttal": "「你饿，我知道。这也是要放下的东西之一。」"
+        },
+        {
+          "id": "book",
+          "text": "（怀里还揣着一本书。拿出来读。）",
+          "rebuttal": "「你就是读太多了，才被送进来的。」"
+        }
+      ],
+      "noise": [
+        "（有人在院子里说话。）",
+        "（一只猫跳上了窗台。）",
+        "（远处宣礼声。）",
+        "（草席硌得慌。）",
+        "（第几天了？记不清了。）"
+      ],
+      "noiseRebuttals": [
+        "「随它去。」",
+        "「不用管。」",
+        "「还在动。」"
+      ],
+      "silenceReveal": "你停住了手。\n屋里只剩一盏油灯和窗口那道光，它慢慢从东墙移到西墙。\n第四十天，门开了。",
+      "consequence": "布尔汉丁说：「现在你身上有了你父亲的那样东西。」\n据后世传记，这样的四十日闭关，他做了三次。"
+    },
+    {
+      "id": "who_is_he_now",
+      "type": "evidence_select",
+      "background": "/assets/rumi/events/1233_syria/backgrounds/chilla_cell.png",
+      "claim": "1240 年的鲁米，是一位学者，还不是一位诗人。",
+      "instruction": "从你一路见到的材料里，挑出 2 条真能支持这个判断的。",
+      "pick": 2,
+      "items": [
+        {
+          "id": "study",
+          "text": "他在阿勒颇、大马士革读了多年法学与经学，回科尼亚开课，学生满堂。",
+          "supports": true,
+          "why": "这说的正是「此刻」他在做的事：教书、讲经。学者的活法。"
+        },
+        {
+          "id": "output",
+          "text": "他这时候留下来的东西是讲经与法学的记录，不是诗。",
+          "supports": true,
+          "why": "判断一个人「此刻是什么」，最硬的证据是他此刻留下了什么。"
+        },
+        {
+          "id": "later",
+          "text": "他后来写了几万行诗，是波斯语最伟大的诗人之一。",
+          "supports": false,
+          "why": "这是真的，但它是后来的事。判断「此刻」，不能拿未来当证据——这是这一关真正的陷阱。"
+        },
+        {
+          "id": "city",
+          "text": "大马士革是当时学者最多的城市之一。",
+          "supports": false,
+          "why": "真的，但说的是城市，不是他。"
+        },
+        {
+          "id": "chilla",
+          "text": "他做过三次四十日闭关。",
+          "supports": false,
+          "why": "闭关是修行，学者和诗人都可能做。它区分不开这两种身份。"
+        }
+      ],
+      "closing": "两条就够了：他在做什么，和他留下了什么。\n「他后来成了大诗人」那条最诱人——可它说的是 1244 年以后的事。\n证据要对得上时间。"
+    },
+    {
+      "id": "teacher_gone",
+      "type": "transition",
+      "background": "/assets/rumi/events/1233_syria/backgrounds/chilla_cell.png",
+      "title": "老师走了",
+      "transitionText": "",
+      "announcement": {
+        "title": "1240 年",
+        "style": "imperial_decree",
+        "text": "布尔汉丁在开塞利去世。"
+      },
+      "narrative": "瓦拉德：「那年我父亲三十三岁。\n已经没有什么书是他没读过的了。」"
+    }
+  ]
+}

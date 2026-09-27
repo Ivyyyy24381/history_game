@@ -22,6 +22,7 @@ import { useRef, useState, useEffect, useCallback, useMemo } from "react";
 import { asset } from "../utils/asset";
 import { dufuPortraitPath } from "../data/dufuPoses";
 import { dantePortraitPath } from "../data/dantePoses";
+import { rumiPortraitPath } from "../data/rumiPoses";
 import usePrefersReducedMotion from "../utils/usePrefersReducedMotion";
 import { FONT, COLOR, TRACKING, SHADOW, paper, paperBtn, alpha } from "../styles/theme";
 import { getCharacter } from "../data/characters";
@@ -177,7 +178,10 @@ export default function GameMap({
   // 总图与宽高比从 timeline.json 的 character 块读取（每条故事线一张图）
   const mapUrl = character?.generalMap || DEFAULT_MAP;
   const imgRatio = character?.mapRatio || DEFAULT_RATIO;
-  const heroWalkerPath = character?.id === "dante" ? dantePortraitPath : dufuPortraitPath;
+  const heroWalkerPath =
+    character?.id === "dante" ? dantePortraitPath
+    : character?.id === "rumi" ? rumiPortraitPath
+    : dufuPortraitPath;
   // 每条线的墨色/印章/符号语汇/底图减淡：花名册 mapTheme 在全局 token 之上做偏移
   const mapTheme = { ...DEFAULT_MAP_THEME, ...(getCharacter(character?.id)?.mapTheme || {}) };
   const events = useMemo(

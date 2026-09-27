@@ -3,12 +3,103 @@
   "title": "水池边的陌生人",
   "year": "1244",
   "type": "interactive",
-  "_note": "鲁米线垂直切片（交互原型）。背景图暂用主页宫殿图占位，待细密画风格的科尼亚场景图替换。",
+  "_note": "鲁米线 1244：克塞山 → 糖商客栈 → 书落水池 → 静下来 → 第5层（诗署谁的名）。",
   "phases": [
+    {
+      "id": "kosedag",
+      "type": "transition",
+      "background": "/assets/rumi/events/1244_shams/backgrounds/kosedag_aftermath.png",
+      "title": "1243 · 克塞山",
+      "transitionText": "蒙古人来了。这一次不是传闻。",
+      "announcement": {
+        "title": "1243 年",
+        "style": "imperial_decree",
+        "text": "塞尔柱军在克塞山败给蒙古人。\n罗姆苏丹国从此成为蒙古的附庸。"
+      },
+      "narrative": "瓦拉德：「城里的人都在问：世界要完了吗？\n第二年秋天，一个陌生人进了城。」"
+    },
+    {
+      "id": "sugar_inn",
+      "type": "explore",
+      "background": "/assets/rumi/events/1244_shams/backgrounds/sugar_merchants_inn.png",
+      "legend": "传说（阿夫拉基《圣徒传》）",
+      "title": "糖商的客栈",
+      "narrative": "1244 年秋，科尼亚。城里来了一个外乡人，住在糖商的客栈里。没有人知道他是谁。",
+      "instruction": "客栈里有人在议论他。听两个人说说。",
+      "npcs": [
+        {
+          "id": "innkeeper",
+          "name": "客栈老板",
+          "portrait": "/assets/rumi/npcs/innkeeper.png",
+          "position": {
+            "x": 24,
+            "y": 86
+          },
+          "scale": 2.6,
+          "dialogues": [
+            {
+              "speaker": "innkeeper",
+              "speakerName": "客栈老板",
+              "text": "「那人不付房钱。」"
+            },
+            {
+              "speaker": "innkeeper",
+              "speakerName": "客栈老板",
+              "text": "「还把门上的好锁换成了一把破锁——他说，挂把好锁，人家才以为里头有宝贝。」"
+            }
+          ]
+        },
+        {
+          "id": "sugar_merchant",
+          "name": "糖商",
+          "portrait": "/assets/rumi/npcs/sugar_merchant.png",
+          "position": {
+            "x": 52,
+            "y": 88
+          },
+          "scale": 2.6,
+          "dialogues": [
+            {
+              "speaker": "sugar_merchant",
+              "speakerName": "糖商",
+              "text": "「他屋里什么都没有。一张草席，一个破罐子。」"
+            },
+            {
+              "speaker": "sugar_merchant",
+              "speakerName": "糖商",
+              "text": "「可他问我的那些话……我一个卖糖的，答不上来。」"
+            }
+          ]
+        },
+        {
+          "id": "student_a",
+          "name": "鲁米的学生",
+          "portrait": "/assets/rumi/npcs/student_a.png",
+          "position": {
+            "x": 78,
+            "y": 86
+          },
+          "scale": 2.6,
+          "dialogues": [
+            {
+              "speaker": "student_a",
+              "speakerName": "学生",
+              "text": "「先生今天骑骡子从这条街过。」"
+            },
+            {
+              "speaker": "student_a",
+              "speakerName": "学生",
+              "text": "「全城的学者见了他都要下马行礼。你说那个怪人会怎么样？」"
+            }
+          ]
+        }
+      ],
+      "requiredTalks": 2
+    },
     {
       "id": "books_in_pool",
       "type": "pool_rescue",
-      "background": "/assets/home/hp_background_rumi.webp",
+      "background": "/assets/rumi/events/1244_shams/backgrounds/pool_courtyard.png",
       "legend": "传说 · 阿夫拉基《圣徒传》",
       "introBeats": [
         {
@@ -65,7 +156,7 @@
     {
       "id": "what_do_you_know",
       "type": "silence_choice",
-      "background": "/assets/home/hp_background_rumi.webp",
+      "background": "/assets/rumi/events/1244_shams/backgrounds/konya_street_dusk.png",
       "legend": "传说 · 台词为本作改写",
       "speaker": {
         "name": "沙姆斯"
@@ -102,6 +193,33 @@
         "「这句也是借来的。」",
         "「你还在背书。」"
       ]
+    },
+    {
+      "id": "where_it_went",
+      "type": "predict_reveal",
+      "background": "/assets/rumi/events/1244_shams/backgrounds/konya_street_dusk.png",
+      "situation": "此后三年，鲁米写了上千首抒情诗。\n波斯抒情诗有个规矩：最后一联，要嵌进诗人自己的笔名。",
+      "question": "鲁米的诗，最后一联嵌的是谁的名字？",
+      "himLabel": "实际",
+      "options": [
+        {
+          "id": "rumi",
+          "text": "鲁米自己"
+        },
+        {
+          "id": "shams",
+          "text": "沙姆斯"
+        },
+        {
+          "id": "none",
+          "text": "谁的都不嵌，他不守这个规矩"
+        }
+      ],
+      "actual": "shams",
+      "sameNote": "你猜对了。那你已经明白那场相遇把他变成了什么样的人。",
+      "diffNote": "不是他自己。往下看——",
+      "reveal": "他把整本诗集叫作《沙姆斯诗集》。\n该署自己名字的地方，他署了那个问住他的人。",
+      "consequence": "一个学者用一生学会了署自己的名。\n然后他把这个位置让了出去。"
     }
   ]
 }

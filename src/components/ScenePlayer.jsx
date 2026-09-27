@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback, useRef, useMemo } from "react";
 import { dufuPortraitPath, DUFU_LEGACY_PORTRAIT } from "../data/dufuPoses";
 import { dantePortraitPath, DANTE_LEGACY_PORTRAIT } from "../data/dantePoses";
+import { rumiPortraitPath, RUMI_LEGACY_PORTRAIT } from "../data/rumiPoses";
 import { Pin } from "./GameMap";
 import { nb } from "../utils/cjkText";
 import { localize, lineOf } from "../i18n/localize";
@@ -45,14 +46,15 @@ function npcPortraitPath(speakerId, eventId) {
 // stage default derived from the event year. (键名 dufu_pose/dufu_reaction 为
 // 引擎历史键名，各故事线沿用。) The legacy hero portrait.webp is remapped to the
 // stage default.
-const HERO_SPEAKERS = new Set(["dufu", "dante", "self"]);
+const HERO_SPEAKERS = new Set(["dufu", "dante", "rumi", "hero", "self"]);
 function heroPortraitPath(pose, year, eventId) {
-  const line = parseInt(eventId, 10) < 1000 ? "dufu" : "dante";
+  const line = lineOf(eventId);
   if (line === "dante") return dantePortraitPath(pose === DANTE_LEGACY_PORTRAIT ? null : pose, year);
+  if (line === "rumi") return rumiPortraitPath(pose === RUMI_LEGACY_PORTRAIT ? null : pose, year);
   return dufuPortraitPath(pose, year);
 }
 function isLegacyHeroPortrait(p) {
-  return p === DUFU_LEGACY_PORTRAIT || p === DANTE_LEGACY_PORTRAIT;
+  return p === DUFU_LEGACY_PORTRAIT || p === DANTE_LEGACY_PORTRAIT || p === RUMI_LEGACY_PORTRAIT;
 }
 
 // ---- 过场文字的动态进入 ------------------------------------------------------

@@ -14,7 +14,7 @@ import { asset } from "./utils/asset";
 import { CHARACTERS, ACHIEVEMENT_TITLES, COMPLETION_LINES } from "./data/characters";
 import { FONT, COLOR, TRACKING, SHADOW, BUTTON, paperBtn, halo, scrim } from "./styles/theme";
 import { nb } from "./utils/cjkText";
-import { localize } from "./i18n/localize";
+import { localize, setLine } from "./i18n/localize";
 import { useLang } from "./i18n/lang";
 import { t, useT } from "./i18n/ui";
 
@@ -54,6 +54,7 @@ const eventLoader = (dir, eventId) =>
  */
 function ShotHarness({ spec }) {
   const [line, eventId, idx] = String(spec).split("/");
+  setLine(line); // 自查入口也要告诉 i18n 层是哪条线，否则主角立绘会串线
   const [data, setData] = useState(null);
   const [err, setErr] = useState(null);
   useEffect(() => {
@@ -155,6 +156,9 @@ export default function App() {
   // Load timeline data when character is selected
   useEffect(() => {
     if (!character || timelineData) return;
+    // 告诉 i18n 层「现在玩的是哪条线」——翻译字典、主角立绘分派都按它走。
+    // 年份分不开但丁（1265–1321）和鲁米（1219–1273），必须显式设。
+    setLine(dataDirOf(character));
     const load = timelineLoader(dataDirOf(character));
     if (!load) {
       // 这个人物的剧本目录还没建（例如但丁线还在另一台机器上写）→ 走「建设中」页

@@ -1,0 +1,160 @@
+{
+  "character": {
+    "id": "rumi",
+    "name": "鲁米",
+    "title": "旋舞的诗人",
+    "years": "1207—1273",
+    "dynasty": "呼罗珊·科尼亚",
+    "description": "《玛斯纳维》作者，波斯语最伟大的诗人之一，梅夫拉维教团的源头",
+    "portrait": "/assets/home/hp_portrait_rumi.webp",
+    "generalMap": "/assets/rumi/maps/rumi_general_map.png",
+    "mapRatio": 1.7778
+  },
+  "stages": [
+    {
+      "id": "exile",
+      "period": "少年流亡",
+      "yearStart": 1207,
+      "yearEnd": 1227,
+      "color": "#8C6A3F",
+      "summary": "十二岁那年全家离开撒马尔罕，一路向西走了六年。少年在内沙布尔的香料铺里听了一个关于三十只鸟的故事，在安纳托利亚的小城停下来——同一年娶妻，同一年送走母亲。",
+      "events": [
+        {
+          "id": "1219_balkh",
+          "year": 1219,
+          "name": "四十头骆驼",
+          "state": "离家",
+          "summary": "父亲带全家离开撒马尔罕。后来的人说是为了躲蒙古人——可他们走的时候，蒙古人还没到。",
+          "location": { "name": "撒马尔罕", "mapX": 86, "mapY": 30 },
+          "hasScene": true,
+          "hasQuiz": false,
+          "poemAnchor": { "work": "玛斯纳维", "canto": "卷一 开篇", "label": "被人从苇塘割下（1258 回收）" }
+        },
+        {
+          "id": "1220_nishapur",
+          "year": 1220,
+          "name": "内沙布尔的香料铺",
+          "state": "被看见",
+          "summary": "老诗人阿塔尔看了这个孩子一眼，讲了一个故事：三十只鸟飞过七个山谷去找它们的王，最后在湖面上看见了自己。",
+          "location": { "name": "内沙布尔", "mapX": 70, "mapY": 37 },
+          "hasScene": true,
+          "hasQuiz": false,
+          "poemAnchor": { "work": "百鸟会议", "canto": "阿塔尔", "label": "西摩格 = 三十只鸟" }
+        },
+        {
+          "id": "1225_larende",
+          "year": 1225,
+          "name": "拉兰达的婚礼与葬礼",
+          "state": "同一年的喜与悲",
+          "summary": "流浪六年后一家人在安纳托利亚的小城停下。十八岁的鲁米娶妻；同一年，母亲葬在这里。",
+          "location": { "name": "拉兰达（今卡拉曼）", "mapX": 15, "mapY": 43 },
+          "hasScene": true,
+          "hasQuiz": false
+        }
+      ]
+    },
+    {
+      "id": "scholar",
+      "period": "科尼亚学者",
+      "yearStart": 1228,
+      "yearEnd": 1243,
+      "color": "#33415C",
+      "summary": "塞尔柱苏丹把这家人请到首都科尼亚。父亲去世后，二十四岁的鲁米接过讲席；老师又把他送去叙利亚，让他把书读到尽头，再让他三次闭关四十天。",
+      "events": [
+        {
+          "id": "1231_konya",
+          "year": 1231,
+          "name": "父亲的讲席",
+          "state": "接过担子",
+          "summary": "父亲去世，二十四岁的鲁米第一次上讲台。台下坐着父亲的老学生。讲完之后，布尔汉丁对他说了一句话。",
+          "location": { "name": "科尼亚", "mapX": 13, "mapY": 41 },
+          "hasScene": true,
+          "hasQuiz": false
+        },
+        {
+          "id": "1233_syria",
+          "year": 1233,
+          "name": "四十日",
+          "state": "学问的尽头",
+          "summary": "在阿勒颇和大马士革读了多年法学与经学，回科尼亚学生满堂。然后老师要他三次闭关四十天，什么都不做。",
+          "location": { "name": "阿勒颇 / 大马士革", "mapX": 26, "mapY": 50 },
+          "hasScene": true,
+          "hasQuiz": false
+        }
+      ]
+    },
+    {
+      "id": "shams",
+      "period": "沙姆斯之火",
+      "yearStart": 1244,
+      "yearEnd": 1248,
+      "color": "#B4762F",
+      "summary": "1244 年秋天，一个陌生人在街上拦住他，问了一个书里没有答案的问题。此后三年，鲁米写了上千首诗；然后那个人消失了，再没有人见过他。",
+      "events": [
+        {
+          "id": "1244_shams",
+          "year": 1244,
+          "name": "水池边的陌生人",
+          "state": "被问住",
+          "summary": "书落进水池，只来得及救一本。街上一个戴黑毡帽的人问：「你自己，知道些什么？」——这一次，所有答案都被驳回。",
+          "location": { "name": "科尼亚", "mapX": 13, "mapY": 41 },
+          "hasScene": true,
+          "hasQuiz": false,
+          "poemAnchor": { "work": "沙姆斯诗集", "canto": "署名", "label": "最后一联嵌的是沙姆斯" }
+        },
+        {
+          "id": "1247_damascus",
+          "year": 1247,
+          "name": "大马士革的灯",
+          "state": "失去",
+          "summary": "沙姆斯第二次消失。鲁米提着灯在大马士革的市集里一条条找线索，每一条都落空。他去了哪里？史料没有答案。",
+          "location": { "name": "大马士革", "mapX": 27, "mapY": 55 },
+          "hasScene": true,
+          "hasQuiz": false
+        }
+      ]
+    },
+    {
+      "id": "masnavi",
+      "period": "芦笛之歌",
+      "yearStart": 1249,
+      "yearEnd": 1273,
+      "color": "#2F6F6B",
+      "summary": "在一个不识字的金匠的锤声里，他重新站了起来。1258 年世界在塌，他开始口授一部长诗，一口授就是十五年。最后那一夜他管它叫婚礼。",
+      "events": [
+        {
+          "id": "1250_goldsmith",
+          "year": 1250,
+          "name": "金匠的锤声",
+          "state": "在节奏里重新站起来",
+          "summary": "失去沙姆斯之后，鲁米在一个不识字的金匠身上重新找到了同伴。传说他路过金匠铺，听见锤声，就在街上转了起来。",
+          "location": { "name": "科尼亚 · 金匠街", "mapX": 13, "mapY": 41 },
+          "hasScene": true,
+          "hasQuiz": false,
+          "poemAnchor": { "work": "玛斯纳维", "canto": "格律", "label": "ramal：长短长长" }
+        },
+        {
+          "id": "1258_masnavi",
+          "year": 1258,
+          "name": "芦笛之歌",
+          "state": "把一生写成寓言",
+          "summary": "蒙古军攻破巴格达的那一年，弟子胡萨姆丁拿着纸笔，鲁米开口了。《玛斯纳维》由上百个寓言套成，每一个都是「你以为 A，其实是 B」。",
+          "location": { "name": "科尼亚", "mapX": 13, "mapY": 41 },
+          "hasScene": true,
+          "hasQuiz": false,
+          "poemAnchor": { "work": "玛斯纳维", "canto": "卷一 1—2 联", "label": "听这芦笛，它在诉说离别" }
+        },
+        {
+          "id": "1273_wedding",
+          "year": 1273,
+          "name": "婚礼之夜",
+          "state": "完成",
+          "summary": "「不要哭，这是我的婚礼。」送葬那天，队伍里有穆斯林，也有基督徒和犹太人。七百多年后，人们还叫这一夜「婚礼之夜」。",
+          "location": { "name": "科尼亚", "mapX": 13, "mapY": 41 },
+          "hasScene": true,
+          "hasQuiz": false
+        }
+      ]
+    }
+  ]
+}

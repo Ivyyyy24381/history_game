@@ -1,0 +1,162 @@
+{
+  "id": "1250_goldsmith",
+  "title": "金匠的锤声",
+  "year": "1250",
+  "type": "interactive",
+  "_note": "鲁米线 1250：金匠街 → 锤声配格律（rhythm 的第一版替代，用 link_match）→ 学生们又闹了。",
+  "phases": [
+    {
+      "id": "goldsmith_street",
+      "type": "explore",
+      "background": "/assets/rumi/events/1250_goldsmith/backgrounds/goldsmith_street.png",
+      "title": "金匠街",
+      "narrative": "科尼亚集市的金匠街。一排敞开的小铺子，炉火、铁砧、金箔在太阳底下发亮。\n满街都是叮叮当当。",
+      "instruction": "街上有三个人。都说说话。",
+      "npcs": [
+        {
+          "id": "salah_goldsmith",
+          "name": "萨拉丁",
+          "portrait": "/assets/rumi/npcs/salah_goldsmith.png",
+          "position": {
+            "x": 26,
+            "y": 86
+          },
+          "scale": 2.6,
+          "dialogues": [
+            {
+              "speaker": "salah_goldsmith",
+              "speakerName": "萨拉丁",
+              "text": "「我不会读书。我只会敲。」"
+            },
+            {
+              "speaker": "salah_goldsmith",
+              "speakerName": "萨拉丁",
+              "text": "「先生说，我敲的时候，他听得见别的东西。」"
+            }
+          ]
+        },
+        {
+          "id": "goldsmith_apprentice",
+          "name": "学徒",
+          "portrait": "/assets/rumi/npcs/goldsmith_apprentice.png",
+          "position": {
+            "x": 52,
+            "y": 88
+          },
+          "scale": 2.4,
+          "dialogues": [
+            {
+              "speaker": "goldsmith_apprentice",
+              "speakerName": "学徒",
+              "text": "「师父打金箔，一块金子要敲一整天，敲到能透光。」"
+            },
+            {
+              "speaker": "goldsmith_apprentice",
+              "speakerName": "学徒",
+              "text": "「敲重了会破。得一下一下，一样重。」"
+            }
+          ]
+        },
+        {
+          "id": "student_b",
+          "name": "鲁米的学生",
+          "portrait": "/assets/rumi/npcs/student_b.png",
+          "position": {
+            "x": 78,
+            "y": 86
+          },
+          "scale": 2.5,
+          "dialogues": [
+            {
+              "speaker": "student_b",
+              "speakerName": "学生",
+              "text": "「先生又跟一个打金子的混在一起。」"
+            },
+            {
+              "speaker": "student_b",
+              "speakerName": "学生",
+              "text": "「上次是个游方的，这次是个不识字的。我们算什么？」"
+            }
+          ]
+        }
+      ],
+      "requiredTalks": 3
+    },
+    {
+      "id": "hammer_meter",
+      "type": "link_match",
+      "background": "/assets/rumi/events/1250_goldsmith/backgrounds/goldsmith_forge.png",
+      "situation": "炉火映红了铺子。铁砧上一片金箔，锤子一下一下落下来，轻重有定数。\n鲁米站在街上听。他听见的不是打铁——是一句诗的骨头。",
+      "question": "三种敲法，各自是哪一句的节拍？把左边连到右边。（◼ 长 ／ ◻ 短）",
+      "left": [
+        {
+          "id": "ramal",
+          "who": "萨拉丁的锤",
+          "text": "◼◻◼◼ ｜ ◼◻◼◼ ｜ ◼◻◼"
+        },
+        {
+          "id": "even",
+          "who": "学徒的锤",
+          "text": "◼◼◼◼ ｜ ◼◼◼◼"
+        },
+        {
+          "id": "rush",
+          "who": "街口打铜的",
+          "text": "◻◻◼ ｜ ◻◻◼ ｜ ◻◻◼"
+        }
+      ],
+      "right": [
+        {
+          "id": "masnavi",
+          "text": "《玛斯纳维》的每一联",
+          "sub": "ramal 格律 · 两万五千联全用它"
+        },
+        {
+          "id": "drill",
+          "text": "新手练手，只求一样重"
+        },
+        {
+          "id": "work",
+          "text": "赶工的活，快而碎"
+        }
+      ],
+      "answer": {
+        "ramal": "masnavi",
+        "even": "drill",
+        "rush": "work"
+      },
+      "himLabel": "实际",
+      "sameNote": "第一行那个节拍，你连对了。",
+      "diffNote": "看实际的连法——关键是第一行。",
+      "reveal": "「长 短 长 长 ｜ 长 短 长 长 ｜ 长 短 长」。\n这是 ramal 格律。《玛斯纳维》约两万五千联，每一联都是这个节拍。\n你刚才连的，就是那本书的心跳。",
+      "consequence": "传说鲁米路过金匠铺，听着锤声就在街上转了起来。\n那不是舞蹈——是一个人终于跟上了一个节拍。"
+    },
+    {
+      "id": "jealous_again",
+      "type": "predict_reveal",
+      "background": "/assets/rumi/events/1250_goldsmith/backgrounds/goldsmith_street.png",
+      "situation": "学生们又开始嫉妒了。上一次这样的时候，那个人走了，再也没回来。",
+      "question": "这一次，鲁米会怎么做？",
+      "himLabel": "实际",
+      "options": [
+        {
+          "id": "send",
+          "text": "像沙姆斯那次一样，让他走"
+        },
+        {
+          "id": "family",
+          "text": "让儿子苏丹·瓦拉德娶了萨拉丁的女儿"
+        },
+        {
+          "id": "self",
+          "text": "自己离开科尼亚"
+        }
+      ],
+      "actual": "family",
+      "sameNote": "对了。他学乖了——这一次，他把人锁进了自己家里。",
+      "diffNote": "他没有再让任何人走。——",
+      "reveal": "他让儿子娶了金匠的女儿。\n一个不识字的手艺人，成了这个学者世家的亲家。",
+      "consequence": "萨拉丁陪了鲁米将近十年，1258 年去世。鲁米为他写了挽诗。\n这一次，没有人再被逼走。"
+    }
+  ]
+}

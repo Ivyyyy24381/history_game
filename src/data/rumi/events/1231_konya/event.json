@@ -1,0 +1,158 @@
+{
+  "id": "1231_konya",
+  "title": "父亲的讲席",
+  "year": "1231",
+  "type": "interactive",
+  "_note": "鲁米线 1231：苏丹的邀请 → 经学院 → 塞尔柱的星（tile_rotate 的第一版替代）→ 他接得住吗。",
+  "phases": [
+    {
+      "id": "sultan_invites",
+      "type": "transition",
+      "background": "/assets/rumi/events/1231_konya/backgrounds/konya_citadel_1228.png",
+      "title": "苏丹的邀请",
+      "transitionText": "阿拉丁山丘上的清真寺与宫殿，城墙一圈围着。这是罗姆苏丹国的都城。",
+      "announcement": {
+        "title": "1228 年",
+        "style": "imperial_decree",
+        "text": "苏丹凯库巴德一世邀请巴哈丁·瓦拉德到都城科尼亚讲学。"
+      },
+      "narrative": "瓦拉德：「祖父在科尼亚只讲了三年。」"
+    },
+    {
+      "id": "madrasa",
+      "type": "explore",
+      "background": "/assets/rumi/events/1231_konya/backgrounds/konya_madrasa.png",
+      "title": "经学院",
+      "narrative": "方形的内庭，四面尖拱廊，中间一方水池。墙上是蓝绿色的釉砖。\n父亲的讲席空着已经七天了。",
+      "instruction": "廊下有三个人。都说说话。",
+      "npcs": [
+        {
+          "id": "student_a",
+          "name": "学生甲",
+          "portrait": "/assets/rumi/npcs/student_a.png",
+          "position": {
+            "x": 24,
+            "y": 86
+          },
+          "scale": 2.5,
+          "dialogues": [
+            {
+              "speaker": "student_a",
+              "speakerName": "学生甲",
+              "text": "「老先生一句话能讲一个下午。」"
+            },
+            {
+              "speaker": "student_a",
+              "speakerName": "学生甲",
+              "text": "「现在他不在了。谁来讲？」"
+            }
+          ]
+        },
+        {
+          "id": "student_b",
+          "name": "学生乙",
+          "portrait": "/assets/rumi/npcs/student_b.png",
+          "position": {
+            "x": 50,
+            "y": 88
+          },
+          "scale": 2.5,
+          "dialogues": [
+            {
+              "speaker": "student_b",
+              "speakerName": "学生乙",
+              "text": "「他儿子？他才二十四。」"
+            },
+            {
+              "speaker": "student_b",
+              "speakerName": "学生乙",
+              "text": "「法学是要讲一辈子的东西。二十四岁的人，讲得了吗？」"
+            }
+          ]
+        },
+        {
+          "id": "burhan",
+          "name": "布尔汉丁",
+          "portrait": "/assets/rumi/npcs/burhan.png",
+          "position": {
+            "x": 76,
+            "y": 86
+          },
+          "scale": 2.6,
+          "dialogues": [
+            {
+              "speaker": "burhan",
+              "speakerName": "布尔汉丁",
+              "text": "「我是你父亲的学生。我从巴尔赫一路找过来。」"
+            },
+            {
+              "speaker": "burhan",
+              "speakerName": "布尔汉丁",
+              "text": "「路上走了九年。到了才知道他已经走了。」"
+            },
+            {
+              "speaker": "burhan",
+              "speakerName": "布尔汉丁",
+              "text": "「明天你上去讲。我在下面听。」"
+            }
+          ]
+        }
+      ],
+      "requiredTalks": 3
+    },
+    {
+      "id": "seljuk_star",
+      "type": "predict_reveal",
+      "background": "/assets/rumi/events/1231_konya/backgrounds/seljuk_tile_wall.png",
+      "situation": "等着上讲台的那个早上，他在廊下盯着墙看。\n蓝绿和黑的釉砖拼出八角星、十角星，一圈套一圈，看不出从哪里开始。",
+      "question": "这面墙上的图案，是怎么画出来的？",
+      "himLabel": "实际",
+      "options": [
+        {
+          "id": "byhand",
+          "text": "工匠一块一块凭手感摆上去的"
+        },
+        {
+          "id": "compass",
+          "text": "用圆规和直尺，从一个圆一步步推出来"
+        },
+        {
+          "id": "carpet",
+          "text": "照着织毯上的花样描下来"
+        }
+      ],
+      "actual": "compass",
+      "sameNote": "对了。这面墙是算出来的，不是画出来的。",
+      "diffNote": "不是手感，也不是描花样。——",
+      "reveal": "从一个圆开始：等分，连线，再等分。所有的星和多边形，都是几条尺规作图规则推出来的。\n塞尔柱的工匠把几何当成一门手艺来学。",
+      "consequence": "这种图案没有中心，也没有尽头——随便从哪块砖出发都能一直铺下去。\n工匠用它表示「无限」。\n二十七年后，鲁米会在另一面墙前面，再想起这件事。"
+    },
+    {
+      "id": "can_he_hold",
+      "type": "predict_reveal",
+      "background": "/assets/rumi/events/1231_konya/backgrounds/konya_madrasa.png",
+      "situation": "父亲去世了。第一次上讲台，下面坐着父亲的老学生。有人在交头接耳。",
+      "question": "接下来会怎样？",
+      "himLabel": "实际",
+      "options": [
+        {
+          "id": "leave",
+          "text": "学生们散了，另投名师"
+        },
+        {
+          "id": "stay",
+          "text": "他讲得很好，学生们留了下来——但布尔汉丁对他说了一句话"
+        },
+        {
+          "id": "decline",
+          "text": "他推辞了，请布尔汉丁来讲"
+        }
+      ],
+      "actual": "stay",
+      "sameNote": "对了。他接住了——可接住之后的那句话，才是这一关的重点。",
+      "diffNote": "他接住了。真正的问题在后面——",
+      "reveal": "布尔汉丁等散了场才开口：\n「你学的是你父亲的学问。可你父亲尝过的那样东西，你还没尝过。」\n（据西帕萨拉尔等记载的大意，本作改写）",
+      "consequence": "于是布尔汉丁把他送去了叙利亚——去把书读到尽头。"
+    }
+  ]
+}
