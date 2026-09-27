@@ -285,14 +285,36 @@ const sr = {
   // 磨完之后墙往上收，给下方的提问 / 对照面板让位
   wallOpen: { top: "27%", width: "44%", height: "40%" },
   layer: { position: "absolute", inset: 0, width: "100%", height: "100%", backgroundSize: "cover", backgroundPosition: "center" },
-  // 磨亮了、但只映着对面那道深红帘子的镜面
+  // 磨亮了、但只映着对面那道深红帘子的镜面。
+  //
+  // 这一层要同时说清两件事：映的是「帘子」（所以要有褶），以及这面墙已经是
+  // 「镜子」（所以要有反光）。原来只有一道 26px 的等距条纹加一条白光，读起来
+  // 像墙后面挂了块红布——试玩时就有人问「这后面不该是镜子吗」。
+  // 现在叠四层（从上往下）：
+  //   1 斜向高光带  —— 抛光面的定向反射
+  //   2 顶部亮 / 底部暗的竖向渐变 —— 光从上方来，褶子下缘积暗
+  //   3 粗褶 + 细褶两组不等距条纹 —— 等距会像栅栏，不等距才像布
+  //   4 整体的深红底
   curtainReflection: {
     background:
-      "linear-gradient(115deg, rgba(255,255,255,0) 30%, rgba(255,255,255,0.22) 45%, rgba(255,255,255,0) 60%)," +
-      "repeating-linear-gradient(90deg, #5E1F1C 0px, #7A2A25 26px, #4E1916 52px)",
+      // 1 镜面的斜向高光
+      "linear-gradient(112deg, rgba(255,246,238,0) 22%, rgba(255,246,238,0.30) 38%," +
+      " rgba(255,246,238,0.10) 46%, rgba(255,246,238,0) 62%)," +
+      // 2 上亮下暗
+      "linear-gradient(180deg, rgba(255,235,220,0.16) 0%, rgba(0,0,0,0) 34%," +
+      " rgba(0,0,0,0.30) 82%, rgba(0,0,0,0.52) 100%)," +
+      // 3a 细褶（窄、密）
+      "repeating-linear-gradient(91deg, rgba(0,0,0,0.30) 0px, rgba(255,255,255,0.05) 7px," +
+      " rgba(0,0,0,0.26) 15px)," +
+      // 3b 粗褶（宽、不等距，靠三段不同的停点错开）
+      "repeating-linear-gradient(90deg, #4A1512 0px, #7E2C26 18px, #93362C 31px," +
+      " #6A211C 44px, #47130F 61px, #5C1B16 78px)," +
+      // 4 底色
+      "linear-gradient(#5E1F1C, #5E1F1C)",
+    backgroundBlendMode: "screen, multiply, multiply, normal, normal",
   },
   sheen: {
-    background: "linear-gradient(110deg, rgba(255,255,255,0) 35%, rgba(255,255,255,0.35) 50%, rgba(255,255,255,0) 65%)",
+    background: "linear-gradient(110deg, rgba(255,255,255,0) 35%, rgba(255,255,255,0.42) 50%, rgba(255,255,255,0) 65%)",
     backgroundSize: "60% 100%", backgroundRepeat: "no-repeat", backgroundPosition: "-60% 0",
     mixBlendMode: "screen", pointerEvents: "none",
   },

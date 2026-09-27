@@ -27,8 +27,8 @@
           "summary": "双子座下，阿利吉耶里家添丁。先祖卡恰圭达的旧佛罗伦萨，与两党相争的火种。",
           "location": {
             "name": "佛罗伦萨",
-            "mapX": 38,
-            "mapY": 38
+            "mapX": 35.9,
+            "mapY": 39.6
           },
           "hasScene": true,
           "hasQuiz": true,
@@ -46,8 +46,8 @@
           "summary": "桥头的致意、坎帕尔迪诺的战场、1290 年的丧钟——《新生》终章的誓言。",
           "location": {
             "name": "佛罗伦萨/坎帕尔迪诺",
-            "mapX": 40,
-            "mapY": 36
+            "mapX": 37.6,
+            "mapY": 38.9
           },
           "hasScene": true,
           "hasQuiz": true,
@@ -65,8 +65,8 @@
           "summary": "贝雅特丽切死后，他埋进书里。全城最有学问的老人教他修辞、政治，和一句他当时还不懂的话。",
           "location": {
             "name": "佛罗伦萨",
-            "mapX": 39,
-            "mapY": 39
+            "mapX": 39.4,
+            "mapY": 38.1
           },
           "comedyAnchor": {
             "work": "地狱",
@@ -94,8 +94,8 @@
           "summary": "《正义法规》之下，诗人注册医药行会取得参政资格；白党黑党的暗流已经涌动。",
           "location": {
             "name": "佛罗伦萨",
-            "mapX": 37,
-            "mapY": 40
+            "mapX": 41.1,
+            "mapY": 37.4
           },
           "hasScene": true,
           "hasQuiz": true,
