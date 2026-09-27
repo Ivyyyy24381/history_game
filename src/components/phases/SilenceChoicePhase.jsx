@@ -7,7 +7,7 @@
 //   · 点一句 = 说出口。沙姆斯当场驳回，那句话碎掉。
 //   · 鼠标一动，句子转得更急、蜡烛乱晃（心乱）。
 //   · 手停下来，句子就慢慢停住、一句一句往下掉。
-//   · 所有句子都没了、四周静下来——沉默本身成了回答。
+//   · 句子全部没了（说完了，或者静下来落光了）——沉默本身成了回答，立刻进入对照。
 //
 // 不显示倒计时，也不告诉玩家「别动」——要他自己发现。说得越多，越晚发现。
 //
@@ -31,7 +31,6 @@ const CX = 50, CY = 60;           // 旋转中心（舞台百分比）
 const STILL_MS = 1400;            // 手停多久算「静」
 const FIRST_FALL_MS = 5000;       // 进场后至少这么久才开始掉（给玩家读题的时间）
 const FALL_EVERY_MS = 1100;
-const DONE_STILL_MS = 1600;
 
 export default function SilenceChoicePhase({ phase, onScore, onComplete }) {
   const reduced = usePrefersReducedMotion();
@@ -129,7 +128,8 @@ export default function SilenceChoicePhase({ phase, onScore, onComplete }) {
       const left = list.some((c) => c.state !== "gone");
       if (stepRef.current === 0) {
         setCalm((v) => (v !== (still > STILL_MS) ? still > STILL_MS : v));
-        if (!left && still > DONE_STILL_MS) {
+        // 句子没了就结束——不管是说完的、还是静下来落光的。不再额外等一段安静（试玩反馈：那段等待不直观）
+        if (!left) {
           setStep(1);
           if (scoreRef.current) scoreRef.current("silence", POINTS.silence);
         }
