@@ -447,7 +447,6 @@
   "rumi.birds.count": "Birds",
   "rumi.birds.hoopoe": "Hoopoe",
   "rumi.birds.reply": "What does the hoopoe say?",
-  "rumi.birds.hint": "You are the hoopoe. Move the mouse to lead the flock.",
   "rumi.birds.look": "Guess first, then look down at the lake.",
   "rumi.birds.lake": "In the lake",
   "rumi.proc.armed": "Tap a person to give it back",
@@ -458,7 +457,6 @@
   "rumi.proc.source": "According to later biographies",
   "rumi.birds.kbd2": "Use the arrow keys to lead the flock; hold Space to dash",
   "rumi.birds.gust": "Wind is coming! Hold to pull the flock together —",
-  "rumi.birds.hint2": "You are the hoopoe. Move the mouse to lead; hold the button to tuck in and dash.",
   "rumi.birds.lost": "Lost along the way: ",
   "rumi.birds.rock": "Hit the rocks!",
   "rumi.birds.fire": "Burned!",
@@ -475,5 +473,14 @@
   "rumi.birds.c.darkLost": "lost in the dark",
   "rumi.birds.c.excuse": "left with an excuse",
   "rumi.birds.orbs": "Light gathered in the Valley of Knowledge: {n} — it lit the path through the last valley.",
-  "rumi.scratch.mirrorCap": "In the mirror: "
+  "rumi.scratch.mirrorCap": "In the mirror: ",
+  "rumi.birds.readyTitle": "You are the hoopoe who leads the way",
+  "rumi.birds.k1": "Move the mouse / drag a finger",
+  "rumi.birds.d1": "to lead — the flock follows you. Try it now.",
+  "rumi.birds.k2": "Hold the mouse / Space / the button at bottom right",
+  "rumi.birds.d2": "to tuck in and dash: faster, and the flock stays close.",
+  "rumi.birds.k3": "Seven valleys",
+  "rumi.birds.d3": "each has its own trial; you'll be told how to fly as you enter.",
+  "rumi.birds.go": "Take off →",
+  "rumi.birds.dash": "Hold to dash"
 }

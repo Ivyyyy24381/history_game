@@ -447,7 +447,6 @@
   "rumi.birds.count": "鸟",
   "rumi.birds.hoopoe": "戴胜",
   "rumi.birds.reply": "戴胜怎么回？",
-  "rumi.birds.hint": "你是戴胜鸟。移动鼠标，带着鸟群飞。",
   "rumi.birds.look": "先猜，再低头看湖。",
   "rumi.birds.lake": "湖里",
   "rumi.proc.armed": "点一个人，把信物还给他",
@@ -458,7 +457,6 @@
   "rumi.proc.source": "据后世传记",
   "rumi.birds.kbd2": "用方向键带着鸟群飞，按住空格冲刺",
   "rumi.birds.gust": "风要来了！按住，把鸟群收拢——",
-  "rumi.birds.hint2": "你是戴胜鸟。移动鼠标带路；按住鼠标 = 收拢翅膀冲刺。",
   "rumi.birds.lost": "一路上失去的：",
   "rumi.birds.rock": "撞上岩石！",
   "rumi.birds.fire": "被火烧！",
@@ -475,5 +473,14 @@
   "rumi.birds.c.darkLost": "消失在黑暗里",
   "rumi.birds.c.excuse": "找借口离开",
   "rumi.birds.orbs": "你在知识之谷收集的光：{n} 点——它们照亮了最后那一谷的路。",
-  "rumi.scratch.mirrorCap": "镜中："
+  "rumi.scratch.mirrorCap": "镜中：",
+  "rumi.birds.readyTitle": "你是领路的戴胜鸟",
+  "rumi.birds.k1": "移动鼠标 / 手指拖动",
+  "rumi.birds.d1": "带路——鸟群跟着你飞。现在就可以试试。",
+  "rumi.birds.k2": "按住鼠标 / 空格 / 右下角按钮",
+  "rumi.birds.d2": "收拢翅膀冲刺：飞得快，鸟群靠得紧。",
+  "rumi.birds.k3": "七个山谷",
+  "rumi.birds.d3": "每个山谷都有自己的难处，进谷时会告诉你怎么飞。",
+  "rumi.birds.go": "起飞 →",
+  "rumi.birds.dash": "按住冲刺"
 }

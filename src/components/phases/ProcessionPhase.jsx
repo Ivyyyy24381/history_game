@@ -82,7 +82,7 @@ export default function ProcessionPhase({ phase, onScore, onComplete }) {
     if (step !== 1) return undefined;
     let raf = 0, prev = performance.now();
     const tick = (now) => {
-      const dt = (now - prev) / 1000; prev = now;
+      const dt = Math.max(0, (now - prev) / 1000); prev = Math.max(prev, now);
       if (holding.current) setWalk((w) => Math.min(1, w + dt / 9));
       raf = requestAnimationFrame(tick);
     };

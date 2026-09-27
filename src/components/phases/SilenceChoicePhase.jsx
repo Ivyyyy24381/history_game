@@ -77,7 +77,7 @@ export default function SilenceChoicePhase({ phase, onScore, onComplete }) {
   useEffect(() => {
     let raf = 0, prev = performance.now();
     const tick = (now) => {
-      const dt = Math.min(50, now - prev) / 1000; prev = now;
+      const dt = Math.max(0, Math.min(50, now - prev)) / 1000; prev = Math.max(prev, now);
       const still = now - lastMove.current;
       agit.current = Math.max(0.08, agit.current * (still > STILL_MS ? 0.95 : 0.985));
       const A = agit.current;

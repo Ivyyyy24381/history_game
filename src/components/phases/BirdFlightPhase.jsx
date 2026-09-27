@@ -101,7 +101,7 @@ export default function BirdFlightPhase({ phase, onScore, onComplete }) {
   const options = phase.options || [];
   const reduced = usePrefersReducedMotion();
 
-  const [step, setStep] = useState(0);        // 0 飞 · 1 猜 · 2 看湖 · 3 后来
+  const [step, setStep] = useState(-1);       // -1 起飞前（可以先试着带一带） · 0 飞 · 1 猜 · 2 看湖 · 3 后来
   const [valleyIdx, setValleyIdx] = useState(-1);
   const [excuse, setExcuse] = useState(null); // { bird, text, reply, open }
   const [left, setLeft] = useState(startBirds);
@@ -115,6 +115,7 @@ export default function BirdFlightPhase({ phase, onScore, onComplete }) {
   const S = useRef(null);                     // 可变的模拟状态（每帧改，不走 React）
   const stepRef = useRef(0);
   stepRef.current = step;
+  const [holding, setHolding] = useState(false);
 
   if (!S.current) {
     let seed = 11;
@@ -139,12 +140,14 @@ export default function BirdFlightPhase({ phase, onScore, onComplete }) {
     S.current.tx = Math.max(0.12, Math.min(0.58, (e.clientX - r.left) / r.width));
     S.current.ty = Math.max(0.08, Math.min(0.92, (e.clientY - r.top) / r.height));
   };
-  const onMove = (e) => { if (stepRef.current === 0) aim(e); };
-  const onDown = (e) => { if (stepRef.current === 0) { aim(e); S.current.hold = true; } };
-  const onUp = () => { S.current.hold = false; };
+  const onMove = (e) => { if (stepRef.current <= 0) aim(e); };
+  // 触屏：手指按下只用来带路（冲刺用屏幕上的按钮）；鼠标：按住左键 = 冲刺
+  const setHold = (on) => { S.current.hold = on; setHolding(on); };
+  const onDown = (e) => { if (stepRef.current <= 0) { aim(e); if (e.pointerType === "mouse") setHold(true); } };
+  const onUp = () => setHold(false);
   const onKey = (e, down) => {
     const s = S.current, d = 0.05;
-    if (e.key === " ") { s.hold = down; e.preventDefault(); return; }
+    if (e.key === " ") { setHold(down); e.preventDefault(); return; }
     if (!down) return;
     if (e.key === "ArrowUp") s.ty = Math.max(0.08, s.ty - d);
     else if (e.key === "ArrowDown") s.ty = Math.min(0.92, s.ty + d);
@@ -161,7 +164,8 @@ export default function BirdFlightPhase({ phase, onScore, onComplete }) {
     const floorAt = (vi) => FINAL + valleys.slice(vi + 1).reduce((n, v) => n + (v.leave || 0), 0);
 
     const tick = (now) => {
-      const dt = Math.min(0.05, (now - prev) / 1000); prev = now;
+      // rAF 的时间戳可能早于挂载时的 performance.now()，第一帧 dt 会是负的——夹到 0
+      const dt = Math.max(0, Math.min(0.05, (now - prev) / 1000)); prev = Math.max(prev, now);
       const s = S.current, cv = canvas.current, el = stage.current;
       if (!cv || !el) { raf = requestAnimationFrame(tick); return; }
       const W = el.clientWidth, H = el.clientHeight, AR = H / W;
@@ -173,7 +177,7 @@ export default function BirdFlightPhase({ phase, onScore, onComplete }) {
       const st = stepRef.current;
       if (st === 0 && s.dist < total) s.dist = Math.min(total, s.dist + SPEED * (s.hold ? DASH : 1) * dt);
       const atLake = s.dist >= total;
-      const vi = Math.min(valleys.length - 1, Math.floor(s.dist / VALLEY_LEN));
+      const vi = Math.max(0, Math.min(valleys.length - 1, Math.floor(Math.max(0, s.dist) / VALLEY_LEN)));
       const within = (s.dist % VALLEY_LEN) / VALLEY_LEN;
       const kind = atLake ? "lake" : valleys[vi].kind;
       const alive = () => s.birds.filter((b) => !b.out && !b.gone);
@@ -234,8 +238,8 @@ export default function BirdFlightPhase({ phase, onScore, onComplete }) {
       });
 
       // —— 戴胜 ——
-      if (st === 0 && !atLake) {
-        const ty = kind === "invert" ? 1 - s.ty : s.ty;   // 惊愕之谷：上下颠倒
+      if (st <= 0 && !atLake) {
+        const ty = st === 0 && kind === "invert" ? 1 - s.ty : s.ty;   // 惊愕之谷：上下颠倒
         s.hx += (s.tx - s.hx) * 0.09; s.hy += (ty - s.hy) * 0.09;
       }
       if (atLake) { s.hx += (0.5 - s.hx) * 0.04; s.hy += (0.34 - s.hy) * 0.04; }
@@ -390,6 +394,11 @@ export default function BirdFlightPhase({ phase, onScore, onComplete }) {
         if (b.gone) continue;
         drawBird(b.x * W, b.y * H, b.out && b.cause === "fire" ? "#3A2418" : b.c, size, b.ph, b.out ? Math.max(0, 1 - b.out / 3) : 1);
       }
+      // 指针的位置画一个小圈：告诉玩家「戴胜往这儿飞」（光标本身隐藏了）
+      if (st <= 0 && !atLake) {
+        g.strokeStyle = s.hold ? "rgba(255,210,122,0.9)" : "rgba(255,255,255,0.7)"; g.lineWidth = 2;
+        g.beginPath(); g.arc(s.tx * W, s.ty * H, s.hold ? 9 : 12, 0, Math.PI * 2); g.stroke();
+      }
       if (!atLake || st < 2) {
         const hx = s.hx * W, hy = s.hy * H;
         drawBird(hx, hy, "#C9793A", size * 2, 0);
@@ -476,12 +485,12 @@ export default function BirdFlightPhase({ phase, onScore, onComplete }) {
         onKeyDown={(e) => onKey(e, true)} onKeyUp={(e) => onKey(e, false)}
         onPointerMove={onMove} onPointerDown={onDown} onPointerUp={onUp} onPointerLeave={onUp} onPointerCancel={onUp}
         aria-label={t("用方向键带着鸟群飞，按住空格冲刺")}
-        style={{ ...kit.stage, outline: "none", touchAction: "none", cursor: step === 0 ? "none" : "default" }}>
+        style={{ ...kit.stage, outline: "none", touchAction: "none", cursor: step <= 0 ? "none" : "default" }}>
         <canvas ref={canvas} aria-hidden="true" style={{ position: "absolute", inset: 0, width: "100%", height: "100%" }} />
         {phase.legend && <div style={kit.legend}>{nb(phase.legend)}</div>}
 
         <div style={bf.top}>
-          {step === 0 && valleyIdx <= 0 && phase.situation && <div style={{ ...kit.situation, maxWidth: 760, padding: "6px 16px", borderRadius: 10, backgroundColor: "rgba(20,15,10,0.5)" }}>{nb(phase.situation)}</div>}
+          {step <= 0 && valleyIdx <= 0 && phase.situation && <div style={{ ...kit.situation, maxWidth: 760, padding: "6px 16px", borderRadius: 10, backgroundColor: "rgba(20,15,10,0.5)" }}>{nb(phase.situation)}</div>}
           {step === 0 && v && (
             <div key={valleyIdx} style={{ ...bf.valley, animation: reduced ? "none" : "bfIn 900ms ease" }}>
               <span style={bf.vNum}>{t("第 {n} 谷").replace("{n}", String(valleyIdx + 1))}</span>
@@ -504,7 +513,24 @@ export default function BirdFlightPhase({ phase, onScore, onComplete }) {
               : <button style={bf.ask} onPointerDown={(e) => e.stopPropagation()} onClick={() => setExcuse({ ...excuse, open: true })}>{t("戴胜怎么回？")}</button>}
           </div>
         )}
-        {step === 0 && valleyIdx === 0 && <div style={bf.hint}>{t("你是戴胜鸟。移动鼠标带路；按住鼠标 = 收拢翅膀冲刺。")}</div>}
+        {step === -1 && (
+          <div style={bf.ready}>
+            <div style={bf.readyTitle}>{t("你是领路的戴胜鸟")}</div>
+            <div style={bf.readyRow}><span style={bf.readyKey}>{t("移动鼠标 / 手指拖动")}</span><span>{t("带路——鸟群跟着你飞。现在就可以试试。")}</span></div>
+            <div style={bf.readyRow}><span style={bf.readyKey}>{t("按住鼠标 / 空格 / 右下角按钮")}</span><span>{t("收拢翅膀冲刺：飞得快，鸟群靠得紧。")}</span></div>
+            <div style={bf.readyRow}><span style={bf.readyKey}>{t("七个山谷")}</span><span>{t("每个山谷都有自己的难处，进谷时会告诉你怎么飞。")}</span></div>
+            <button style={{ ...kit.go, pointerEvents: "auto" }} onPointerDown={(e) => e.stopPropagation()} onClick={() => setStep(0)}>{t("起飞 →")}</button>
+          </div>
+        )}
+        {step <= 0 && (
+          <button style={{ ...bf.dash, ...(holding ? bf.dashOn : null),
+            animation: !reduced && step === 0 && v && (v.kind === "fire" || v.kind === "gust") && !holding ? "bfPulse 1s ease-in-out infinite" : "none" }}
+            onPointerDown={(e) => { e.stopPropagation(); e.currentTarget.setPointerCapture?.(e.pointerId); setHold(true); }}
+            onPointerUp={(e) => { e.stopPropagation(); setHold(false); }} onPointerCancel={() => setHold(false)}
+            aria-label={t("按住冲刺")}>
+            {t("按住冲刺")}
+          </button>
+        )}
 
         {step === 1 && (
           <div style={bf.panel}>
@@ -534,6 +560,7 @@ export default function BirdFlightPhase({ phase, onScore, onComplete }) {
           </div>
         )}
         <style>{`
+          @keyframes bfPulse { 0%,100% { box-shadow: 0 0 0 0 rgba(255,190,90,0.7) } 50% { box-shadow: 0 0 0 12px rgba(255,190,90,0) } }
           @keyframes bfIn { from { opacity: 0; transform: translateY(8px) } to { opacity: 1; transform: none } }
           @keyframes bfToast { 0% { opacity: 0; transform: translate(-50%, 6px) } 15% { opacity: 1; transform: translate(-50%, 0) } 80% { opacity: 1 } 100% { opacity: 0; transform: translate(-50%, -10px) } }
         `}</style>
@@ -558,7 +585,7 @@ const bf = {
   toast: { position: "absolute", left: "50%", top: "46%", zIndex: 21, pointerEvents: "none", color: "#FFF8E8", fontSize: "clamp(14px, 1.2vw, 20px)", letterSpacing: 3, textShadow: "0 2px 10px rgba(0,0,0,0.9)" },
   lost: { color: "#E2D3B4", fontSize: "clamp(12px, 0.94vw, 15.5px)", letterSpacing: 1, lineHeight: 1.7, maxWidth: 760 },
   count: {
-    position: "absolute", right: 18, top: 18, zIndex: 22, padding: "4px 14px", borderRadius: 14,
+    position: "absolute", left: 16, top: 50, zIndex: 22, padding: "4px 14px", borderRadius: 14,
     backgroundColor: "rgba(20,15,10,0.6)", color: "#FBEFD5", fontSize: 14, letterSpacing: 3,
   },
   excuse: {
@@ -573,6 +600,21 @@ const bf = {
     alignSelf: "flex-start", minHeight: 32, padding: "4px 12px", borderRadius: 14, border: "1px solid #C9793A",
     background: "none", color: "#8A5A1E", cursor: "pointer", fontFamily: "var(--font-body)", fontSize: 13,
   },
+  ready: {
+    position: "absolute", left: "50%", top: "50%", transform: "translate(-50%, -50%)", zIndex: 24, pointerEvents: "none",
+    width: "min(640px, 88%)", padding: "20px 26px", borderRadius: 14, backgroundColor: "rgba(20,15,10,0.8)",
+    display: "flex", flexDirection: "column", gap: 10, color: "#FBEFD5", textAlign: "left",
+    fontSize: "clamp(13px, 1.04vw, 17px)", lineHeight: 1.6,
+  },
+  readyTitle: { fontSize: "clamp(18px, 1.6vw, 26px)", letterSpacing: 6, textAlign: "center", marginBottom: 4 },
+  readyRow: { display: "flex", gap: 12, flexWrap: "wrap" },
+  readyKey: { color: "#FFD27A", minWidth: 150, letterSpacing: 1 },
+  dash: {
+    position: "absolute", right: "3%", bottom: "5%", zIndex: 23, width: 96, height: 96, borderRadius: "50%",
+    border: "2px solid #FFD27A", backgroundColor: "rgba(20,15,10,0.55)", color: "#FFE9B8", cursor: "pointer",
+    fontFamily: "var(--font-body)", fontSize: 15, letterSpacing: 2, touchAction: "none", userSelect: "none",
+  },
+  dashOn: { backgroundColor: "rgba(201,121,58,0.85)", color: "#FFF8E8" },
   hint: {
     position: "absolute", left: 0, right: 0, bottom: "3%", zIndex: 21, textAlign: "center", pointerEvents: "none",
     color: "#FFF8E8", fontSize: "clamp(13px, 1.04vw, 17px)", letterSpacing: 3, textShadow: "0 2px 10px rgba(0,0,0,0.6)",
