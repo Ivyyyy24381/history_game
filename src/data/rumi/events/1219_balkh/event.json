@@ -8,7 +8,7 @@
     {
       "id": "walad_opens",
       "type": "transition",
-      "background": "/assets/rumi/shared/backgrounds/walad_study_1291.png",
+      "background": "/assets/rumi/shared/backgrounds/walad_study_1291.webp",
       "title": "开端之书",
       "transitionText": "1291 年，科尼亚。\n我叫苏丹·瓦拉德。我在写我父亲的一生——这本书后来叫《开端之书》。",
       "announcement": {
@@ -21,7 +21,7 @@
     {
       "id": "why_leave",
       "type": "eavesdrop",
-      "background": "/assets/rumi/events/1219_balkh/backgrounds/samarkand_rooftops.png",
+      "background": "/assets/rumi/events/1219_balkh/backgrounds/samarkand_rooftops.webp",
       "situation": "撒马尔罕。十二岁的鲁米听说，全家要走了——去麦加，而且可能再也不回来。大人们不肯跟孩子说为什么。市集的土墙后面，有人在说话。",
       "instruction": "把耳朵贴在墙上，左右挪动。离谁近，谁的话就听得清。",
       "voices": [
@@ -95,9 +95,9 @@
     {
       "id": "only_three",
       "type": "flee_florence",
-      "room": "/assets/rumi/events/1219_balkh/backgrounds/balkh_house_packing.png",
-      "gate": "/assets/rumi/events/1219_balkh/backgrounds/caravan_gate_dawn.png",
-      "hero": "/assets/rumi/hero/child/standing.png",
+      "room": "/assets/rumi/events/1219_balkh/backgrounds/balkh_house_packing.webp",
+      "gate": "/assets/rumi/events/1219_balkh/backgrounds/caravan_gate_dawn.webp",
+      "hero": "/assets/rumi/hero/child/standing.webp",
       "prompt": "驼队天亮就走。你只能带三样。",
       "walkPrompt": "去城门。",
       "seconds": 30,
@@ -153,7 +153,7 @@
     {
       "id": "khorasan_road",
       "type": "map_travel",
-      "background": "/assets/rumi/maps/route_1219_khorasan.png",
+      "background": "/assets/rumi/maps/route_1219_khorasan.webp",
       "title": "呼罗珊大道",
       "travelNarrative": "驼队向西。这条路是丝绸之路的主干，一路上都是绿洲城市——它们每一座，都还不知道自己剩下几年。",
       "instruction": "沿路线点击每一站。",

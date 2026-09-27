@@ -8,7 +8,7 @@
     {
       "id": "attar_shop",
       "type": "explore",
-      "background": "/assets/rumi/events/1220_nishapur/backgrounds/nishapur_attar_shop.png",
+      "background": "/assets/rumi/events/1220_nishapur/backgrounds/nishapur_attar_shop.webp",
       "title": "内沙布尔 · 药香铺",
       "narrative": "驼队在内沙布尔歇脚。父亲带你走进一间铺子——墙上一格格全是药材和香料，铜秤，玫瑰水瓶。\n「阿塔尔」这个名字，本来的意思就是「卖香料和药的人」。",
       "instruction": "铺子里有三个人。都说说话。",
@@ -16,7 +16,7 @@
         {
           "id": "attar_apprentice",
           "name": "学徒",
-          "portrait": "/assets/rumi/npcs/attar_apprentice.png",
+          "portrait": "/assets/rumi/npcs/attar_apprentice.webp",
           "position": {
             "x": 22,
             "y": 86
@@ -38,7 +38,7 @@
         {
           "id": "baha_walad",
           "name": "父亲巴哈丁",
-          "portrait": "/assets/rumi/npcs/baha_walad.png",
+          "portrait": "/assets/rumi/npcs/baha_walad.webp",
           "position": {
             "x": 50,
             "y": 88
@@ -60,7 +60,7 @@
         {
           "id": "attar",
           "name": "阿塔尔",
-          "portrait": "/assets/rumi/npcs/attar.png",
+          "portrait": "/assets/rumi/npcs/attar.webp",
           "position": {
             "x": 76,
             "y": 86
@@ -268,12 +268,12 @@
         "src": "/assets/rumi/art/concourse_of_birds.webp",
         "artKey": "/assets/rumi/art/concourse_of_birds.webp"
       },
-      "background": "/assets/rumi/events/1220_nishapur/backgrounds/birds_seven_valleys.png"
+      "background": "/assets/rumi/events/1220_nishapur/backgrounds/birds_seven_valleys.webp"
     },
     {
       "id": "book_and_words",
       "type": "transition",
-      "background": "/assets/rumi/events/1220_nishapur/backgrounds/nishapur_attar_shop.png",
+      "background": "/assets/rumi/events/1220_nishapur/backgrounds/nishapur_attar_shop.webp",
       "legend": "传说（道拉特沙等后世记载）",
       "title": "一本书和一句话",
       "transitionText": "临走的时候，老人从架子上取下自己写的一本书，放进孩子手里。",

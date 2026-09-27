@@ -8,7 +8,7 @@
     {
       "id": "sultan_invites",
       "type": "transition",
-      "background": "/assets/rumi/events/1231_konya/backgrounds/konya_citadel_1228.png",
+      "background": "/assets/rumi/events/1231_konya/backgrounds/konya_citadel_1228.webp",
       "title": "苏丹的邀请",
       "transitionText": "阿拉丁山丘上的清真寺与宫殿，城墙一圈围着。这是罗姆苏丹国的都城。",
       "announcement": {
@@ -21,7 +21,7 @@
     {
       "id": "madrasa",
       "type": "explore",
-      "background": "/assets/rumi/events/1231_konya/backgrounds/konya_madrasa.png",
+      "background": "/assets/rumi/events/1231_konya/backgrounds/konya_madrasa.webp",
       "title": "经学院",
       "narrative": "方形的内庭，四面尖拱廊，中间一方水池。墙上是蓝绿色的釉砖。\n父亲的讲席空着已经七天了。",
       "instruction": "廊下有三个人。都说说话。",
@@ -29,7 +29,7 @@
         {
           "id": "student_a",
           "name": "学生甲",
-          "portrait": "/assets/rumi/npcs/student_a.png",
+          "portrait": "/assets/rumi/npcs/student_a.webp",
           "position": {
             "x": 24,
             "y": 86
@@ -51,7 +51,7 @@
         {
           "id": "student_b",
           "name": "学生乙",
-          "portrait": "/assets/rumi/npcs/student_b.png",
+          "portrait": "/assets/rumi/npcs/student_b.webp",
           "position": {
             "x": 50,
             "y": 88
@@ -73,7 +73,7 @@
         {
           "id": "burhan",
           "name": "布尔汉丁",
-          "portrait": "/assets/rumi/npcs/burhan.png",
+          "portrait": "/assets/rumi/npcs/burhan.webp",
           "position": {
             "x": 76,
             "y": 86
@@ -103,7 +103,7 @@
     {
       "id": "seljuk_star",
       "type": "predict_reveal",
-      "background": "/assets/rumi/events/1231_konya/backgrounds/seljuk_tile_wall.png",
+      "background": "/assets/rumi/events/1231_konya/backgrounds/seljuk_tile_wall.webp",
       "situation": "等着上讲台的那个早上，他在廊下盯着墙看。\n蓝绿和黑的釉砖拼出八角星、十角星，一圈套一圈，看不出从哪里开始。",
       "question": "这面墙上的图案，是怎么画出来的？",
       "himLabel": "实际",
@@ -130,7 +130,7 @@
     {
       "id": "can_he_hold",
       "type": "predict_reveal",
-      "background": "/assets/rumi/events/1231_konya/backgrounds/konya_madrasa.png",
+      "background": "/assets/rumi/events/1231_konya/backgrounds/konya_madrasa.webp",
       "situation": "父亲去世了。第一次上讲台，下面坐着父亲的老学生。有人在交头接耳。",
       "question": "接下来会怎样？",
       "himLabel": "实际",

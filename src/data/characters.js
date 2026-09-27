@@ -96,7 +96,7 @@ export const CHARACTERS = [
     achievementTitle: "旋舞之路",
     completionLine: "从逃难的孩子，到科尼亚的芦笛。",
     recapEpigraph: "「我曾是生的，后来熟了，最后燃尽了。」——传为鲁米的四行诗（本作试译）",
-    heroPortrait: "/assets/rumi/hero/portrait.png",
+    heroPortrait: "/assets/rumi/hero/portrait.webp",
     avatar: "🌀",
     color: "#2F6F6B",
     background: "/assets/home/hp_background_rumi.webp",

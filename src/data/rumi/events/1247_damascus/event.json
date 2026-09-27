@@ -8,7 +8,7 @@
     {
       "id": "why_he_left",
       "type": "evidence_select",
-      "background": "/assets/rumi/events/1231_konya/backgrounds/konya_madrasa.png",
+      "background": "/assets/rumi/events/1231_konya/backgrounds/konya_madrasa.webp",
       "claim": "沙姆斯 1246 年离开科尼亚，主要是因为鲁米身边的人容不下他。",
       "instruction": "从这些说法里，挑出 2 条真能支持这个判断的。",
       "pick": 2,
@@ -49,7 +49,7 @@
     {
       "id": "to_damascus",
       "type": "map_travel",
-      "background": "/assets/rumi/maps/route_1247_damascus.png",
+      "background": "/assets/rumi/maps/route_1247_damascus.webp",
       "title": "去大马士革",
       "travelNarrative": "他第二次消失了。这一次，鲁米自己去找。\n同一条路，十四年前他走过——那次是去读书。",
       "instruction": "沿路线点击每一站。",
@@ -114,7 +114,7 @@
     {
       "id": "lamp_search",
       "type": "dark_explore",
-      "image": "/assets/rumi/events/1247_damascus/backgrounds/damascus_night_bazaar.png",
+      "image": "/assets/rumi/events/1247_damascus/backgrounds/damascus_night_bazaar.webp",
       "situation": "大马士革的夜市。长长的拱廊，店铺一间间关了门。地上的积水映着微光。",
       "instruction": "你提着一盏灯。在市集里找找线索。",
       "candle": 9,
@@ -177,7 +177,7 @@
     {
       "id": "layer5_found",
       "type": "link_match",
-      "background": "/assets/rumi/events/1247_damascus/backgrounds/damascus_night_bazaar.png",
+      "background": "/assets/rumi/events/1247_damascus/backgrounds/damascus_night_bazaar.webp",
       "situation": "二十七年前，一个老人在香料铺里给他讲过一群鸟。\n现在他提着灯，在一座空市集里找一个人。",
       "question": "这两件事，最后找到的是什么？把左边连到右边。",
       "left": [

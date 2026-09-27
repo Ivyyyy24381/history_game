@@ -8,7 +8,7 @@
     {
       "id": "kosedag",
       "type": "transition",
-      "background": "/assets/rumi/events/1244_shams/backgrounds/kosedag_aftermath.png",
+      "background": "/assets/rumi/events/1244_shams/backgrounds/kosedag_aftermath.webp",
       "title": "1243 · 克塞山",
       "transitionText": "蒙古人来了。这一次不是传闻。",
       "announcement": {
@@ -21,7 +21,7 @@
     {
       "id": "sugar_inn",
       "type": "explore",
-      "background": "/assets/rumi/events/1244_shams/backgrounds/sugar_merchants_inn.png",
+      "background": "/assets/rumi/events/1244_shams/backgrounds/sugar_merchants_inn.webp",
       "legend": "传说（阿夫拉基《圣徒传》）",
       "title": "糖商的客栈",
       "narrative": "1244 年秋，科尼亚。城里来了一个外乡人，住在糖商的客栈里。没有人知道他是谁。",
@@ -30,7 +30,7 @@
         {
           "id": "innkeeper",
           "name": "客栈老板",
-          "portrait": "/assets/rumi/npcs/innkeeper.png",
+          "portrait": "/assets/rumi/npcs/innkeeper.webp",
           "position": {
             "x": 24,
             "y": 86
@@ -52,7 +52,7 @@
         {
           "id": "sugar_merchant",
           "name": "糖商",
-          "portrait": "/assets/rumi/npcs/sugar_merchant.png",
+          "portrait": "/assets/rumi/npcs/sugar_merchant.webp",
           "position": {
             "x": 52,
             "y": 88
@@ -74,7 +74,7 @@
         {
           "id": "student_a",
           "name": "鲁米的学生",
-          "portrait": "/assets/rumi/npcs/student_a.png",
+          "portrait": "/assets/rumi/npcs/student_a.webp",
           "position": {
             "x": 78,
             "y": 86
@@ -99,7 +99,7 @@
     {
       "id": "books_in_pool",
       "type": "pool_rescue",
-      "background": "/assets/rumi/events/1244_shams/backgrounds/pool_courtyard.png",
+      "background": "/assets/rumi/events/1244_shams/backgrounds/pool_courtyard.webp",
       "legend": "传说 · 阿夫拉基《圣徒传》",
       "introBeats": [
         {
@@ -156,7 +156,7 @@
     {
       "id": "what_do_you_know",
       "type": "silence_choice",
-      "background": "/assets/rumi/events/1244_shams/backgrounds/konya_street_dusk.png",
+      "background": "/assets/rumi/events/1244_shams/backgrounds/konya_street_dusk.webp",
       "legend": "传说 · 台词为本作改写",
       "speaker": {
         "name": "沙姆斯"
@@ -197,7 +197,7 @@
     {
       "id": "where_it_went",
       "type": "predict_reveal",
-      "background": "/assets/rumi/events/1244_shams/backgrounds/konya_street_dusk.png",
+      "background": "/assets/rumi/events/1244_shams/backgrounds/konya_street_dusk.webp",
       "situation": "此后三年，鲁米写了上千首抒情诗。\n波斯抒情诗有个规矩：最后一联，要嵌进诗人自己的笔名。",
       "question": "鲁米的诗，最后一联嵌的是谁的名字？",
       "himLabel": "实际",

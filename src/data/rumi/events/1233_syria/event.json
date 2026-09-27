@@ -8,7 +8,7 @@
     {
       "id": "to_syria",
       "type": "map_travel",
-      "background": "/assets/rumi/maps/route_1233_syria.png",
+      "background": "/assets/rumi/maps/route_1233_syria.webp",
       "title": "游学叙利亚",
       "travelNarrative": "布尔汉丁把他送出城。往南翻过托罗斯山，就是叙利亚。",
       "instruction": "沿路线点击每一站。",
@@ -78,7 +78,7 @@
     {
       "id": "forty_days",
       "type": "silence_choice",
-      "background": "/assets/rumi/events/1233_syria/backgrounds/chilla_cell.png",
+      "background": "/assets/rumi/events/1233_syria/backgrounds/chilla_cell.webp",
       "legend": "据后世传记",
       "speaker": {
         "name": "布尔汉丁"
@@ -124,7 +124,7 @@
     {
       "id": "who_is_he_now",
       "type": "evidence_select",
-      "background": "/assets/rumi/events/1233_syria/backgrounds/chilla_cell.png",
+      "background": "/assets/rumi/events/1233_syria/backgrounds/chilla_cell.webp",
       "claim": "1240 年的鲁米，是一位学者，还不是一位诗人。",
       "instruction": "从你一路见到的材料里，挑出 2 条真能支持这个判断的。",
       "pick": 2,
@@ -165,7 +165,7 @@
     {
       "id": "teacher_gone",
       "type": "transition",
-      "background": "/assets/rumi/events/1233_syria/backgrounds/chilla_cell.png",
+      "background": "/assets/rumi/events/1233_syria/backgrounds/chilla_cell.webp",
       "title": "老师走了",
       "transitionText": "",
       "announcement": {

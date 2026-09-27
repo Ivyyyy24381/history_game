@@ -3,12 +3,12 @@
   "title": "婚礼之夜",
   "year": "1273",
   "type": "interactive",
-  "_note": "鲁米线 1273：冬天 → 信物与送葬 → 他们为何而来 → 婚礼之夜连环画（末格接「同时代的中国」）。",
+  "_note": "鲁米线 1273：冬天 → 信物与送葬（含「他们为何而来」）→ 婚礼之夜连环画（末格接「同时代的中国」）。",
   "phases": [
     {
       "id": "that_winter",
       "type": "transition",
-      "background": "/assets/rumi/events/1273_wedding/backgrounds/konya_winter.png",
+      "background": "/assets/rumi/events/1273_wedding/backgrounds/konya_winter.webp",
       "title": "冬天",
       "transitionText": "1273 年冬，科尼亚。雪落在屋顶上。",
       "announcement": {
@@ -21,7 +21,7 @@
     {
       "id": "wedding_night",
       "type": "procession",
-      "background": "/assets/rumi/events/1273_wedding/backgrounds/konya_winter.png",
+      "background": "/assets/rumi/events/1273_wedding/backgrounds/konya_winter.webp",
       "legend": "台词为本作改写 · 送葬场面据阿夫拉基《圣徒传》",
       "situation": "1273 年冬，科尼亚。鲁米病了。他对身边的人说：不要哭，这是我的婚礼。病榻前摆着几样东西——每一样，都是一路上有人给他的。",
       "people": [
@@ -170,38 +170,10 @@
       }
     },
     {
-      "id": "why_they_came",
-      "type": "predict_reveal",
-      "background": "/assets/rumi/events/1273_wedding/backgrounds/konya_winter.png",
-      "legend": "传说（阿夫拉基《圣徒传》）· 本作意译",
-      "situation": "1273 年 12 月 17 日，鲁米去世。\n第二天送葬，队伍里有穆斯林，也有基督徒和犹太人。",
-      "question": "为什么基督徒和犹太人也来了？",
-      "himLabel": "实际",
-      "options": [
-        {
-          "id": "order",
-          "text": "苏丹下令全城都要来"
-        },
-        {
-          "id": "taught",
-          "text": "他们也听过他讲，觉得他也是自己的老师"
-        },
-        {
-          "id": "curious",
-          "text": "只是来看热闹"
-        }
-      ],
-      "actual": "taught",
-      "sameNote": "你猜对了。那你已经知道那些寓言是讲给谁听的了。",
-      "diffNote": "不是命令，也不是看热闹。——",
-      "reveal": "后来的传记记下了这一幕：有人问他们为何而来。\n他们的意思大致是——「我们从他身上，懂得了我们自己经书里的道理。」",
-      "consequence": "科尼亚当时住着突厥人、波斯人、希腊人、亚美尼亚人和犹太人。\n一枚银币买四样东西的那个故事，谁都听得懂。"
-    },
-    {
       "id": "wedding_comic",
       "type": "comic_reveal",
-      "background": "/assets/rumi/events/1273_wedding/backgrounds/comic_wedding_night.png",
-      "image": "/assets/rumi/events/1273_wedding/backgrounds/comic_wedding_night.png",
+      "background": "/assets/rumi/events/1273_wedding/backgrounds/comic_wedding_night.webp",
+      "image": "/assets/rumi/events/1273_wedding/backgrounds/comic_wedding_night.webp",
       "title": "婚礼之夜",
       "narrative": "",
       "instruction": "点击画面，一格一格看下去。",

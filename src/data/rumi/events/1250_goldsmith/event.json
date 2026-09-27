@@ -8,7 +8,7 @@
     {
       "id": "goldsmith_street",
       "type": "explore",
-      "background": "/assets/rumi/events/1250_goldsmith/backgrounds/goldsmith_street.png",
+      "background": "/assets/rumi/events/1250_goldsmith/backgrounds/goldsmith_street.webp",
       "title": "金匠街",
       "narrative": "科尼亚集市的金匠街。一排敞开的小铺子，炉火、铁砧、金箔在太阳底下发亮。\n满街都是叮叮当当。",
       "instruction": "街上有三个人。都说说话。",
@@ -16,7 +16,7 @@
         {
           "id": "salah_goldsmith",
           "name": "萨拉丁",
-          "portrait": "/assets/rumi/npcs/salah_goldsmith.png",
+          "portrait": "/assets/rumi/npcs/salah_goldsmith.webp",
           "position": {
             "x": 26,
             "y": 86
@@ -38,7 +38,7 @@
         {
           "id": "goldsmith_apprentice",
           "name": "学徒",
-          "portrait": "/assets/rumi/npcs/goldsmith_apprentice.png",
+          "portrait": "/assets/rumi/npcs/goldsmith_apprentice.webp",
           "position": {
             "x": 52,
             "y": 88
@@ -60,7 +60,7 @@
         {
           "id": "student_b",
           "name": "鲁米的学生",
-          "portrait": "/assets/rumi/npcs/student_b.png",
+          "portrait": "/assets/rumi/npcs/student_b.webp",
           "position": {
             "x": 78,
             "y": 86
@@ -85,7 +85,7 @@
     {
       "id": "hammer_meter",
       "type": "link_match",
-      "background": "/assets/rumi/events/1250_goldsmith/backgrounds/goldsmith_forge.png",
+      "background": "/assets/rumi/events/1250_goldsmith/backgrounds/goldsmith_forge.webp",
       "situation": "炉火映红了铺子。铁砧上一片金箔，锤子一下一下落下来，轻重有定数。\n鲁米站在街上听。他听见的不是打铁——是一句诗的骨头。",
       "question": "三种敲法，各自是哪一句的节拍？把左边连到右边。（◼ 长 ／ ◻ 短）",
       "left": [
@@ -134,7 +134,7 @@
     {
       "id": "jealous_again",
       "type": "predict_reveal",
-      "background": "/assets/rumi/events/1250_goldsmith/backgrounds/goldsmith_street.png",
+      "background": "/assets/rumi/events/1250_goldsmith/backgrounds/goldsmith_street.webp",
       "situation": "学生们又开始嫉妒了。上一次这样的时候，那个人走了，再也没回来。",
       "question": "这一次，鲁米会怎么做？",
       "himLabel": "实际",

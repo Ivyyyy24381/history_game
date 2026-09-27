@@ -8,7 +8,7 @@
     {
       "id": "hajj_west",
       "type": "map_travel",
-      "background": "/assets/rumi/maps/route_1221_hajj.png",
+      "background": "/assets/rumi/maps/route_1221_hajj.webp",
       "title": "朝觐与西行",
       "travelNarrative": "一家人往西南走到麦加，再折向西北。走走停停，六七年。\n（路线细节各家记载不一，这里只取主流说法。）",
       "instruction": "沿路线点击每一站。",
@@ -86,7 +86,7 @@
     {
       "id": "courtyard",
       "type": "explore",
-      "background": "/assets/rumi/events/1225_larende/backgrounds/larende_courtyard.png",
+      "background": "/assets/rumi/events/1225_larende/backgrounds/larende_courtyard.webp",
       "title": "拉兰达的院子",
       "narrative": "安纳托利亚的一座小城。石砌的院子，葡萄架，廊下挂起了彩色的布幔——家里要办喜事。",
       "instruction": "院子里有三个人。都说说话。",
@@ -94,7 +94,7 @@
         {
           "id": "gowhar",
           "name": "高哈尔",
-          "portrait": "/assets/rumi/npcs/gowhar.png",
+          "portrait": "/assets/rumi/npcs/gowhar.webp",
           "position": {
             "x": 26,
             "y": 86
@@ -116,7 +116,7 @@
         {
           "id": "mother_mumina",
           "name": "母亲穆敏娜",
-          "portrait": "/assets/rumi/npcs/mother_mumina.png",
+          "portrait": "/assets/rumi/npcs/mother_mumina.webp",
           "position": {
             "x": 52,
             "y": 88
@@ -138,7 +138,7 @@
         {
           "id": "baha_walad",
           "name": "父亲巴哈丁",
-          "portrait": "/assets/rumi/npcs/baha_walad.png",
+          "portrait": "/assets/rumi/npcs/baha_walad.webp",
           "position": {
             "x": 76,
             "y": 86
@@ -163,7 +163,7 @@
     {
       "id": "contract_direction",
       "type": "predict_reveal",
-      "background": "/assets/rumi/events/1225_larende/backgrounds/marriage_contract_desk.png",
+      "background": "/assets/rumi/events/1225_larende/backgrounds/marriage_contract_desk.webp",
       "situation": "矮桌上摊着一张空白的婚约纸。芦苇笔、墨壶、撒沙罐，旁边一支红烛。",
       "question": "波斯文写婚约，笔从哪边起？",
       "himLabel": "实际",
@@ -190,8 +190,8 @@
     {
       "id": "same_year",
       "type": "comic_reveal",
-      "background": "/assets/rumi/events/1225_larende/backgrounds/comic_larende_year.png",
-      "image": "/assets/rumi/events/1225_larende/backgrounds/comic_larende_year.png",
+      "background": "/assets/rumi/events/1225_larende/backgrounds/comic_larende_year.webp",
+      "image": "/assets/rumi/events/1225_larende/backgrounds/comic_larende_year.webp",
       "title": "同一年",
       "narrative": "",
       "instruction": "点击画面，一格一格看下去。",
@@ -277,7 +277,7 @@
     {
       "id": "epitaph",
       "type": "predict_reveal",
-      "background": "/assets/rumi/events/1225_larende/backgrounds/marriage_contract_desk.png",
+      "background": "/assets/rumi/events/1225_larende/backgrounds/marriage_contract_desk.webp",
       "situation": "同一张桌子，同一支笔。这次要写的是墓志。",
       "question": "如果让你给母亲写一句，你会写——",
       "himLabel": "史料",

@@ -1,11 +1,11 @@
 // Rumi portrait poses, organized by life stage.
-// Files live at /assets/rumi/hero/<stage>/<pose>.png
+// Files live at /assets/rumi/hero/<stage>/<pose>.webp
 // Resolution priority (in ScenePlayer):
 //   dialogue line dufu_pose > phase dufu_pose > event dufu_pose > stage default by event year
 // (键名沿用引擎现有的 dufu_pose / dufu_reaction，不改引擎。)
 //
 // 分期与默认姿态见 docs/SCREENPLAY_RUMI.md 附录 A。
-// 注意扩展名是 .png——鲁米线的立绘还没转 webp，转完这里和资产一起改。
+// 立绘已转 webp（和杜甫、但丁两线一致）。
 
 export const RUMI_POSES = [
   { value: "child/standing", label: "少年·旅装站立（12 岁）" },
@@ -27,7 +27,7 @@ export const RUMI_POSES = [
 
 // The character-select portrait. Any event reference to it is treated as
 // "unset" and resolves to a stage default instead (same convention as dufu/dante).
-export const RUMI_LEGACY_PORTRAIT = "/assets/rumi/hero/portrait.png";
+export const RUMI_LEGACY_PORTRAIT = "/assets/rumi/hero/portrait.webp";
 
 const STAGE_DEFAULT_POSE = {
   child: "child/standing",
@@ -55,5 +55,5 @@ export function rumiPortraitPath(pose, year) {
     const stage = rumiStageForYear(year) || "scholar";
     pose = STAGE_DEFAULT_POSE[stage];
   }
-  return `/assets/rumi/hero/${pose}.png`;
+  return `/assets/rumi/hero/${pose}.webp`;
 }
