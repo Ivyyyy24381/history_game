@@ -1,5 +1,8 @@
 # 美工生成指南 · ASSET_PROMPTS_RUMI
 
+> ⚠️ **2026-09-27 起先读 `ASSET_STRATEGY_RUMI.md`。** 鲁米线改为「代码画舞台 + 真实古画 + 只生成 7 张背景」，
+> 实际要跑的是 `scripts/assets_manifest_rumi_core.csv`（7 行）。下面这份 78 张的全量清单保留作备用，不要整批跑。
+
 > 鲁米线资产 prompt 清单，体例同 `ASSET_PROMPTS_DANTE.md`。剧本见 `SCREENPLAY_RUMI.md`——每条 prompt 都来自剧本里「背景」那一行。
 > 机器可读版：[`scripts/assets_manifest_rumi.csv`](../scripts/assets_manifest_rumi.csv)（78 行）。
 >

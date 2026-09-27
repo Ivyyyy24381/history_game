@@ -1,0 +1,8 @@
+type,output_path,prompt,width,height,transparent
+bg,public/assets/rumi/events/1244_shams/backgrounds/pool_courtyard.png,13世纪科尼亚宅院内庭，四面尖拱廊与蓝绿釉砖，中央地面留出一大片空地（游戏里会叠加一个水池），午后天光从上方落下，低细节平涂，画面偏暗、对比柔和，前景中部留空给游戏界面，画面中不画任何人物，无可读文字,1920,1080,false
+bg,public/assets/rumi/events/1244_shams/backgrounds/konya_street_dusk.png,13世纪科尼亚黄昏的空街，土黄色墙壁，远处一座宣礼塔的剪影，天色由金转暗，低细节平涂，画面偏暗、对比柔和，前景中部留空给游戏界面，画面中不画任何人物，无可读文字,1920,1080,false
+bg,public/assets/rumi/events/1219_balkh/backgrounds/samarkand_rooftops.png,13世纪初撒马尔罕的屋顶天际线，砖砌穹顶、平屋顶、远处城墙，清晨天空；画面下半部分是一堵土墙的顶端（游戏里会叠加墙），低细节平涂，画面偏暗、对比柔和，前景中部留空给游戏界面，画面中不画任何人物，无可读文字,1920,1080,false
+bg,public/assets/rumi/events/1258_masnavi/backgrounds/fruit_market.png,13世纪安纳托利亚集市一角，布棚、藤架、远处的清真寺穹顶，下方留出空地（游戏里会叠加果摊），低细节平涂，画面偏暗、对比柔和，前景中部留空给游戏界面，画面中不画任何人物，无可读文字,1920,1080,false
+bg,public/assets/rumi/events/1247_damascus/backgrounds/damascus_night_bazaar.png,13世纪大马士革夜晚的有顶市集，长长的拱廊纵深，关门的店铺、客栈门口、清真寺台阶、城门各在画面不同位置，地面积水映着微光，16:9 整幅清晰可辨（游戏会用黑幕遮住，只露提灯的一圈）,1920,1080,false
+bg,public/assets/rumi/events/1273_wedding/backgrounds/konya_winter.png,冬日科尼亚街道通向城门，雪落在屋顶和地面，灰蓝天空，炊烟，左侧远处是城门的方向，低细节平涂，画面偏暗、对比柔和，前景中部留空给游戏界面，画面中不画任何人物，无可读文字,1920,1080,false
+bg,public/assets/rumi/maps/rumi_general_map.png,手绘古地图风格，中亚到安纳托利亚：东起撒马尔罕，西至科尼亚，南到麦加，画出里海、黑海、地中海、波斯湾与两河，山脉以细密画方式画出，羊皮纸底色，不写任何地名文字，留出城市图钉的位置,1920,1080,false
