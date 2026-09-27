@@ -41,3 +41,39 @@
 3. 波提切利的《神曲》素描是**分藏两处**的：柏林铜版画陈列馆 85 张，梵蒂冈 7 张 8 幅，
    《地狱图》在**梵蒂冈**这一批里。别写成柏林。
 4. `File:Gustave Dore Inferno1.jpg`（第一歌）的 Commons 作者字段填成了 Walter Crane，是错的，别用那个文件。
+
+## 背景音乐（BGM）
+
+引擎按 `/assets/<人物id>/bgm/<stageId>.mp3` 取文件，**文件名必须等于
+timeline.json 里的时期 id**（见 `src/App.jsx` 的 BGM 那一段）。
+
+鲁米线与但丁线这 8 首全部来自 **Kevin MacLeod（incompetech.com）**，
+经 Wikimedia Commons 取得，授权 **CC BY 3.0** —— 署名是授权要求，不能省。
+
+> Music by Kevin MacLeod (incompetech.com)
+> Licensed under Creative Commons: By Attribution 3.0
+> http://creativecommons.org/licenses/by/3.0/
+
+| 用在哪 | 曲名 | ISRC | 时长 |
+|---|---|---|---|
+| `rumi/bgm/exile.mp3` · 少年流亡 | Desert City | USUAN1100564 | 1:29 |
+| `rumi/bgm/scholar.mp3` · 科尼亚学者 | Ibn Al-Noor | USUAN1100706 | 3:38 |
+| `rumi/bgm/shams.mp3` · 沙姆斯之火 | Mystery Bazaar | USUAN1700005 | 2:38 |
+| `rumi/bgm/masnavi.mp3` · 芦笛之歌 | Nu Flute | USUAN1100680 | 1:22 |
+| `dante/bgm/firenze.mp3` · 旧佛罗伦萨 | Suonatore di Liuto | USUAN1400023 | 2:24 |
+| `dante/bgm/comune.mp3` · 自由的公社 | Minstrel Guild | USUAN1200098 | 3:05 |
+| `dante/bgm/esilio.mp3` · 流亡 | Angevin | USUAN1200110 | 4:40 |
+| `dante/bgm/ravenna.mp3` · 拉文纳 | Rites | USUAN1100722 | 2:06 |
+
+原文件在 Commons 上叫 `<曲名> (ISRC <编号>).mp3`，直链形如
+`https://commons.wikimedia.org/wiki/Special:FilePath/Desert_City_(ISRC_USUAN1100564).mp3`。
+
+杜甫线那 5 首（youth / changan / anshi / chengdu / piaobo）来源另记，不在此表。
+
+选曲时踩到的坑：
+1. **Free Music Archive 下载要登录**，脚本取不到；曲目页的授权标注倒是清楚，
+   适合人工挑，不适合自动拉。
+2. **Musopen 有 Cloudflare 机器人验证**，同样走不通。
+3. Wikimedia Commons 的 `Special:FilePath/<文件名>` 会 302 到真实文件，
+   不需要登录、也不用自己拼 MD5 目录，是最省事的直链形式。
+   请求时带上有联系方式的 User-Agent，否则会被限流。
