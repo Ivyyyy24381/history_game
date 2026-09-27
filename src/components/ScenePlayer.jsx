@@ -15,6 +15,7 @@ import SilenceChoicePhase from "./phases/SilenceChoicePhase";
 import LinkMatchPhase from "./phases/LinkMatchPhase";
 import DarkExplorePhase from "./phases/DarkExplorePhase";
 import ScratchRevealPhase from "./phases/ScratchRevealPhase";
+import PoolRescuePhase from "./phases/PoolRescuePhase";
 
 /** 图标：只吃 path，颜色大小随调。来源 game-icons.net（CC BY 3.0，见 CREDITS.md）。 */
 function Icon({ name, size = 40, color = "#E8D9BE" }) {
@@ -1422,6 +1423,11 @@ export default function ScenePlayer({ sceneData, eventId, awardScore, onComplete
   // --- DARK EXPLORE (黑屋里只有一小圈烛光：摸 → 猜 → 点灯对照) ---
   if (currentPhase.type === "dark_explore") {
     return <DarkExplorePhase phase={currentPhase} onScore={award} onComplete={goToNextPhase} />;
+  }
+
+  // --- POOL RESCUE (书落水池：只来得及救一本) ---
+  if (currentPhase.type === "pool_rescue") {
+    return <PoolRescuePhase phase={currentPhase} onScore={award} onComplete={goToNextPhase} />;
   }
 
   // --- SCRATCH REVEAL (磨 → 猜 → 拉帘对照) ---

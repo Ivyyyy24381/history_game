@@ -406,5 +406,15 @@
   "rumi.scratch.guessFirst": "Guess first, then draw the curtain.",
   "rumi.scratch.opened": "Curtain drawn",
   "rumi.scratch.same": "You guessed what the mirror was for.",
-  "rumi.scratch.diff": "The Greek painters were betting on something else —"
+  "rumi.scratch.diff": "The Greek painters were betting on something else —",
+  "rumi.pool.kbd": ", press Enter to pull it out of the pool",
+  "rumi.pool.hint": "The books are sinking! Grab one and drag it out of the pool.",
+  "rumi.pool.stop": "Shams stops your hand: “Enough.”",
+  "rumi.pool.reach": "Shams reaches into the water…",
+  "rumi.pool.more": "…",
+  "rumi.pool.throw": "He throws the books →",
+  "rumi.pool.saved": "You saved",
+  "rumi.pool.none": "Nothing, in time",
+  "rumi.pool.shams": "Shams pulled out",
+  "rumi.pool.dry": "All of them — and the pages are dry"
 }

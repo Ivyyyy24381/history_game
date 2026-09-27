@@ -406,5 +406,15 @@
   "rumi.scratch.guessFirst": "先猜，再拉开帘子。",
   "rumi.scratch.opened": "帘子拉开",
   "rumi.scratch.same": "你猜到了镜子的用处。",
-  "rumi.scratch.diff": "希腊画师赌的是另一件事——"
+  "rumi.scratch.diff": "希腊画师赌的是另一件事——",
+  "rumi.pool.kbd": "，按回车把它拖出水池",
+  "rumi.pool.hint": "书在往下沉！按住一本，拖出水池。",
+  "rumi.pool.stop": "沙姆斯按住了你的手：「够了。」",
+  "rumi.pool.reach": "沙姆斯把手伸进水里……",
+  "rumi.pool.more": "……",
+  "rumi.pool.throw": "他把书扔了出去 →",
+  "rumi.pool.saved": "你救下的",
+  "rumi.pool.none": "一本也没来得及救",
+  "rumi.pool.shams": "沙姆斯捞起的",
+  "rumi.pool.dry": "全部——而且书页是干的"
 }
