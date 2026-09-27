@@ -36,14 +36,25 @@ for (const id of readdirSync(evDir)) {
   if (!existsSync(f)) continue;
   for (const m of readFileSync(f, "utf8").matchAll(/"(\/assets\/[^"]+)"/g)) paths.add(m[1]);
 }
+// 优先用 .artifact-assets/ 里的缩图（scripts/shrink_artifact_assets.py 产出）。
+// 内嵌成 base64 还要再胀 33%，直接塞 1920×1080 的正式资产会让这一页冲到十几 MB。
+const SMALL = join(ROOT, ".artifact-assets");
 const map = {};
 let bytes = 0;
+let shrunk = 0;
 for (const p of paths) {
-  const file = join(ROOT, "public", p);
+  const full = join(ROOT, "public", p);
+  const smallWebp = join(SMALL, p).replace(/\.(png|jpe?g|webp)$/i, ".webp");
+  const smallAsIs = join(SMALL, p);
+  const file = existsSync(smallWebp) ? smallWebp : existsSync(smallAsIs) ? smallAsIs : full;
+  if (file !== full) shrunk++;
   if (!existsSync(file)) { console.warn("  ⚠ 缺图：" + p); continue; }
   const buf = readFileSync(file);
   bytes += buf.length;
-  map[p] = `data:${MIME[extname(p).toLowerCase()] || "application/octet-stream"};base64,${buf.toString("base64")}`;
+  map[p] = `data:${MIME[extname(file).toLowerCase()] || "application/octet-stream"};base64,${buf.toString("base64")}`;
+}
+if (shrunk === 0 && paths.size > 0) {
+  console.warn("  ⚠ 没找到 .artifact-assets/——先跑 python scripts/shrink_artifact_assets.py 能把这一页缩小很多");
 }
 
 const safeJs = js.replace(/<\/script/gi, "<\\/script");

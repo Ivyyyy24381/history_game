@@ -13,7 +13,7 @@
     "i18n:ui": "node scripts/i18n_ui_check.mjs",
     "contrast": "node scripts/contrast.mjs",
     "check:overlap": "node scripts/check_overlap.mjs",
-    "artifact:rumi": "node scripts/build_artifact.mjs rumi"
+    "artifact:rumi": "python scripts/shrink_artifact_assets.py rumi && node scripts/build_artifact.mjs rumi"
   },
   "dependencies": {
     "@cloudbase/js-sdk": "^3.6.2",

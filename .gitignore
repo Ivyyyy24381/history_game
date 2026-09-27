@@ -22,3 +22,6 @@ public/assets/rumi/art/*.jpg
 # Python 缓存（run_comfyui_batch.py 跑一次就会生成）
 __pycache__/
 *.pyc
+
+# 试玩页用的缩图（npm run artifact:rumi 自动生成，不入库）
+.artifact-assets/
