@@ -33,7 +33,8 @@
           "color": "#6E5A3A",
           "beardColor": "#E8E2D6",
           "keepsake": "book",
-          "line": "「这孩子将来，会在世上点起一把火。」"
+          "line": "「这孩子将来，会在世上点起一把火。」",
+          "portrait": "/assets/rumi/npcs/attar.webp"
         },
         {
           "id": "burhan",
@@ -43,7 +44,8 @@
           "color": "#5A5A4A",
           "beardColor": "#9A948A",
           "keepsake": "lamp",
-          "line": "「现在你身上，有了你父亲的那样东西。」"
+          "line": "「现在你身上，有了你父亲的那样东西。」",
+          "portrait": "/assets/rumi/npcs/burhan.webp"
         },
         {
           "id": "shams",
@@ -52,7 +54,8 @@
           "hat": "feltcap",
           "color": "#24201E",
           "keepsake": "question",
-          "line": "「你自己，知道些什么？」"
+          "line": "「你自己，知道些什么？」",
+          "portrait": "/assets/rumi/npcs/shams.webp"
         },
         {
           "id": "salah",
@@ -61,7 +64,8 @@
           "hat": "furcap",
           "color": "#8A6438",
           "keepsake": "hammer",
-          "line": "「我不会读书，我只会敲。」"
+          "line": "「我不会读书，我只会敲。」",
+          "portrait": "/assets/rumi/npcs/salah_goldsmith.webp"
         },
         {
           "id": "husam",
@@ -71,7 +75,8 @@
           "color": "#4A6A7A",
           "keepsake": "pen",
           "line": "「老师，您说，我来写。」",
-          "walks": true
+          "walks": true,
+          "portrait": "/assets/rumi/npcs/husam.webp"
         }
       ],
       "keepsakes": [
@@ -106,44 +111,52 @@
         {
           "label": "儿子苏丹·瓦拉德",
           "hat": "turban",
-          "color": "#2F4A5A"
+          "color": "#2F4A5A",
+          "portrait": "/assets/rumi/npcs/sultan_walad_young.webp"
         },
         {
           "label": "经学院的学生们",
           "hat": "bigturban",
-          "color": "#3A4A6A"
+          "color": "#3A4A6A",
+          "portrait": "/assets/rumi/npcs/student_a.webp"
         },
         {
           "label": "基督徒修士",
           "hat": "hood",
           "color": "#24201E",
-          "cloth": "#1A1614"
+          "cloth": "#1A1614",
+          "portrait": "/assets/rumi/npcs/mourners/christian_monk.webp"
         },
         {
           "label": "犹太拉比",
           "hat": "kippah",
-          "color": "#2E3A5A"
+          "color": "#2E3A5A",
+          "portrait": "/assets/rumi/npcs/mourners/jewish_rabbi.webp"
         },
         {
           "label": "希腊石匠",
           "hat": "pilos",
-          "color": "#5A4A3A"
+          "color": "#5A4A3A",
+          "portrait": "/assets/rumi/npcs/mourners/greek_mason.webp"
         },
         {
           "label": "突厥士兵",
           "hat": "furcap",
-          "color": "#6E3A2A"
+          "color": "#6E3A2A",
+          "portrait": "/assets/rumi/npcs/mourners/turkish_soldier.webp"
         },
         {
           "label": "亚美尼亚妇人",
           "hat": "veil",
           "color": "#6A2E3A",
-          "cloth": "#3A2A4A"
+          "cloth": "#3A2A4A",
+          "portrait": "/assets/rumi/npcs/mourners/armenian_woman.webp"
         },
         {
           "label": "波斯商人",
           "hat": "turban",
-          "color": "#8A6A3A"
+          "color": "#8A6A3A",
+          "portrait": "/assets/rumi/npcs/sugar_merchant.webp"
         }
       ],
       "question": "送葬的队伍里，有基督徒，也有犹太人。他们为什么也来了？",

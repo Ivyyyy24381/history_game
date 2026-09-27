@@ -117,8 +117,16 @@ export default function ProcessionPhase({ phase, onScore, onComplete }) {
                 return (
                   <button key={p.id} data-person={p.id} onClick={() => armed && give(armed, p.id)}
                     style={{ ...pc.person, cursor: armed ? "pointer" : "default", animation: nope === p.id && !reduced ? "pcNo 0.3s ease-in-out 2" : "none" }}>
-                    <span data-person={p.id} style={{ ...pc.ghost, opacity: on ? 1 : 0.32, filter: on ? "none" : "grayscale(1) brightness(1.3)" }}>
-                      <Traveler hat={p.hat} color={p.color} beardColor={p.beardColor} mood={on ? "calm" : "idle"} />
+                    <span data-person={p.id} style={{
+                      ...pc.ghost,
+                      opacity: on ? 1 : (p.portrait ? 0.78 : 0.32),
+                      filter: on ? "none"
+                        : p.portrait ? "grayscale(0.55) brightness(0.72)"
+                        : "grayscale(1) brightness(1.3)",
+                    }}>
+                      {p.portrait
+                        ? <img src={asset(p.portrait)} alt="" style={pc.portraitImg} />
+                        : <Traveler hat={p.hat} color={p.color} beardColor={p.beardColor} mood={on ? "calm" : "idle"} />}
                     </span>
                     <span data-person={p.id} style={pc.pName}>{nb(p.name)}</span>
                     <span data-person={p.id} style={pc.pWhere}>{nb(p.where)}</span>
@@ -170,12 +178,18 @@ export default function ProcessionPhase({ phase, onScore, onComplete }) {
                 </svg>
               </div>
               {people.filter((p) => p.walks).map((p) => (
-                <div key={p.id} style={pc.walker}><Traveler hat={p.hat} color={p.color} beardColor={p.beardColor} mood="calm" /></div>
+                <div key={p.id} style={pc.walker}>
+                  {p.portrait
+                    ? <img src={asset(p.portrait)} alt="" style={pc.portraitImg} />
+                    : <Traveler hat={p.hat} color={p.color} beardColor={p.beardColor} mood="calm" />}
+                </div>
               ))}
               {mourners.slice(0, joined).map((m, i) => (
                 <div key={i} style={{ ...pc.walker, animation: reduced ? "none" : "pcIn 700ms ease",
                   transform: reduced ? "none" : `translateY(${(Math.sin(walk * 60 + i * 1.3) * 3).toFixed(1)}px)` }}>
-                  <Traveler hat={m.hat} color={m.color} cloth={m.cloth} mood="calm" />
+                  {m.portrait
+                    ? <img src={asset(m.portrait)} alt="" style={pc.portraitImg} />
+                    : <Traveler hat={m.hat} color={m.color} cloth={m.cloth} mood="calm" />}
                   <span style={pc.mLabel}>{nb(m.label)}</span>
                 </div>
               ))}
@@ -220,6 +234,12 @@ export default function ProcessionPhase({ phase, onScore, onComplete }) {
 }
 
 const pc = {
+  // 送葬这一幕的人是「把信物还给谁」和「谁来送他」——必须认得出脸，
+  // 剪影做不到。没有 portrait 的仍回退剪影。
+  portraitImg: {
+    width: "100%", height: "100%", objectFit: "contain", objectPosition: "bottom",
+    userSelect: "none", pointerEvents: "none",
+  },
   top: {
     position: "absolute", top: 0, left: 0, right: 0, zIndex: 20, pointerEvents: "none",
     display: "flex", flexDirection: "column", alignItems: "center", gap: 6, padding: "max(3%, 48px) 10% 0", textAlign: "center",

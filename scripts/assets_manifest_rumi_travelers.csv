@@ -1,0 +1,6 @@
+type,output_path,prompt,width,height,transparent
+npc,public/assets/rumi/npcs/travelers/persian.png,"13世纪波斯旅人，三十五岁男子，修剪整齐的黑须，白色缠头巾，靛蓝色长袍束腰带，肩上一条薄毯，一手抬起比划着说话，全身立绘含双脚，站在纯白的空白上，画面里只有这个人，isolated single figure on plain white, cut-out character sheet",768,1024,false
+npc,public/assets/rumi/npcs/travelers/arab.png,"13世纪阿拉伯旅人，四十岁男子，浓密黑须，白色头巾用黑绳箍住，米白色宽袍，一手按在胸前一手伸出争辩，全身立绘含双脚，站在纯白的空白上，画面里只有这个人，isolated single figure on plain white, cut-out character sheet",768,1024,false
+npc,public/assets/rumi/npcs/travelers/turk.png,"13世纪突厥旅人，三十岁男子，八字胡，毛皮边的尖顶毡帽，赭红色对襟短袍配长靴，腰挂皮囊，抱着手臂皱眉，全身立绘含双脚，站在纯白的空白上，画面里只有这个人，isolated single figure on plain white, cut-out character sheet",768,1024,false
+npc,public/assets/rumi/npcs/travelers/greek.png,"13世纪安纳托利亚的希腊旅人，二十五岁男子，卷曲短发不戴帽，橄榄绿色束腰外衣配斗篷，脚穿系带凉鞋，张开双手一脸茫然，全身立绘含双脚，站在纯白的空白上，画面里只有这个人，isolated single figure on plain white, cut-out character sheet",768,1024,false
+npc,public/assets/rumi/npcs/travelers/vendor.png,"13世纪安纳托利亚果摊摊主，五十岁男子，头缠土黄色旧头巾，褐色围裙罩在长袍外，双手拢在袖子里等着，全身立绘含双脚，站在纯白的空白上，画面里只有这个人，isolated single figure on plain white, cut-out character sheet",768,1024,false

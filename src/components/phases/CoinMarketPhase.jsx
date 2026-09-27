@@ -155,7 +155,16 @@ export default function CoinMarketPhase({ phase, onScore, onComplete }) {
                   {text && (mood === "happy" ? <><Fruit kind="grape" size={22} /> {nb(text)}</> : nb(text))}
                 </div>
                 <button style={cm.avatar} onClick={() => ask(tr)} aria-label={`${tr.who}${t("：问问他要的是什么")}`}>
-                  <Traveler hat={tr.hat} color={tr.color} mood={mood} />
+                  {tr.portrait ? (
+                    // 有立绘就用立绘：这四个人要一眼看出是四拨人（波斯/阿拉伯/突厥/希腊），
+                    // 代码画的色块做不到。正在喊的那个往前凑一点。
+                    <img src={asset(tr.portrait)} alt="" style={{
+                      ...cm.avatarImg,
+                      transform: mood === "shout" || mood === "talk" ? "translateY(-2%) scale(1.04)" : "none",
+                    }} />
+                  ) : (
+                    <Traveler hat={tr.hat} color={tr.color} mood={mood} />
+                  )}
                 </button>
                 <div style={cm.name}>
                   {nb(tr.who)}{asked[tr.id] && <span style={cm.askedDot}>{" · " + t("问过")}</span>}
@@ -278,6 +287,11 @@ const cm = {
   bubbleTalk: { backgroundColor: "rgba(233,244,236,0.97)", borderColor: "#6E8B6A" },
   bubbleHappy: { backgroundColor: "rgba(246,236,214,0.98)", borderColor: "#B4762F", fontSize: "clamp(14px, 1.15vw, 19px)" },
   avatar: { width: "70%", height: "66%", padding: 0, border: "none", background: "none", cursor: "pointer" },
+  avatarImg: {
+    width: "100%", height: "100%", objectFit: "contain", objectPosition: "bottom",
+    transformOrigin: "bottom center", transition: "transform 200ms ease",
+    userSelect: "none", pointerEvents: "none",
+  },
   name: { color: "#E9DCC2", fontSize: "clamp(12px, 0.9vw, 15px)", letterSpacing: 2, marginTop: 4, textShadow: "0 1px 6px rgba(0,0,0,0.9)" },
   askedDot: { color: "#9FC39A", fontSize: 12 },
   stall: {

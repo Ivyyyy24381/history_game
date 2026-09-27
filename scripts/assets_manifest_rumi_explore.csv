@@ -1,0 +1,6 @@
+type,output_path,prompt,width,height,transparent
+bg,public/assets/rumi/events/1220_nishapur/backgrounds/nishapur_attar_shop.png,"13世纪内沙布尔一间药香铺的内景，墙上一格格木柜装满药材与香料罐，黄铜天平空着挂在架上，柜台上摆着玫瑰水瓶和铜秤砣，午后光线穿过木格窗落在空地面上，deserted and uninhabited, empty interior, nobody in the scene, flat color blocks, muted tone",1920,1080,false
+bg,public/assets/rumi/events/1225_larende/backgrounds/larende_courtyard.png,"13世纪安纳托利亚小城的石砌院落，葡萄架，廊下挂着婚礼的彩色布幔，石板地空着，远处雪山与土黄色平原，deserted and uninhabited, empty interior, nobody in the scene, flat color blocks, muted tone",1920,1080,false
+bg,public/assets/rumi/events/1231_konya/backgrounds/konya_madrasa.png,"塞尔柱经学院的方形内庭，四面尖拱廊，中央一方水池，墙面蓝绿色釉砖，廊下铺着空的坐垫，庭院里空无一物，deserted and uninhabited, empty interior, nobody in the scene, flat color blocks, muted tone",1920,1080,false
+bg,public/assets/rumi/events/1244_shams/backgrounds/sugar_merchants_inn.png,"13世纪科尼亚商队客栈的内院，拱廊下堆着糖锭与香料货包，水槽边空着，角落一张空草席，午后斜光，deserted and uninhabited, empty interior, nobody in the scene, flat color blocks, muted tone",1920,1080,false
+bg,public/assets/rumi/events/1250_goldsmith/backgrounds/goldsmith_street.png,"13世纪科尼亚集市的金匠街，一排敞开的小铺子，炉火、铁砧、摊开的金箔在阳光下发亮，铺子里空着没有人，街面空荡，deserted and uninhabited, empty interior, nobody in the scene, flat color blocks, muted tone",1920,1080,false

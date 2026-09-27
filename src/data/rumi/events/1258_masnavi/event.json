@@ -54,7 +54,8 @@
           "word": "angūr",
           "clue": "「angūr！长在藤上的那个！」",
           "color": "#2F5D8A",
-          "hat": "turban"
+          "hat": "turban",
+          "portrait": "/assets/rumi/npcs/travelers/persian.webp"
         },
         {
           "id": "arab",
@@ -62,7 +63,8 @@
           "word": "ʿinab",
           "clue": "「ʿinab！一串一串的，一颗一颗的！」",
           "color": "#8A6A3A",
-          "hat": "headcloth"
+          "hat": "headcloth",
+          "portrait": "/assets/rumi/npcs/travelers/arab.webp"
         },
         {
           "id": "turk",
@@ -70,7 +72,8 @@
           "word": "üzüm",
           "clue": "「üzüm！紫的，晒干了更甜！」",
           "color": "#6E3A2A",
-          "hat": "furcap"
+          "hat": "furcap",
+          "portrait": "/assets/rumi/npcs/travelers/turk.webp"
         },
         {
           "id": "greek",
@@ -78,7 +81,8 @@
           "word": "istāfīl",
           "clue": "「istāfīl！拿来酿酒的！」",
           "color": "#3E5A3A",
-          "hat": "pilos"
+          "hat": "pilos",
+          "portrait": "/assets/rumi/npcs/travelers/greek.webp"
         }
       ],
       "fruits": [
@@ -112,7 +116,7 @@
     {
       "id": "dark_house",
       "type": "dark_explore",
-      "image": "/assets/rumi/events/1258_masnavi/dark_house_placeholder.svg",
+      "image": "/assets/rumi/events/1258_masnavi/backgrounds/dark_house_elephant.webp",
       "legend": "《玛斯纳维》卷三 · 寓言",
       "situation": "有人从印度带来一样东西，关在一间漆黑的屋子里给人看。屋里没有灯，进去的人只能用手摸。",
       "instruction": "你手里只有一支蜡烛。移动烛光，摸一摸。",
@@ -120,32 +124,32 @@
       "spots": [
         {
           "id": "trunk",
-          "x": 18,
-          "y": 72,
+          "x": 30.8,
+          "y": 70.4,
           "r": 6,
           "part": "长长的一截",
           "claim": "「这东西像一根水管。」"
         },
         {
           "id": "ear",
-          "x": 34,
-          "y": 42,
+          "x": 39.7,
+          "y": 27.8,
           "r": 6,
           "part": "又薄又大的一片",
           "claim": "「不对，它像一把扇子。」"
         },
         {
           "id": "leg",
-          "x": 37,
-          "y": 79,
+          "x": 66.2,
+          "y": 79.6,
           "r": 5,
           "part": "又粗又圆的一根",
           "claim": "「你们都错了，它像一根柱子。」"
         },
         {
           "id": "back",
-          "x": 53,
-          "y": 37,
+          "x": 54.4,
+          "y": 31.5,
           "r": 7,
           "part": "高处宽宽的一块",
           "claim": "「它分明像一张王座。」"
@@ -171,11 +175,7 @@
       "sameNote": "你把四个片面的说法拼成了一个整体。",
       "diffNote": "四个人说的都是真话——只是每人只摸到了一块。",
       "reveal": "是一头大象。\n「要是每人手里都有一支蜡烛，他们的说法就不会有分歧。」\n——《玛斯纳维》卷三（本作试译）",
-      "consequence": "回头看看你自己：你手里的烛光也只照得见一小圈，跟屋里那些人一样。你是把几个人的说法并排放在一起，才猜到整体的。\n这个故事比鲁米古老得多：佛经里就有「盲人摸象」（如《长阿含经》），鲁米之前的波斯诗人萨纳伊也讲过。鲁米把「盲人」改成了「黑屋里的明眼人」——看不全，不是因为眼睛，是因为没有光。",
-      "artCard": {
-        "src": "/assets/rumi/art/elephant_alam_guman.webp",
-        "artKey": "/assets/rumi/art/elephant_alam_guman.webp"
-      }
+      "consequence": "回头看看你自己：你手里的烛光也只照得见一小圈，跟屋里那些人一样。你是把几个人的说法并排放在一起，才猜到整体的。\n这个故事比鲁米古老得多：佛经里就有「盲人摸象」（如《长阿含经》），鲁米之前的波斯诗人萨纳伊也讲过。鲁米把「盲人」改成了「黑屋里的明眼人」——看不全，不是因为眼睛，是因为没有光。\n（画：《大象阿拉姆·古曼像》（Portrait of the Elephant 'Alam Guman），传 比契特尔（Bichitr），约 1640 年（莫卧儿王朝），大都会艺术博物馆，馆藏号 1996.98a，公有领域）"
     },
     {
       "id": "painters",

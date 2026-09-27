@@ -1,0 +1,6 @@
+type,output_path,prompt,width,height,transparent
+npc,public/assets/rumi/npcs/mourners/christian_monk.png,"13世纪安纳托利亚的东方基督教修士，五十岁男子，灰白胡须，黑色带风帽的修士袍，胸前挂一枚素木十字架，双手拢在袖中低头，全身立绘含双脚，站在纯白的空白上，画面里只有这个人，isolated single figure on plain white, cut-out character sheet",768,1024,false
+npc,public/assets/rumi/npcs/mourners/jewish_rabbi.png,"13世纪安纳托利亚的犹太拉比，六十岁男子，花白长须，深色长袍外披条纹祈祷巾，头戴软帽，手捧一卷书，全身立绘含双脚，站在纯白的空白上，画面里只有这个人，isolated single figure on plain white, cut-out character sheet",768,1024,false
+npc,public/assets/rumi/npcs/mourners/greek_mason.png,"13世纪安纳托利亚的希腊石匠，四十岁男子，卷发短须，粗布短衣系皮围裙，露出结实的小臂，手里握一把石凿，全身立绘含双脚，站在纯白的空白上，画面里只有这个人，isolated single figure on plain white, cut-out character sheet",768,1024,false
+npc,public/assets/rumi/npcs/mourners/turkish_soldier.png,"13世纪塞尔柱突厥士兵，三十岁男子，八字胡，毛边尖顶毡帽，皮甲外罩深色斗篷，腰佩弯刀，肃立低头，全身立绘含双脚，站在纯白的空白上，画面里只有这个人，isolated single figure on plain white, cut-out character sheet",768,1024,false
+npc,public/assets/rumi/npcs/mourners/armenian_woman.png,"13世纪安纳托利亚的亚美尼亚妇人，四十岁，深红头巾连着披肩只露面庞，深色长裙，双手交握在身前，神情哀戚，全身立绘含双脚，站在纯白的空白上，画面里只有这个人，isolated single figure on plain white, cut-out character sheet",768,1024,false
