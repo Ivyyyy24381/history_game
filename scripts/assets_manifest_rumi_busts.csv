@@ -1,0 +1,7 @@
+type,output_path,prompt,width,height,transparent
+npc,public/assets/rumi/npcs/bust/melon_seller.png,13世纪撒马尔罕的瓜贩，三十五岁男子，晒黑的圆脸，络腮短须，头缠土黄色旧头巾，粗布短袍敞着领口，咧嘴吆喝的神情，半身像齐胸，正面略侧，纯白背景，单人，isolated bust portrait on plain white,768,768,false
+npc,public/assets/rumi/npcs/bust/caravan_leader.png,13世纪中亚商队头领，五十岁男子，晒得黝黑的长脸，灰白络腮胡，深色毡帽，皮背心罩在长袍外，精明警惕地压低声音说话，半身像齐胸，正面略侧，纯白背景，单人，isolated bust portrait on plain white,768,768,false
+npc,public/assets/rumi/npcs/bust/mother_mumina.png,13世纪呼罗珊贵族妇人，四十余岁，端正的鹅蛋脸，素色头巾与长面纱只露出面庞，深红长袍的领口，神情温柔而疲惫，半身像齐胸，正面略侧，纯白背景，单人，isolated bust portrait on plain white,768,768,false
+npc,public/assets/rumi/npcs/bust/old_student.png,13世纪呼罗珊经学院的老学生，四十岁男子，清瘦长脸，修剪整齐的黑须，白色头巾，灰色学者长袍，谨慎地侧头低语，半身像齐胸，正面略侧，纯白背景，单人，isolated bust portrait on plain white,768,768,false
+npc,public/assets/rumi/npcs/bust/silk_merchant.png,13世纪撒马尔罕的丝绸商，四十五岁男子，富态的方脸，修剪整齐的胡须，彩色条纹头巾，锦缎长袍的领口有织金花边，一脸愁色地算账，半身像齐胸，正面略侧，纯白背景，单人，isolated bust portrait on plain white,768,768,false
+npc,public/assets/rumi/npcs/bust/storyteller.png,13世纪中亚市集的说书人，六十岁老者，瘦长脸，雪白长须，破旧的深色头巾，打着补丁的褐色长袍，眉飞色舞讲故事的神情，一手抬起比划，半身像齐胸，正面略侧，纯白背景，单人，isolated bust portrait on plain white,768,768,false

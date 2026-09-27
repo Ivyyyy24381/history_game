@@ -8,7 +8,8 @@
 //
 // phase: {
 //   background, legend?, situation, instruction,
-//   voices: [{ id, x（沿墙位置 0–100）, who, text, supports: bool, why }],
+//   voices: [{ id, x（沿墙位置 0–100）, who, text, supports: bool, why,
+//             portrait?（半身立绘，没有就用 hat/color 画剪影）, hat?, color? }],
 //   need（记下几句才能下判断）, claim, pick（挑几条）,
 //   reveal, consequence
 // }
@@ -133,8 +134,23 @@ export default function EavesdropPhase({ phase, onScore, onComplete }) {
                 <span>{heard ? nb(v.text) : muffle(v.text, c)}</span>
                 {holding > 0 && <span style={{ ...ev.holdBar, width: `${holding * 100}%` }} />}
               </div>
-              <div style={{ ...ev.head, opacity: 0.35 + 0.4 * c }}>
-                <Traveler hat={v.hat || "turban"} color={v.color || "#3A3028"} mood={c > 0.5 ? "talk" : "idle"} />
+              <div style={{ ...(v.portrait ? ev.headBust : ev.head), opacity: 0.35 + 0.4 * c }}>
+                {v.portrait ? (
+                  // 有立绘就用立绘：这一排人是玩家在这一关唯一看见的脸，
+                  // 画得出来的辨识度，代码画的剪影给不了。没有就退回剪影。
+                  <img
+                    src={asset(v.portrait)}
+                    alt=""
+                    style={{
+                      ...ev.headImg,
+                      // 听清的那个人稍微往前凑一点，其余的往后退
+                      transform: `translateY(${((1 - c) * 6).toFixed(1)}%) scale(${(0.94 + 0.06 * c).toFixed(3)})`,
+                      filter: reduced ? "none" : `saturate(${(0.55 + 0.45 * c).toFixed(2)})`,
+                    }}
+                  />
+                ) : (
+                  <Traveler hat={v.hat || "turban"} color={v.color || "#3A3028"} mood={c > 0.5 ? "talk" : "idle"} />
+                )}
               </div>
             </div>
           );
@@ -222,6 +238,14 @@ const ev = {
   who: { fontSize: 12, letterSpacing: 2, color: "#2F6B3A" },
   holdBar: { position: "absolute", left: 0, bottom: 0, height: 3, backgroundColor: "#9FC39A" },
   head: { width: "56%", height: "15vh", maxHeight: 140, marginTop: 4 },
+  // 半身立绘是方图，要给满整个 voice 宽度才看得清脸；下缘会被墙切掉一截，正好。
+  headBust: { width: "100%", height: "22vh", maxHeight: 190, marginTop: 2 },
+  headImg: {
+    width: "100%", height: "100%", objectFit: "contain", objectPosition: "bottom",
+    transformOrigin: "bottom center", transition: "transform 160ms ease, filter 160ms ease",
+    // 墙后面的人只露上半身，底边被墙切掉——不加阴影，免得在墙上投出一道假影子
+    pointerEvents: "none", userSelect: "none",
+  },
   wall: {
     position: "absolute", left: 0, right: 0, top: "52%", height: "26%", zIndex: 10,
     background:

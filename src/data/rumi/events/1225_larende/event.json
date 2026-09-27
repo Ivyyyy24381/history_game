@@ -15,10 +15,23 @@
       "requireAll": true,
       "waypoints": [
         {
+          "id": "nishapur",
+          "name": "内沙布尔 · 出发",
+          "x": 71.9,
+          "y": 30.0,
+          "dialogues": [
+            {
+              "speaker": "narrator",
+              "speakerName": "旁白",
+              "text": "从内沙布尔再往西。这一走，就是六七年。"
+            }
+          ]
+        },
+        {
           "id": "baghdad",
           "name": "巴格达",
-          "x": 74,
-          "y": 30,
+          "x": 45.1,
+          "y": 41.1,
           "dialogues": [
             {
               "speaker": "narrator",
@@ -30,8 +43,8 @@
         {
           "id": "mecca",
           "name": "麦加",
-          "x": 62,
-          "y": 72,
+          "x": 36.7,
+          "y": 86.8,
           "dialogues": [
             {
               "speaker": "baha_walad",
@@ -43,8 +56,8 @@
         {
           "id": "damascus",
           "name": "大马士革",
-          "x": 44,
-          "y": 44,
+          "x": 30.2,
+          "y": 40.3,
           "dialogues": [
             {
               "speaker": "narrator",
@@ -54,10 +67,23 @@
           ]
         },
         {
+          "id": "malatya",
+          "name": "马拉蒂亚",
+          "x": 33.9,
+          "y": 21.7,
+          "dialogues": [
+            {
+              "speaker": "narrator",
+              "speakerName": "旁白",
+              "text": "翻过山口进了安纳托利亚。父亲在这里讲了一阵经。"
+            }
+          ]
+        },
+        {
           "id": "erzincan",
           "name": "埃尔津詹",
-          "x": 28,
-          "y": 22,
+          "x": 36.1,
+          "y": 16.3,
           "dialogues": [
             {
               "speaker": "narrator",
@@ -69,8 +95,8 @@
         {
           "id": "larende",
           "name": "拉兰达",
-          "x": 14,
-          "y": 34,
+          "x": 24.5,
+          "y": 26.2,
           "isKey": true,
           "dialogues": [
             {

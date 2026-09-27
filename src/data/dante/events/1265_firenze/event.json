@@ -258,7 +258,7 @@
           "id": "p3_marriage",
           "x": 66,
           "y": 0,
-          "w": 34.3,
+          "w": 34,
           "h": 51.5,
           "dialogues": [
             {
@@ -273,7 +273,7 @@
           "x": 0,
           "y": 51,
           "w": 33,
-          "h": 49.7,
+          "h": 49,
           "dialogues": [
             {
               "speaker": "cacciaguida",
@@ -286,8 +286,8 @@
           "id": "p5_baptism",
           "x": 33,
           "y": 51,
-          "w": 67.5,
-          "h": 49.4,
+          "w": 67,
+          "h": 49,
           "dialogues": [
             {
               "speaker": "narrator",

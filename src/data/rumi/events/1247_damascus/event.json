@@ -58,8 +58,8 @@
         {
           "id": "konya",
           "name": "科尼亚",
-          "x": 16,
-          "y": 24,
+          "x": 23.1,
+          "y": 23.6,
           "dialogues": [
             {
               "speaker": "hero",
@@ -71,8 +71,8 @@
         {
           "id": "taurus",
           "name": "托罗斯山口",
-          "x": 38,
-          "y": 40,
+          "x": 27.4,
+          "y": 25.8,
           "dialogues": [
             {
               "speaker": "narrator",
@@ -84,8 +84,8 @@
         {
           "id": "aleppo",
           "name": "阿勒颇",
-          "x": 58,
-          "y": 54,
+          "x": 31.8,
+          "y": 30.0,
           "dialogues": [
             {
               "speaker": "narrator",
@@ -97,8 +97,8 @@
         {
           "id": "damascus",
           "name": "大马士革",
-          "x": 80,
-          "y": 72,
+          "x": 30.2,
+          "y": 40.3,
           "isKey": true,
           "dialogues": [
             {

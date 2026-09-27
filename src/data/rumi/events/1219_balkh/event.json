@@ -33,7 +33,8 @@
           "color": "#5A4A2A",
           "text": "「撒马尔罕的瓜，连巴格达的哈里发都要吃！」",
           "supports": false,
-          "why": "撒马尔罕很富——这解释了为什么舍不得走，不解释为什么要走。"
+          "why": "撒马尔罕很富——这解释了为什么舍不得走，不解释为什么要走。",
+          "portrait": "/assets/rumi/npcs/bust/melon_seller.webp"
         },
         {
           "id": "caravan",
@@ -43,7 +44,8 @@
           "color": "#6E3A2A",
           "text": "「讹答剌出事了——蒙古大汗派来的商队被杀了个精光。大汗不会善罢甘休。」",
           "supports": true,
-          "why": "外面的危险：花剌子模杀了蒙古商队（1218），战争迫在眉睫。"
+          "why": "外面的危险：花剌子模杀了蒙古商队（1218），战争迫在眉睫。",
+          "portrait": "/assets/rumi/npcs/bust/caravan_leader.webp"
         },
         {
           "id": "mother",
@@ -53,7 +55,8 @@
           "color": "#6A2E3A",
           "text": "「你父亲说要去麦加朝觐。东西只能带最要紧的。」",
           "supports": false,
-          "why": "朝觐是对外说的去处——它没说明为什么非走不可、还要带上全家和藏书。"
+          "why": "朝觐是对外说的去处——它没说明为什么非走不可、还要带上全家和藏书。",
+          "portrait": "/assets/rumi/npcs/bust/mother_mumina.webp"
         },
         {
           "id": "student",
@@ -63,7 +66,8 @@
           "color": "#2F4A5A",
           "text": "「巴哈丁先生讲经时句句都在骂朝廷里那帮学者，宫里早就恨上他了。」",
           "supports": true,
-          "why": "里面的不和：他和宫廷、和宫里的学者关系很僵。"
+          "why": "里面的不和：他和宫廷、和宫里的学者关系很僵。",
+          "portrait": "/assets/rumi/npcs/bust/old_student.webp"
         },
         {
           "id": "silk",
@@ -73,7 +77,8 @@
           "color": "#7A6A3A",
           "text": "「今年丝绸的价钱翻了一倍，一匹都难收。」",
           "supports": false,
-          "why": "真的，也可能和战乱有关——但它说的是生意，说明不了巴哈丁一家为什么要走。"
+          "why": "真的，也可能和战乱有关——但它说的是生意，说明不了巴哈丁一家为什么要走。",
+          "portrait": "/assets/rumi/npcs/bust/silk_merchant.webp"
         },
         {
           "id": "teller",
@@ -83,7 +88,8 @@
           "color": "#3E5A3A",
           "text": "「从前有个国王，他有四十头骆驼……」",
           "supports": false,
-          "why": "只是一个故事。"
+          "why": "只是一个故事。",
+          "portrait": "/assets/rumi/npcs/bust/storyteller.webp"
         }
       ],
       "need": 4,
@@ -162,8 +168,8 @@
         {
           "id": "samarkand",
           "name": "撒马尔罕 · 出发",
-          "x": 84,
-          "y": 26,
+          "x": 87.0,
+          "y": 16.7,
           "dialogues": [
             {
               "speaker": "mother",
@@ -175,8 +181,8 @@
         {
           "id": "bukhara",
           "name": "布哈拉",
-          "x": 66,
-          "y": 33,
+          "x": 82.3,
+          "y": 16.3,
           "dialogues": [
             {
               "speaker": "narrator",
@@ -188,8 +194,8 @@
         {
           "id": "merv",
           "name": "梅尔夫",
-          "x": 46,
-          "y": 40,
+          "x": 78.1,
+          "y": 24.4,
           "dialogues": [
             {
               "speaker": "narrator",
@@ -206,8 +212,8 @@
         {
           "id": "nishapur",
           "name": "内沙布尔",
-          "x": 22,
-          "y": 46,
+          "x": 71.9,
+          "y": 30.0,
           "isKey": true,
           "dialogues": [
             {

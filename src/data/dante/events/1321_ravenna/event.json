@@ -218,8 +218,8 @@
           "id": "p2_point",
           "x": 65,
           "y": 0,
-          "w": 35.1,
-          "h": 100.1,
+          "w": 35,
+          "h": 100,
           "dialogues": [
             {
               "speaker": "narrator",
@@ -233,7 +233,7 @@
           "x": 0,
           "y": 50,
           "w": 32.1,
-          "h": 50.3,
+          "h": 50,
           "dialogues": [
             {
               "speaker": "narrator",
@@ -261,7 +261,7 @@
           "x": 32,
           "y": 50,
           "w": 33.2,
-          "h": 50.2,
+          "h": 50,
           "dialogues": [
             {
               "speaker": "narrator",

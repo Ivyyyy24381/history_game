@@ -89,8 +89,8 @@
         {
           "id": "jiangling",
           "name": "江陵",
-          "x": 52,
-          "y": 10,
+          "x": 51.6,
+          "y": 15.4,
           "dialogues": [
             {
               "speaker": "dufu",
@@ -142,8 +142,8 @@
         {
           "id": "leiyang",
           "name": "耒阳",
-          "x": 60,
-          "y": 87,
+          "x": 59.8,
+          "y": 80.7,
           "isKey": true,
           "dialogues": [
             {
