@@ -51,23 +51,30 @@ WAYPOINT_CITY = {
     "malatya": "malatya",
 }
 
-SPREAD = 2.9   # 同城事件散开的半径（地图百分比）
+# 同城多事件怎么摆：沿一条短线按年代排开，而不是围成一圈。
+#
+# 围成一圈的话，按年代走一遍等于在圈上来回穿，地图上的旅程线就缠成一团；
+# 排成一条线，簇内就是一路平走。方向取「垂直于该城→下一个外地城」——
+# 科尼亚的两趟叙利亚往返因此接近平行，不互相穿。
+CLUSTER = {
+    # 城 : (方向单位向量, 相邻两点间距 %, 整簇偏移)
+    # 科尼亚 → 大马士革大致是 (+7, +16)，取其垂线 (0.92, -0.40)。
+    # 整簇再往西北推一点，避开只差 0.7 度的拉兰达。
+    "konya": ((0.92, -0.40), 1.9, (-0.5, -1.5)),
+}
+DEFAULT_DIR, DEFAULT_GAP = (1.0, 0.0), 2.0
 
-# 同城的一簇整体挪开一点：科尼亚和拉兰达地理上只差 0.7 度，
-# 科尼亚五个事件散开之后会压到拉兰达的图钉上，所以整簇往西北推。
-CLUSTER_NUDGE = {"konya": (-1.9, -1.6)}
 
-
-def spread_positions(n, x, y, nudge=(0.0, 0.0)):
-    """n 个事件在同一座城：1 个就原地，多个沿小圆均匀散开。"""
+def spread_positions(n, x, y, city):
+    """n 个事件在同一座城：1 个就原地，多个沿一条短线按年代排开。"""
     if n == 1:
         return [(x, y)]
-    x, y = x + nudge[0], y + nudge[1]
+    (dx, dy), gap, (ox, oy) = CLUSTER.get(city, (DEFAULT_DIR, DEFAULT_GAP, (0.0, 0.0)))
+    cx, cy = x + ox, y + oy
     out = []
     for i in range(n):
-        a = -math.pi / 2 + i * (2 * math.pi / n)
-        out.append((round(x + SPREAD * math.cos(a), 1),
-                    round(y + SPREAD * math.sin(a) * 0.78, 1)))   # y 稍压一点，地图是宽的
+        t = (i - (n - 1) / 2) * gap          # 居中：…-2 -1 0 1 2…
+        out.append((round(cx + dx * t, 1), round(cy + dy * t, 1)))
     return out
 
 
@@ -82,7 +89,7 @@ def main():
     moved = 0
     for city, evs in by_city.items():
         x, y = city_xy(city)
-        for ev, (nx, ny) in zip(evs, spread_positions(len(evs), x, y, CLUSTER_NUDGE.get(city, (0.0, 0.0)))):
+        for ev, (nx, ny) in zip(evs, spread_positions(len(evs), x, y, city)):
             loc = ev.setdefault("location", {})
             if (loc.get("mapX"), loc.get("mapY")) != (nx, ny):
                 loc["mapX"], loc["mapY"] = nx, ny

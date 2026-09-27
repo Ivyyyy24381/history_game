@@ -89,8 +89,8 @@
           "summary": "父亲去世，二十四岁的鲁米第一次上讲台。台下坐着父亲的老学生。讲完之后，布尔汉丁对他说了一句话。",
           "location": {
             "name": "科尼亚",
-            "mapX": 21.2,
-            "mapY": 19.7
+            "mapX": 19.1,
+            "mapY": 23.6
           },
           "hasScene": true,
           "hasQuiz": false
@@ -103,8 +103,8 @@
           "summary": "在阿勒颇和大马士革读了多年法学与经学，回科尼亚学生满堂。然后老师要他三次闭关四十天，什么都不做。",
           "location": {
             "name": "阿勒颇 / 大马士革",
-            "mapX": 30.2,
-            "mapY": 38.0
+            "mapX": 29.2,
+            "mapY": 40.3
           },
           "hasScene": true,
           "hasQuiz": false
@@ -127,8 +127,8 @@
           "summary": "书落进水池，只来得及救一本。街上一个戴黑毡帽的人问：「你自己，知道些什么？」——这一次，所有答案都被驳回。",
           "location": {
             "name": "科尼亚",
-            "mapX": 24.0,
-            "mapY": 21.3
+            "mapX": 20.9,
+            "mapY": 22.9
           },
           "hasScene": true,
           "hasQuiz": false,
@@ -146,8 +146,8 @@
           "summary": "沙姆斯第二次消失。鲁米提着灯在大马士革的市集里一条条找线索，每一条都落空。他去了哪里？史料没有答案。",
           "location": {
             "name": "大马士革",
-            "mapX": 30.2,
-            "mapY": 42.6
+            "mapX": 31.2,
+            "mapY": 40.3
           },
           "hasScene": true,
           "hasQuiz": false
@@ -170,8 +170,8 @@
           "summary": "失去沙姆斯之后，鲁米在一个不识字的金匠身上重新找到了同伴。传说他路过金匠铺，听见锤声，就在街上转了起来。",
           "location": {
             "name": "科尼亚 · 金匠街",
-            "mapX": 22.9,
-            "mapY": 23.8
+            "mapX": 22.6,
+            "mapY": 22.1
           },
           "hasScene": true,
           "hasQuiz": false,
@@ -189,8 +189,8 @@
           "summary": "蒙古军攻破巴格达的那一年，弟子胡萨姆丁拿着纸笔，鲁米开口了。《玛斯纳维》由上百个寓言套成，每一个都是「你以为 A，其实是 B」。",
           "location": {
             "name": "科尼亚",
-            "mapX": 19.5,
-            "mapY": 23.8
+            "mapX": 24.3,
+            "mapY": 21.3
           },
           "hasScene": true,
           "hasQuiz": false,
@@ -208,8 +208,8 @@
           "summary": "「不要哭，这是我的婚礼。」送葬那天，队伍里有穆斯林，也有基督徒和犹太人。七百多年后，人们还叫这一夜「婚礼之夜」。",
           "location": {
             "name": "科尼亚",
-            "mapX": 18.4,
-            "mapY": 21.3
+            "mapX": 26.1,
+            "mapY": 20.6
           },
           "hasScene": true,
           "hasQuiz": false

@@ -5,6 +5,7 @@ import { rumiPortraitPath, RUMI_LEGACY_PORTRAIT } from "../data/rumiPoses";
 import { Pin } from "./GameMap";
 import { nb } from "../utils/cjkText";
 import { localize, lineOf } from "../i18n/localize";
+import ArtCard from "./phases/ArtCard";
 import { t } from "../i18n/ui";
 import { useLang } from "../i18n/lang";
 import usePrefersReducedMotion from "../utils/usePrefersReducedMotion";
@@ -1947,6 +1948,15 @@ function ComicRevealPhase({ phase, onComplete }) {
           </div>
         )}
 
+        {/* 全部揭开之后，如果这一幕挂了画作，压在连环画上作收尾。
+            原来 phase.artCard 在这个类型里是死数据——ArtCard 只有四个 phase
+            组件导入过，comic_reveal 根本不渲染它。 */}
+        {allDone && phase.artCard && (
+          <div style={crStyles.artWrap} onClick={(e) => e.stopPropagation()}>
+            <ArtCard src={phase.artCard} />
+          </div>
+        )}
+
         {/* Finished → continue */}
         {allDone && (
           <button
@@ -1961,6 +1971,12 @@ function ComicRevealPhase({ phase, onComplete }) {
 }
 
 const crStyles = {
+  artWrap: {
+    position: "absolute", inset: 0, zIndex: 28,
+    display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center",
+    gap: 10, padding: "4% 6% 12%",
+    backgroundColor: "rgba(12,9,6,0.82)",
+  },
   intro: {
     position: "absolute", inset: 0, zIndex: 25,
     display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center",

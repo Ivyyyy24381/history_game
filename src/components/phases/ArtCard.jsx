@@ -24,7 +24,23 @@ export default function ArtCard({ src, style }) {
 }
 
 const ac = {
-  fig: { margin: 0, display: "flex", flexDirection: "column", alignItems: "center", gap: 6, maxWidth: 560 },
-  img: { maxWidth: "100%", maxHeight: "24vh", borderRadius: 4, border: "6px solid #E9DCC2", boxShadow: "0 8px 24px rgba(0,0,0,0.6)", objectFit: "contain" },
-  cap: { color: "rgba(233,220,194,0.85)", fontSize: 12, lineHeight: 1.5, letterSpacing: 1, textAlign: "center" },
+  fig: {
+    margin: "2px 0 0", display: "flex", flexDirection: "column", alignItems: "center",
+    gap: 8, maxWidth: "min(94vw, 980px)", width: "100%",
+  },
+  // 画要看得清才有意义：原来 24vh + 6px 奶油硬边，读起来是一张贴上去的明信片。
+  // 现在放大到近一倍、去掉硬边框，边缘用遮罩淡出——画化进底图，而不是压在上面。
+  img: {
+    maxWidth: "100%", maxHeight: "58vh", objectFit: "contain",
+    borderRadius: 6,
+    WebkitMaskImage:
+      "radial-gradient(120% 120% at 50% 45%, #000 62%, rgba(0,0,0,0.65) 82%, rgba(0,0,0,0) 100%)",
+    maskImage:
+      "radial-gradient(120% 120% at 50% 45%, #000 62%, rgba(0,0,0,0.65) 82%, rgba(0,0,0,0) 100%)",
+    filter: "drop-shadow(0 10px 30px rgba(0,0,0,0.55))",
+  },
+  cap: {
+    color: "rgba(233,220,194,0.78)", fontSize: 12, lineHeight: 1.5, letterSpacing: 1,
+    textAlign: "center", maxWidth: 720,
+  },
 };
