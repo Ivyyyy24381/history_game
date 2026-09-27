@@ -89,8 +89,30 @@ export default function PoolRescuePhase({ phase, onScore, onComplete }) {
     g.setTransform(dpr, 0, 0, dpr, 0, 0);
     // 水
     const grad = g.createLinearGradient(0, 0, 0, ph);
-    grad.addColorStop(0, "#2E5B63"); grad.addColorStop(1, "#122C33");
+    grad.addColorStop(0, "#23515C"); grad.addColorStop(0.55, "#12333C"); grad.addColorStop(1, "#0A1E25");
     g.fillStyle = grad; g.fillRect(0, 0, pw, ph);
+    // 倒影：上沿映出对面的拱廊。不求像，只要让水面「映着东西」，
+    // 不然一池纯色看着就是一块布。
+    const refl = g.createLinearGradient(0, 0, 0, ph * 0.42);
+    refl.addColorStop(0, "rgba(176,205,206,0.22)");
+    refl.addColorStop(1, "rgba(176,205,206,0)");
+    g.fillStyle = refl; g.fillRect(0, 0, pw, ph * 0.42);
+    g.save();
+    g.globalAlpha = 0.16;
+    g.fillStyle = "#06161C";
+    const archN = 5, archW = pw / archN;
+    for (let i = 0; i < archN; i++) {
+      const cx = (i + 0.5) * archW;
+      const aw = archW * 0.30, ah = ph * 0.30;
+      g.beginPath();
+      g.moveTo(cx - aw, 0);
+      g.lineTo(cx - aw, ah * 0.55);
+      g.quadraticCurveTo(cx, ah * 1.15, cx + aw, ah * 0.55);
+      g.lineTo(cx + aw, 0);
+      g.closePath();
+      g.fill();
+    }
+    g.restore();
     // 波光
     const tt = reduced ? 0 : now / 1000;
     g.strokeStyle = "rgba(220,240,235,0.10)"; g.lineWidth = 1.4;
@@ -329,10 +351,18 @@ export default function PoolRescuePhase({ phase, onScore, onComplete }) {
 }
 
 const pr = {
+  // 水池是嵌在院子地面里的，不是扣在地上的一块板：
+  // 池沿用石头的冷灰，圆角收小，外面不再描亮边，投影收在池子底下一点点。
   rim: {
-    position: "absolute", zIndex: 8, borderRadius: 14, overflow: "hidden",
-    border: "12px solid #A08C70",
-    boxShadow: "inset 0 0 0 2px #6E5C44, 0 0 0 2px #D9C7A6, 0 16px 40px rgba(0,0,0,0.6)",
+    position: "absolute", zIndex: 8, borderRadius: 5, overflow: "hidden",
+    border: "10px solid transparent",
+    background:
+      "linear-gradient(#0D2129, #0D2129) padding-box," +
+      "linear-gradient(180deg, #9C907E 0%, #7C7162 46%, #5E5446 100%) border-box",
+    boxShadow:
+      "inset 0 0 0 1px rgba(30,24,16,0.85)," +          // 石沿内侧的暗线
+      "inset 0 10px 22px rgba(0,0,0,0.55)," +           // 水面比地面低
+      "0 6px 18px rgba(0,0,0,0.45)",
   },
   water: { width: "100%", height: "100%", display: "block" },
   book: {

@@ -6464,16 +6464,17 @@ const styles = {
     border: "none", borderRadius: 6, cursor: "pointer", fontWeight: "bold",
   },
   fillPassage: {
-    fontSize: "clamp(12.8px, 1.111vw, 18.4px)", lineHeight: 2.2, color: "#231C12",
+    fontSize: "clamp(12.8px, 1.111vw, 18.4px)", lineHeight: 2.9, color: "#231C12",
     marginBottom: 16, whiteSpace: "pre-wrap",
     fontFamily: "var(--font-body)",
   },
+  // 原来 minHeight 44 把行盒撑高，上下两行的空格会叠在一起、盖住标点。
+  // 高度交给 padding，点击区靠 lineHeight 撑开的行距保证。
   fillDropZone: {
-    minHeight: 44, minWidth: 44, display: "inline-flex", alignItems: "center", justifyContent: "center",
-    display: "inline-block", minWidth: 60, padding: "4px 12px",
+    display: "inline-block", minWidth: 62, padding: "5px 12px",
     border: "2px dashed", borderRadius: 6,
     textAlign: "center", fontSize: "clamp(12.8px, 1.111vw, 18.4px)", fontWeight: "bold",
-    transition: "all 0.2s", verticalAlign: "middle",
+    lineHeight: 1.35, transition: "all 0.2s", verticalAlign: "middle",
   },
   fillChips: {
     display: "flex", flexWrap: "wrap", gap: 10, marginBottom: 16,
@@ -6514,8 +6515,12 @@ const styles = {
     marginTop: 6,
     textAlign: "center",
   },
+  // 纯白面板在三条线的底图上都像一块贴上去的塑料板。
+  // 换成和 phaseKit 的卡片同一套材质：暖羊皮纸 + 金棕描边，略透一点底图。
   choicePanel: {
-    backgroundColor: "#FFF", borderRadius: 12,
+    backgroundColor: "rgba(250,245,233,0.96)", borderRadius: 12,
+    border: "2px solid rgba(201,168,106,0.45)",
+    boxShadow: "0 18px 48px rgba(0,0,0,0.55)",
     padding: "clamp(14px, 2vh, 28px) clamp(16px, 2vw, 28px)",
     maxWidth: 500, width: "90%",
     maxHeight: "calc(var(--vh100) - 32px)", overflowY: "auto",
