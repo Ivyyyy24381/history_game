@@ -767,6 +767,57 @@ export const PHASE_TEMPLATES = [
       consequence: "（出处与引申。）",
     }),
   },
+  {
+    type: "pool_rescue",
+    name: "水中救书（只来得及救一本）",
+    desc: "三样东西落进水里慢慢下沉，玩家只来得及拖出一样——先判断「你最舍不得哪样」，再揭示结果。按玩家救的那样给不同的一句话。池子、水面、墨晕全是 canvas 画的，不需要美术。",
+    ref: "rumi · 1244_shams「书落水池」",
+    sketch: "pairs",
+    make: () => ({
+      id: "pool_" + uid(),
+      type: "pool_rescue",
+      background: "",
+      legend: "",
+      introBeats: [{ who: "（谁）", text: "（开场）" }],
+      books: [
+        { id: "a", title: "（书名）", sub: "（一行说明）", color: "#5A2E2A", note: "（玩家救了这本时的那句话）" },
+        { id: "b", title: "（书名）", sub: "", color: "#1F4A5A", note: "" },
+        { id: "c", title: "（书名）", sub: "", color: "#3F4A2A", note: "" },
+      ],
+      sinkSec: 8,
+      outroBeats: [{ who: "（谁）", text: "（揭示后的对白）" }],
+      noneNote: "（一本也没救时）",
+      reveal: "（反转。）",
+      consequence: "（出处与史实。）",
+    }),
+  },
+  {
+    type: "coin_market",
+    name: "一枚银币（问线索 · 试买）",
+    desc: "几个人各喊各的，玩家只有一次购买机会（买错可退，但争吵升级）。点人得到线索，每条单看都不够；拖银币去买来检验假设。适合「表面分歧、其实是同一件事」的材料。",
+    ref: "rumi · 1258_masnavi「四人争葡萄」",
+    sketch: "pairs",
+    make: () => ({
+      id: "market_" + uid(),
+      type: "coin_market",
+      background: "",
+      legend: "",
+      situation: "（处境。）",
+      goal: "一枚银币。让所有人都满意。",
+      travelers: [
+        { id: "p1", who: "（谁）", word: "（他喊的词）", clue: "（点他时给的线索）", color: "#2F5D8A", hat: "turban" },
+        { id: "p2", who: "（谁）", word: "（他喊的词）", clue: "（线索）", color: "#8A6A3A", hat: "headcloth" },
+      ],
+      fruits: [
+        { id: "grape", name: "葡萄", kind: "grape" },
+        { id: "fig", name: "无花果", kind: "fig" },
+      ],
+      answer: "grape",
+      hint: "……他们喊的，会不会是同一样东西？",
+      reveal: "（反转。）",
+      consequence: "（出处与史实。）",
+    }),
+  },
 ];
 
 export default PHASE_TEMPLATES;

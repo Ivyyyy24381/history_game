@@ -52,6 +52,19 @@
 弧线检查：离家 → 被看见 → 喜与悲 → 接担子 → 学问尽头 → **被问住** → 失去 → 重新站起 → 写成寓言 → 完成。
 前五个是「得到」，第六个是铰链，后四个是「失去之后写出来」——和杜甫、但丁同构。
 
+### 下一轮改造清单（试玩反馈：手先动，字后读）
+
+原型里「摸黑」「磨墙」好玩，文字选择题无聊（见 `DESIGN_VERBS.md`「试玩反馈」）。剧本里还有几幕的主操作是点文字按钮，下一轮按这张表换成动作：
+
+| 事件 · 幕 | 现在 | 换成（动作） |
+|---|---|---|
+| 1219 · 为什么要走？ | evidence_select 挑证据 | **贴墙偷听**：沿着市集的墙拖动耳朵，只在某些位置听得清别人的话，听到的每句自动收进「证据袋」，再判断 |
+| 1220 · 百鸟会议 | predict_reveal 猜西摩格 | **带鸟飞过七谷**：拖着戴胜鸟领路，每过一个山谷有鸟找借口掉队；飞到湖边低头看水——水里是剩下的鸟自己 |
+| 1225 · 婚约怎么写 | predict_reveal 猜书写方向 | `trace` 描摹：笔从左边落就洇墨，从右边落才顺——手自己学会 |
+| 1231 · 他接得住吗 | predict_reveal | 讲台上**接学生的提问**：问题像纸条飞来，拖到对的经书上回答；越答越快，最后布尔汉丁的那张纸条接不住 |
+| 1250 · 学生又闹了 | predict_reveal | 并入节奏游戏：锤声里插进学生的抱怨声，节奏乱了就停下来听 |
+| 1273 · 送葬的人 | predict_reveal | **排送葬队伍**：把一路遇见的人（不同服饰）拖进队列，队伍自己越走越长 |
+
 ## timeline.json · stages
 
 ```json
@@ -333,11 +346,11 @@ character 块已在 `src/data/characters.js`（`id: "rumi"`，`locked: true`，�
 - 传说沙姆斯到科尼亚后住在糖商的客栈。NPC：客栈老板（「那人不付房钱，把门锁换成了一把破锁，说要让人以为里面有宝贝。」——阿夫拉基记的趣事）、糖商、鲁米的学生（「先生今天骑骡子从这里过。」）
 - 通过：`requiredTalks: 2`
 
-### Phase 3 · predict_reveal · 书落水池 ▲ ✅
+### Phase 3 · pool_rescue · 书落水池：只来得及救一本 ▲ ✅
 
 见 `src/data/rumi/events/1244_shams/event.json` 的 `books_in_pool`。
 
-### Phase 4 · silence_choice · 「你自己，知道些什么？」★ ✅
+### Phase 4 · silence_choice · 「你自己，知道些什么？」—— 静下来 ★ ✅
 
 见同文件 `what_do_you_know`。设计说明见 `docs/DESIGN_VERBS.md`「鲁米线新增」。
 
@@ -469,7 +482,7 @@ character 块已在 `src/data/characters.js`（`id: "rumi"`，`locked: true`，�
 - **blanks**：诉说 / 离别 / 苇塘；**distractors**：歌唱 / 爱情 / 山林
 - **结尾追问**（transition）：「芦苇被人从苇塘割下，从此一直在哭。——你在哪一关，也被人从家里带走过？」→ 画面闪回 1219 撒马尔罕城门。
 
-### Phase 3 · link_match · 四人争葡萄 ★ ✅
+### Phase 3 · coin_market · 四人争葡萄：一枚银币 ★ ✅
 ### Phase 4 · dark_explore · 黑屋里的东西 ◆ ✅
 ### Phase 5 · scratch_reveal · 中国画师与希腊画师 ▲ ✅
 
