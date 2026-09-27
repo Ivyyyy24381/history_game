@@ -23,7 +23,7 @@ import { asset } from "../../utils/asset";
 import { POINTS } from "../../utils/scoring";
 import usePrefersReducedMotion from "../../utils/usePrefersReducedMotion";
 import { kit } from "./phaseKit";
-import ArtCard from "./ArtCard";
+import { ArtBackdrop } from "./ArtCard";
 import { artworkFor } from "../ArtworkLabel";
 
 const GRID_X = 48, GRID_Y = 30; // 抽样估算磨亮了多少
@@ -180,6 +180,7 @@ export default function ScratchRevealPhase({ phase, onScore, onComplete }) {
     <div style={kit.outer}>
       <div style={{ ...kit.stage, backgroundImage: `url(${asset(phase.background)})` }}>
         <div style={{ ...kit.dim, backgroundColor: "rgba(12,8,5,0.66)" }} />
+        {phase.artCard && <ArtBackdrop src={phase.artCard} />}
         {phase.legend && <div style={kit.legend}>{nb(phase.legend)}</div>}
 
         <div style={sr.top}>
@@ -256,7 +257,7 @@ export default function ScratchRevealPhase({ phase, onScore, onComplete }) {
             ) : (
               <>
                 {phase.consequence && <div style={kit.consequence}>{nb(phase.consequence)}</div>}
-                {phase.artCard && <ArtCard src={phase.artCard} />}
+                
                 <button style={kit.go} onClick={onComplete}>{t("继续 →")}</button>
               </>
             )}

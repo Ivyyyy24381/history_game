@@ -29,7 +29,7 @@ import { t } from "../../i18n/ui";
 import { POINTS } from "../../utils/scoring";
 import usePrefersReducedMotion from "../../utils/usePrefersReducedMotion";
 import { kit } from "./phaseKit";
-import ArtCard from "./ArtCard";
+import { ArtBackdrop } from "./ArtCard";
 
 const VALLEY_LEN = 1.8;              // 每个山谷有多长（屏宽）
 const SPEED = 0.24;                  // 屏宽 / 秒
@@ -487,6 +487,8 @@ export default function BirdFlightPhase({ phase, onScore, onComplete }) {
         aria-label={t("用方向键带着鸟群飞，按住空格冲刺")}
         style={{ ...kit.stage, outline: "none", touchAction: "none", cursor: step <= 0 ? "none" : "default" }}>
         <canvas ref={canvas} aria-hidden="true" style={{ position: "absolute", inset: 0, width: "100%", height: "100%" }} />
+        {/* 收尾时把画作铺成背景：内联的小卡会被上面那一大段文字挤下去，只露出半截 */}
+        {step >= 3 && phase.artCard && <ArtBackdrop src={phase.artCard} />}
         {phase.legend && <div style={kit.legend}>{nb(phase.legend)}</div>}
 
         <div style={bf.top}>
@@ -554,7 +556,6 @@ export default function BirdFlightPhase({ phase, onScore, onComplete }) {
               ? <button style={kit.go} onClick={() => setStep(3)}>{t("后来呢 →")}</button>
               : <>
                   {phase.consequence && <div style={kit.consequence}>{nb(phase.consequence)}</div>}
-                  {phase.artCard && <ArtCard src={phase.artCard} />}
                   <button style={kit.go} onClick={onComplete}>{t("继续 →")}</button>
                 </>}
           </div>

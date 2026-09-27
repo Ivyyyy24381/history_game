@@ -21,7 +21,7 @@ import { asset } from "../../utils/asset";
 import { POINTS } from "../../utils/scoring";
 import usePrefersReducedMotion from "../../utils/usePrefersReducedMotion";
 import { kit } from "./phaseKit";
-import ArtCard from "./ArtCard";
+import { ArtBackdrop } from "./ArtCard";
 import { Traveler, Keepsake } from "./figures";
 
 export default function ProcessionPhase({ phase, onScore, onComplete }) {
@@ -103,6 +103,8 @@ export default function ProcessionPhase({ phase, onScore, onComplete }) {
       <div ref={stage} onPointerMove={sMove} onPointerUp={sUp}
         style={{ ...kit.stage, backgroundImage: `url(${asset(phase.background)})`, touchAction: "none" }}>
         <div style={{ ...kit.dim, backgroundColor: step === 0 ? "rgba(8,8,14,0.74)" : "rgba(10,12,20,0.5)" }} />
+        {/* 收尾时把画作铺成背景：内联的小卡会被上面那一大段文字挤下去，只露出半截 */}
+        {step === 4 && phase.artCard && <ArtBackdrop src={phase.artCard} style={{ zIndex: 22 }} />}
         {phase.legend && <div style={kit.legend}>{nb(phase.legend)}</div>}
 
         {step === 0 && (
@@ -221,7 +223,7 @@ export default function ProcessionPhase({ phase, onScore, onComplete }) {
             {phase.reveal && <div style={{ ...kit.reveal, fontSize: "clamp(13px, 1.1vw, 18px)" }}>{nb(phase.reveal)}</div>}
             {step === 3
               ? <button style={kit.go} onClick={() => setStep(4)}>{t("后来呢 →")}</button>
-              : <>{phase.consequence && <div style={kit.consequence}>{nb(phase.consequence)}</div>}{phase.artCard && <ArtCard src={phase.artCard} />}<button style={kit.go} onClick={onComplete}>{t("继续 →")}</button></>}
+              : <>{phase.consequence && <div style={kit.consequence}>{nb(phase.consequence)}</div>}<button style={kit.go} onClick={onComplete}>{t("继续 →")}</button></>}
           </div>
         )}
         <style>{`
@@ -278,12 +280,25 @@ const pc = {
     background: "linear-gradient(rgba(255,230,170,0.25), rgba(255,230,170,0.05))",
   },
   road: {
-    position: "absolute", left: "18%", bottom: "20%", height: "30%", zIndex: 12, display: "flex", alignItems: "flex-end", gap: 6,
+    position: "absolute", left: "14%", bottom: "17%", height: "38%", zIndex: 12, display: "flex", alignItems: "flex-end", gap: 8,
     transition: "transform 120ms linear",
   },
-  bier: { width: 190, height: "70%", flex: "0 0 auto" },
-  walker: { position: "relative", width: 76, height: "62%", flex: "0 0 auto", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "flex-end" },
-  mLabel: { position: "absolute", top: "100%", marginTop: 4, width: 84, textAlign: "center", color: "#F5E6D3", fontSize: 11, lineHeight: 1.3, letterSpacing: 1, textShadow: "0 1px 6px rgba(0,0,0,0.9)" },
+  bier: { width: "clamp(150px, 15vw, 230px)", height: "72%", flex: "0 0 auto" },
+  // 立绘是 3:4 的竖图，objectFit: contain 会被较小的那一边卡住。
+  // 原来宽度写死 76px，于是不管盒子多高，人只有 100 px 出头——在一条
+  // 空街上看着像蚂蚁。改成按视口给宽度，高度跟着队伍走。
+  walker: {
+    position: "relative", width: "clamp(96px, 9.5vw, 150px)", height: "92%",
+    flex: "0 0 auto", display: "flex", flexDirection: "column",
+    alignItems: "center", justifyContent: "flex-end",
+  },
+  // 标签原来固定 84px，比人偶（76px）还宽，名字就互相压上了。
+  // 跟着人偶的宽度走，长名字自己换行。
+  mLabel: {
+    position: "absolute", top: "100%", marginTop: 4, left: 0, right: 0,
+    textAlign: "center", color: "#F5E6D3", fontSize: 11, lineHeight: 1.3,
+    letterSpacing: 0.5, textShadow: "0 1px 6px rgba(0,0,0,0.9)",
+  },
   holdBtn: {
     position: "absolute", left: "50%", bottom: "4%", transform: "translateX(-50%)", zIndex: 24, overflow: "hidden",
     minHeight: 48, padding: "12px 34px", borderRadius: 24, border: "1px solid #C9A86A",
