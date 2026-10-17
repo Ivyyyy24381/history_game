@@ -6100,6 +6100,9 @@ const styles = {
     position: "relative",
     // 同样要压过立绘：站在 y=10 以下的角色 z 就 >20 了
     zIndex: Z_PROCEED,
+    // 只是文字，不能挡点击：759 秦州古道的「华州」「秦州」站点在 y=5%，
+    // 原来被这条蒙版整个盖住，第一站点不动，整趟行程启动不了。
+    pointerEvents: "none",
   },
   phaseTitle: {
     margin: "0 0 4px", fontSize: "clamp(17.6px, 1.528vw, 25.3px)", letterSpacing: 4,
