@@ -412,8 +412,8 @@
         {
           "id": "huazhou",
           "name": "华州",
-          "x": 37,
-          "y": 5,
+          "x": 71.2,
+          "y": 26.0,
           "dialogues": [
             {
               "speaker": "dufu",
@@ -425,8 +425,8 @@
         {
           "id": "qinzhou",
           "name": "秦州",
-          "x": 31,
-          "y": 6,
+          "x": 43.3,
+          "y": 25.3,
           "isKey": true,
           "dialogues": [
             {
@@ -439,8 +439,8 @@
         {
           "id": "tonggu",
           "name": "同谷",
-          "x": 32,
-          "y": 19,
+          "x": 43.3,
+          "y": 35.4,
           "isKey": true,
           "dialogues": [
             {
@@ -453,8 +453,8 @@
         {
           "id": "road_son",
           "name": "途中",
-          "x": 27,
-          "y": 43,
+          "x": 42.8,
+          "y": 62.2,
           "dialogues": [
             {
               "speaker": "son",
@@ -476,8 +476,8 @@
         {
           "id": "chengdu_gate",
           "name": "成都",
-          "x": 16,
-          "y": 66,
+          "x": 30.5,
+          "y": 84.7,
           "isKey": true,
           "dialogues": [
             {

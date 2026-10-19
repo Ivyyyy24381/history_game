@@ -966,8 +966,11 @@ const styles = {
   },
   backBtn: {
     position: "fixed",
-    bottom: "calc(20px + env(safe-area-inset-bottom, 0px))",
+    // 和音乐钮一样抬到时间轴细带之上：原来 bottom:20 正压在时间轴左上角的
+    // 「744年 · 遇李白」那行字上（iPad 实测），还没有 zIndex，被时间轴盖住。
+    bottom: "calc(84px + env(safe-area-inset-bottom, 0px))",
     left: "calc(20px + env(safe-area-inset-left, 0px))",
+    zIndex: 60,
     padding: "9px 18px",
     minHeight: 42,
     touchAction: "manipulation",
